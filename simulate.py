@@ -1,5 +1,5 @@
 import pybullet as p
-from pybullet_utils import find_joints, track_held_keys
+from utils import find_joints, track_held_keys
 import pybullet_data
 import time
 
