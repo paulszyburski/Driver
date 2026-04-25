@@ -15,9 +15,16 @@ steering_joints, drive_joints = find_joints(car)
 keys_held = set()
 
 p.setRealTimeSimulation(0)
+p.resetDebugVisualizerCamera(
+    cameraDistance=2,
+    cameraYaw=45,
+    cameraPitch=-30,
+    cameraTargetPosition=[0, 0, 0.2],
+)
+
 
 def control(action: list[int] = []):
-    #TODO: use action to control the car instead of the keyboard inputs
+    # TODO: use action to control the car instead of the keyboard inputs
     steer = 0
     speed = 0
 
@@ -32,22 +39,16 @@ def control(action: list[int] = []):
 
     for j in steering_joints:
         p.setJointMotorControl2(
-            car,
-            j,
-            p.POSITION_CONTROL,
-            targetPosition=steer
+            car, j, p.POSITION_CONTROL, targetPosition=steer
         )
 
     for j in drive_joints:
         p.setJointMotorControl2(
-            car,
-            j,
-            p.VELOCITY_CONTROL,
-            targetVelocity=speed,
-            force=100
+            car, j, p.VELOCITY_CONTROL, targetVelocity=speed, force=100
         )
     return steer, speed
-    
+
+
 def main():
     step = 0
     while True:
@@ -83,4 +84,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()    
+    main()
