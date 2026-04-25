@@ -1,5 +1,5 @@
 import pybullet as p
-from utils import find_joints, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle
+from utils import find_joints, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
 import pybullet_data
 import time
 
@@ -9,9 +9,7 @@ p.setGravity(0, 0, -9.81)
 
 plane = p.loadURDF("plane.urdf")
 car = p.loadURDF("racecar/racecar.urdf", [0, 0, 0])
-car2 = p.loadURDF("racecar/racecar.urdf", [0.5, 0, 0.2])
-car3 = p.loadURDF("racecar/racecar.urdf", [-0.5, 0, 0.2])
-
+obstacles = {"car2": p.loadURDF("racecar/racecar.urdf", [0.5, 0, 0.2]), "car3": p.loadURDF("racecar/racecar.urdf", [-0.5, 0, 0.2])}
 
 steering_joints, drive_joints = find_joints(car)
 keys_held = set()
@@ -24,7 +22,7 @@ def control(action: list[int] = []):
     speed = 0
 
     if p.B3G_UP_ARROW in keys_held:
-        speed = 10
+        speed = 20
     if p.B3G_DOWN_ARROW in keys_held:
         speed = -6
     if p.B3G_LEFT_ARROW in keys_held:
@@ -64,9 +62,10 @@ def main():
         velocity = get_velocity(car, client_id)
         steer_angle = get_steer_angle(car, steering_joints)
         
-
+        
         if step % 550 == 0:
             print(f"X: {position[0]:.2f}, Y: {position[1]:.2f}, Z: {position[2]:.2f}")
+            print(f"Collision: {check_collision(car, obstacles, client_id)}")
             print(f"Orientation yaw: {compute_power(str(orientation))}")
             print(f"Steer angle: {compute_power(str(steer_angle))}")
             print(f"Velocity: {compute_power(str(velocity[0]))}, {compute_power(str(velocity[1]))}, {compute_power(str(velocity[2]))}")

@@ -44,6 +44,15 @@ def compute_power(value: str):
     d = Decimal(value)
     return format(d, "f")
 
+def check_collision(object, obstacles, client_id):
+
+    for obstacle in obstacles.values():
+        contact_points = p.getContactPoints(object, obstacle, physicsClientId=client_id)
+        if len(contact_points) > 0:
+            return True
+    return False
+
+
 def compute_corners_position(position, yaw, length=0.43, width=0.29):
     """"
     a1: front middle
