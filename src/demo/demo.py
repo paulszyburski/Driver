@@ -1,5 +1,5 @@
 import pybullet as p
-from src.utils import find_joints, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
+from src.core.utils import find_joints, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
 import pybullet_data
 import time
 
