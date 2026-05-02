@@ -107,6 +107,30 @@ def adjust_yaw(orientation, target_yaw, max_delta=0.1):
         return target_yaw
     else:
         return orientation + max(-max_delta, min(max_delta, delta))
+    
+def adjust_yaw_in_place(yaw_err, phase):
+    direction = 1 if yaw_err > 0 else -1 #left if positive right if negative
+    if abs(yaw_err) > 0.1:
+        if phase == 1.0:
+            action = [-4, 0.6 if direction == 1 else -0.6, 120]
+            phase = 1.1
+        elif phase == 1.1:
+            action = [4, -0.6 if direction == 1 else 0.6, 120]
+            phase = 1.0
+        return action, phase
+    else:
+        phase = 2
+        return [0, 0, 0], phase
+
+def approach_target(state, target_pos):
+    # Check if we are at the target
+    #print(math.hypot(state["position"][0] - target_pos[0], state["position"][1] - target_pos[1]))
+    if math.hypot(state["position"][0] - target_pos[0], state["position"][1] - target_pos[1]) < 0.1:
+        action = [0, 0, 0]
+        return action
+    steer = steering_to_target(state["position"][0], state["position"][1], state["orientation"], target_pos[0], target_pos[1])
+    action = [10, steer, 1]
+    return action
 
 def compute_corners_position(position, yaw, length=0.43, width=0.29):
     """"

@@ -17,7 +17,7 @@ class Env:
 
         self.plane = p.loadURDF("plane.urdf")
         self.car = p.loadURDF("racecar/racecar.urdf", [1, 0, 0.2])
-        self.obstacles = {"obstacle1": p.loadURDF("racecar/racecar.urdf", [0.5, 0, 0.2]), "obstacle2": p.loadURDF("racecar/racecar.urdf", [-0.5, 0, 0.2])}
+        self.obstacles = {"obstacle1": p.loadURDF("racecar/racecar.urdf", [0.5, 0, 0.2]), "obstacle2": p.loadURDF("racecar/racecar.urdf", [-0.8, 0, 0.2])}
 
         self.steering_joints, self.drive_joints = find_joints(self.car)
         self.keys_held = set()

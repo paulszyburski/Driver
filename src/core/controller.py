@@ -2,7 +2,7 @@ import math
 
 import pybullet as p
 import random
-from core.utils import steering_to_target, track_held_keys, is_facing_target
+from core.utils import approach_target, steering_to_target, track_held_keys, is_facing_target, adjust_yaw_in_place
 
 class Controller:
     def __init__(self):
@@ -21,16 +21,38 @@ class Controller:
 
         return action
 
+    def scripted_controller(self, state, phase):
+        yaw_target = -math.pi/2
+        yaw_err = state["orientation"] - yaw_target
 
-    def approach_target(self, state, target_pos):
-        # Check if we are at the target
-        print(math.hypot(state["position"][0] - target_pos[0], state["position"][1] - target_pos[1]))
-        if math.hypot(state["position"][0] - target_pos[0], state["position"][1] - target_pos[1]) < 0.1:
-            action = [0, 0, 0]
-            return action
-        steer = steering_to_target(state["position"][0], state["position"][1], state["orientation"], target_pos[0], target_pos[1])
-        action = [10, steer, 1]
-        return action
+        
+        if phase == 0:
+            
+            y_pos = state["position"][1]
+            if y_pos >= 0:
+                target_pos = (0, 0.8)
+            elif y_pos <= 0:
+                target_pos = (0, -0.8)
+            action = approach_target(state, target_pos)
+            if action == [0,0,0]:
+                phase = 1.0
+            print(action)
+            return action, phase
+        
+            
+        if phase in [1.0, 1.1]:
+            action, phase = adjust_yaw_in_place(yaw_err, phase)
+            if action == (0,0,0):
+                phase = 2
+            return action, phase
+        
+        if phase == 2:
+            action = approach_target(state, (0, 0))
+            if action == (0,0,0):
+                phase = 3
+            return action, phase
+    
+            
         
     def control(self, action, mode):# first position for drive second for steer third for hold
         speed = action[0]

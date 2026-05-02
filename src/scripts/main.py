@@ -14,9 +14,10 @@ def main():
     controller = Controller()
 
     step = 0
+    phase = 0
     while True:
         state = env.get_state(env.car)
-        action = controller.approach_target(state, (0, 2))
+        action, phase = controller.scripted_controller(state, phase)
         steer, speed, hold = controller.control(action, mode="approach_target")
         for i in range(hold):
             env.apply_control(steer, speed)
