@@ -6,7 +6,7 @@ import pybullet as p
 import pybullet_data
 import time
 
-from core.utils import find_joints, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
+from core.utils import find_joints, random_spawn, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
 
 
 class Env:
@@ -16,9 +16,8 @@ class Env:
         p.setGravity(0, 0, -9.81)
 
         self.plane = p.loadURDF("plane.urdf")
-        self.car = p.loadURDF("racecar/racecar.urdf", [0, 0, 0])
-        #self.obstacles = {"obstacle1": p.loadURDF("racecar/racecar.urdf", [0.5, 0, 0.2]), "obstacle2": p.loadURDF("racecar/racecar.urdf", [-0.5, 0, 0.2])}
-        self.obstacles = {}
+        self.car = p.loadURDF("racecar/racecar.urdf", [1, 0, 0.2])
+        self.obstacles = {"obstacle1": p.loadURDF("racecar/racecar.urdf", [0.5, 0, 0.2]), "obstacle2": p.loadURDF("racecar/racecar.urdf", [-0.5, 0, 0.2])}
 
         self.steering_joints, self.drive_joints = find_joints(self.car)
         self.keys_held = set()

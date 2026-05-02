@@ -20,7 +20,7 @@ import random
 import pybullet as p
 import pybullet_data
 
-from src.core.utils import find_joints
+from utils import find_joints
 
 # ---------------------------------------------------------------------------
 # Configuration
