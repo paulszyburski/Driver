@@ -64,6 +64,12 @@ class Env:
         yaw_err = orientation - (-math.pi/2 if pos[1] >= 0 else math.pi/2)
 
         return {
+            "front_middle": front_middle,
+            "front_right": front_right,
+            "front_left": front_left,
+            "back_middle": back_middle,
+            "back_right": back_right,
+            "back_left": back_left,
             "x": pos[0],
             "y": pos[1],
             "orientation": orientation,

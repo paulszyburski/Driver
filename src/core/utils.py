@@ -63,7 +63,7 @@ def random_spawn(x_range=(-5, 5), y_range=(-5, 5)):
 def log(state, step):
     if step % 550 != 0:
         return
-    print(f"X: {state['position'][0]:.2f}, Y: {state['position'][1]:.2f}, Z: {state['position'][2]:.2f}")
+    print(f"X: {state['x']:.2f}, Y: {state['y']:.2f}")
     print(f"Collision: {state['collision']}")
     print(f"Orientation yaw: {compute_power(str(state['orientation']))}")
     print(f"Steer angle: {compute_power(str(state['steer_angle']))}")
