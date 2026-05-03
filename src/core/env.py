@@ -58,18 +58,24 @@ class Env:
         front_middle, front_right, front_left, back_middle, back_right, back_left = compute_corners_position(pos, orientation)
         obs1_fm, obs1_fr, obs1_fl, obs1_bm, obs1_br, obs1_bl = compute_corners_position(obs1_pos, orientation)
         obs2_fm, obs2_fr, obs2_fl, obs2_bm, obs2_br, obs2_bl = compute_corners_position(obs2_pos, orientation)
-        target_dist = dist_to_target({"front_middle": front_middle, "front_right": front_right, "front_left": front_left, "back_middle": back_middle, "back_right": back_right, "back_left": back_left}, (0, 0.21))
-        obs1_dist = dist_to_obstacle({"front_middle": front_middle, "front_right": front_right, "front_left": front_left, "back_middle": back_middle, "back_right": back_right, "back_left": back_left}, {"front_middle": obs1_fm, "front_right": obs1_fr, "front_left": obs1_fl, "back_middle": obs1_bm, "back_right": obs1_br, "back_left": obs1_bl})
-        obs2_dist = dist_to_obstacle({"front_middle": front_middle, "front_right": front_right, "front_left": front_left, "back_middle": back_middle, "back_right": back_right, "back_left": back_left}, {"front_middle": obs2_fm, "front_right": obs2_fr, "front_left": obs2_fl, "back_middle": obs2_bm, "back_right": obs2_br, "back_left": obs2_bl})
+        target_dist = dist_to_target({"front_middlex": front_middle[0], "front_middley": front_middle[1], "front_rightx": front_right[0], "front_righty": front_right[1], "front_leftx": front_left[0], "front_lefty": front_left[1], "back_middlex": back_middle[0], "back_middley": back_middle[1], "back_rightx": back_right[0], "back_righty": back_right[1], "back_leftx": back_left[0], "back_lefty": back_left[1]}, (0, 0.21))
+        obs1_dist = dist_to_obstacle({"front_middlex": front_middle[0], "front_middley": front_middle[1], "front_rightx": front_right[0], "front_righty": front_right[1], "front_leftx": front_left[0], "front_lefty": front_left[1], "back_middlex": back_middle[0], "back_middley": back_middle[1], "back_rightx": back_right[0], "back_righty": back_right[1], "back_leftx": back_left[0], "back_lefty": back_left[1]}, {"front_middlex": obs1_fm[0], "front_middley": obs1_fm[1], "front_rightx": obs1_fr[0], "front_righty": obs1_fr[1], "front_leftx": obs1_fl[0], "front_lefty": obs1_fl[1], "back_middlex": obs1_bm[0], "back_middley": obs1_bm[1], "back_rightx": obs1_br[0], "back_righty": obs1_br[1], "back_leftx": obs1_bl[0], "back_lefty": obs1_bl[1]})
+        obs2_dist = dist_to_obstacle({"front_middlex": front_middle[0], "front_middley": front_middle[1], "front_rightx": front_right[0], "front_righty": front_right[1], "front_leftx": front_left[0], "front_lefty": front_left[1], "back_middlex": back_middle[0], "back_middley": back_middle[1], "back_rightx": back_right[0], "back_righty": back_right[1], "back_leftx": back_left[0], "back_lefty": back_left[1]}, {"front_middlex": obs2_fm[0], "front_middley": obs2_fm[1], "front_rightx": obs2_fr[0], "front_righty": obs2_fr[1], "front_leftx": obs2_fl[0], "front_lefty": obs2_fl[1], "back_middlex": obs2_bm[0], "back_middley": obs2_bm[1], "back_rightx": obs2_br[0], "back_righty": obs2_br[1], "back_leftx": obs2_bl[0], "back_lefty": obs2_bl[1]})
         yaw_err = orientation - (-math.pi/2 if pos[1] >= 0 else math.pi/2)
 
         return {
-            "front_middle": front_middle,
-            "front_right": front_right,
-            "front_left": front_left,
-            "back_middle": back_middle,
-            "back_right": back_right,
-            "back_left": back_left,
+            "front_middlex": front_middle[0],
+            "front_middley": front_middle[1],
+            "front_rightx": front_right[0],
+            "front_righty": front_right[1],
+            "front_leftx": front_left[0],
+            "front_lefty": front_left[1],
+            "back_middlex": back_middle[0],
+            "back_middley": back_middle[1],
+            "back_rightx": back_right[0],
+            "back_righty": back_right[1],
+            "back_leftx": back_left[0],
+            "back_lefty": back_left[1],
             "x": pos[0],
             "y": pos[1],
             "orientation": orientation,

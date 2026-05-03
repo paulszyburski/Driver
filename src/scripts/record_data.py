@@ -7,14 +7,17 @@ from core.utils import compute_power
 from core.controller import Controller
 from core.utils import log
 import time
-
+import csv
+import datetime
 
 def main():
+    date = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     env = Env() 
     controller = Controller()  
-    record = []
+    
 
     for episode in range(10):
+        record = []
         env.reset()
 
         step = 0
@@ -43,6 +46,11 @@ def main():
             if phase == 3:
                 print("Episode ended successfully.")
                 break
+
+        if phase == 3:
+            with open(f"training_data_V1_{date}.csv", "w", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerows(record)
 
 if __name__ == "__main__":
     main()

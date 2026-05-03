@@ -68,30 +68,30 @@ def log(state, step):
     print(f"Orientation yaw: {compute_power(str(state['orientation']))}")
     print(f"Steer angle: {compute_power(str(state['steer_angle']))}")
     print(f"Velocity: {compute_power(str(state['velocity'][0]))}, {compute_power(str(state['velocity'][1]))}, {compute_power(str(state['velocity'][2]))}")
-    print(f"Front middle: {compute_power(str(state['front_middle'][0]))}, {compute_power(str(state['front_middle'][1]))}")
-    print(f"Front right: {compute_power(str(state['front_right'][0]))}, {compute_power(str(state['front_right'][1]))}")
-    print(f"Front left: {compute_power(str(state['front_left'][0]))}, {compute_power(str(state['front_left'][1]))}")
-    print(f"Back middle: {compute_power(str(state['back_middle'][0]))}, {compute_power(str(state['back_middle'][1]))}")
-    print(f"Back right: {compute_power(str(state['back_right'][0]))}, {compute_power(str(state['back_right'][1]))}")
-    print(f"Back left: {compute_power(str(state['back_left'][0]))}, {compute_power(str(state['back_left'][1]))}\n\n")
+    print(f"Front middle: {compute_power(str(state['front_middlex']))}, {compute_power(str(state['front_middley']))}")
+    print(f"Front right: {compute_power(str(state['front_rightx']))}, {compute_power(str(state['front_righty']))}")
+    print(f"Front left: {compute_power(str(state['front_leftx']))}, {compute_power(str(state['front_lefty']))}")
+    print(f"Back middle: {compute_power(str(state['back_middlex']))}, {compute_power(str(state['back_middley']))}")
+    print(f"Back right: {compute_power(str(state['back_rightx']))}, {compute_power(str(state['back_righty']))}")
+    print(f"Back left: {compute_power(str(state['back_leftx']))}, {compute_power(str(state['back_lefty']))}\n\n")
     print(f"Distance to obs1: {compute_power(str(state['obs1_dist']))}")
     print(f"Distance to obs2: {compute_power(str(state['obs2_dist']))}")
 
 
 def dist_to_target(ego_state, target_pos):
-    dist1 = math.hypot(ego_state["front_middle"][0] - target_pos[0], ego_state["front_middle"][1] - target_pos[1])
-    dist2 = math.hypot(ego_state["front_right"][0] - target_pos[0], ego_state["front_right"][1] - target_pos[1])
-    dist3 = math.hypot(ego_state["front_left"][0] - target_pos[0], ego_state["front_left"][1] - target_pos[1])
-    dist4 = math.hypot(ego_state["back_middle"][0] - target_pos[0], ego_state["back_middle"][1] - target_pos[1])
-    dist5 = math.hypot(ego_state["back_right"][0] - target_pos[0], ego_state["back_right"][1] - target_pos[1])
-    dist6 = math.hypot(ego_state["back_left"][0] - target_pos[0], ego_state["back_left"][1] - target_pos[1])
+    dist1 = math.hypot(ego_state["front_middlex"] - target_pos[0], ego_state["front_middley"] - target_pos[1])
+    dist2 = math.hypot(ego_state["front_rightx"] - target_pos[0], ego_state["front_righty"] - target_pos[1])
+    dist3 = math.hypot(ego_state["front_leftx"] - target_pos[0], ego_state["front_lefty"] - target_pos[1])
+    dist4 = math.hypot(ego_state["back_middlex"] - target_pos[0], ego_state["back_middley"] - target_pos[1])
+    dist5 = math.hypot(ego_state["back_rightx"] - target_pos[0], ego_state["back_righty"] - target_pos[1])
+    dist6 = math.hypot(ego_state["back_leftx"] - target_pos[0], ego_state["back_lefty"] - target_pos[1])
     return min(dist1, dist2, dist3, dist4, dist5, dist6)
 
 def dist_to_obstacle(ego_state, obstacle_state):
     smallest_dist = float('inf')
-    for ego_point in ["front_middle", "front_right", "front_left", "back_middle", "back_right", "back_left"]:
-        for obs_point in ["front_middle", "front_right", "front_left", "back_middle", "back_right", "back_left"]:
-            dist = math.hypot(ego_state[ego_point][0] - obstacle_state[obs_point][0], ego_state[ego_point][1] - obstacle_state[obs_point][1])
+    for ego_point in ["front_middlex", "front_rightx", "front_leftx", "back_middlex", "back_rightx", "back_leftx"]:
+        for obs_point in ["front_middlex", "front_rightx", "front_leftx", "back_middlex", "back_rightx", "back_leftx"]:
+            dist = math.hypot(ego_state[ego_point] - obstacle_state[obs_point], ego_state[ego_point] - obstacle_state[obs_point])
             if dist < smallest_dist:
                 smallest_dist = dist
     return smallest_dist
