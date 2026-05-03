@@ -41,11 +41,8 @@ def get_steer_angle(car, steering_joints):
     steer_angle = p.getJointState(car, steering_joints[0])[0]
     return steer_angle
 
-def compute_power(value: str):
-    from decimal import Decimal
-
-    d = Decimal(value)
-    return format(d, "f")
+def compute_power(value):
+    return f"{float(value):.10f}"
 
 def check_collision(object, obstacles, client_id):
 
@@ -78,12 +75,14 @@ def log(state, step):
 def is_facing_target(x0, y0, orientation, x1, y1, eps=0.6):
     dx = x1 - x0
     dy = y1 - y0
-
-    if abs(dx * math.sin(orientation) - dy * math.cos(orientation)) > eps:
-        return False
     
-    t = dx * math.cos(orientation) + dy * math.sin(orientation)
-    return True if t >= 0 else False
+    # Calculate angle to target
+    target_angle = math.atan2(dy, dx)
+    # Calculate difference between current orientation and target angle
+    delta = target_angle - orientation
+    delta = math.atan2(math.sin(delta), math.cos(delta))
+    
+    return abs(delta) < eps
 
 def steering_to_target(x0, y0, orientation, x1, y1, max_steer=0.6):
     dx = x1 - x0

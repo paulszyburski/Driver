@@ -1,12 +1,15 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Add the project root to sys.path if not already there
+PROJECT_ROOT = str(Path(__file__).resolve().parent.parent)
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
+import pybullet as p
+import time
 from core.env import Env
-from core.utils import compute_power
 from core.controller import Controller
 from core.utils import log
-import time
 
 
 def main():
