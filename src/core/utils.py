@@ -74,6 +74,27 @@ def log(state, step):
     print(f"Back middle: {compute_power(str(state['back_middle'][0]))}, {compute_power(str(state['back_middle'][1]))}")
     print(f"Back right: {compute_power(str(state['back_right'][0]))}, {compute_power(str(state['back_right'][1]))}")
     print(f"Back left: {compute_power(str(state['back_left'][0]))}, {compute_power(str(state['back_left'][1]))}\n\n")
+    print(f"Distance to obs1: {compute_power(str(state['obs1_dist']))}")
+    print(f"Distance to obs2: {compute_power(str(state['obs2_dist']))}")
+
+
+def dist_to_target(ego_state, target_pos):
+    dist1 = math.hypot(ego_state["front_middle"][0] - target_pos[0], ego_state["front_middle"][1] - target_pos[1])
+    dist2 = math.hypot(ego_state["front_right"][0] - target_pos[0], ego_state["front_right"][1] - target_pos[1])
+    dist3 = math.hypot(ego_state["front_left"][0] - target_pos[0], ego_state["front_left"][1] - target_pos[1])
+    dist4 = math.hypot(ego_state["back_middle"][0] - target_pos[0], ego_state["back_middle"][1] - target_pos[1])
+    dist5 = math.hypot(ego_state["back_right"][0] - target_pos[0], ego_state["back_right"][1] - target_pos[1])
+    dist6 = math.hypot(ego_state["back_left"][0] - target_pos[0], ego_state["back_left"][1] - target_pos[1])
+    return min(dist1, dist2, dist3, dist4, dist5, dist6)
+
+def dist_to_obstacle(ego_state, obstacle_state):
+    smallest_dist = float('inf')
+    for ego_point in ["front_middle", "front_right", "front_left", "back_middle", "back_right", "back_left"]:
+        for obs_point in ["front_middle", "front_right", "front_left", "back_middle", "back_right", "back_left"]:
+            dist = math.hypot(ego_state[ego_point][0] - obstacle_state[obs_point][0], ego_state[ego_point][1] - obstacle_state[obs_point][1])
+            if dist < smallest_dist:
+                smallest_dist = dist
+    return smallest_dist
 
 def is_facing_target(x0, y0, orientation, x1, y1, eps=0.6):
     dx = x1 - x0
@@ -85,7 +106,7 @@ def is_facing_target(x0, y0, orientation, x1, y1, eps=0.6):
     t = dx * math.cos(orientation) + dy * math.sin(orientation)
     return True if t >= 0 else False
 
-def steering_to_target(x0, y0, orientation, x1, y1, max_steer=0.6):
+def steering_to_target(x0, y0, orientation, x1, y1, max_steer=0.8):
     dx = x1 - x0
     dy = y1 - y0
 
@@ -109,13 +130,13 @@ def adjust_yaw(orientation, target_yaw, max_delta=0.1):
         return orientation + max(-max_delta, min(max_delta, delta))
     
 def adjust_yaw_in_place(yaw_err, phase):
-    direction = 1 if yaw_err > 0 else -1 #left if positive right if negative
+    direction = 1 if yaw_err > 0 else -1 #right if positive left if negative
     if abs(yaw_err) > 0.1:
         if phase == 1.0:
-            action = [-4, 0.6 if direction == 1 else -0.6, 120]
+            action = [-7, 0.6 if direction == 1 else -0.6, 80]
             phase = 1.1
         elif phase == 1.1:
-            action = [4, -0.6 if direction == 1 else 0.6, 120]
+            action = [7, -0.6 if direction == 1 else 0.6, 80]
             phase = 1.0
         return action, phase
     else:
@@ -124,12 +145,12 @@ def adjust_yaw_in_place(yaw_err, phase):
 
 def approach_target(state, target_pos):
     # Check if we are at the target
-    #print(math.hypot(state["position"][0] - target_pos[0], state["position"][1] - target_pos[1]))
-    if math.hypot(state["position"][0] - target_pos[0], state["position"][1] - target_pos[1]) < 0.1:
+    #print(math.hypot(state["x"] - target_pos[0], state["y"] - target_pos[1]))
+    if math.hypot(state["x"] - target_pos[0], state["y"] - target_pos[1]) < 0.1:
         action = [0, 0, 0]
         return action
-    steer = steering_to_target(state["position"][0], state["position"][1], state["orientation"], target_pos[0], target_pos[1])
-    action = [10, steer, 1]
+    steer = steering_to_target(state["x"], state["y"], state["orientation"], target_pos[0], target_pos[1])
+    action = [20, steer, 1]
     return action
 
 def compute_corners_position(position, yaw, length=0.43, width=0.29):

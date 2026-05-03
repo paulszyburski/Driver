@@ -22,21 +22,19 @@ class Controller:
         return action
 
     def scripted_controller(self, state, phase):
-        yaw_target = -math.pi/2
+        yaw_target = -math.pi/2 if state["y"] >= 0 else math.pi/2
         yaw_err = state["orientation"] - yaw_target
-
         
         if phase == 0:
             
-            y_pos = state["position"][1]
+            y_pos = state["y"]
             if y_pos >= 0:
-                target_pos = (0, 0.8)
+                target_pos = (0, 0.95)
             elif y_pos <= 0:
-                target_pos = (0, -0.8)
+                target_pos = (0, -0.95)
             action = approach_target(state, target_pos)
             if action == [0,0,0]:
                 phase = 1.0
-            print(action)
             return action, phase
         
             
@@ -47,10 +45,14 @@ class Controller:
             return action, phase
         
         if phase == 2:
-            action = approach_target(state, (0, 0))
-            if action == (0,0,0):
+            action = approach_target(state, (0, 0.21))
+            if action == [0, 0, 0]:
                 phase = 3
             return action, phase
+        
+        if phase == 3:
+            return [0, 0, 0], phase
+
     
             
         

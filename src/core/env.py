@@ -1,3 +1,5 @@
+import math
+from random import random
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -6,7 +8,7 @@ import pybullet as p
 import pybullet_data
 import time
 
-from core.utils import find_joints, random_spawn, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
+from core.utils import find_joints, dist_to_target, dist_to_obstacle, random_spawn, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
 
 
 class Env:
@@ -15,14 +17,26 @@ class Env:
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0, 0, -9.81)
 
-        self.plane = p.loadURDF("plane.urdf")
-        self.car = p.loadURDF("racecar/racecar.urdf", [1, 0, 0.2])
-        self.obstacles = {"obstacle1": p.loadURDF("racecar/racecar.urdf", [0.5, 0, 0.2]), "obstacle2": p.loadURDF("racecar/racecar.urdf", [-0.8, 0, 0.2])}
+        yaw_90 = p.getQuaternionFromEuler([0, 0, math.pi/2])
 
+        self.plane = p.loadURDF("plane.urdf")
+        self.car = p.loadURDF("racecar/racecar.urdf", random_spawn(), yaw_90)
+        self.obstacles = {
+          "obstacle1": p.loadURDF("racecar/racecar.urdf", [0.35, 0, 0.2], yaw_90),
+          "obstacle2": p.loadURDF("racecar/racecar.urdf", [-0.35, 0, 0.2], yaw_90)
+        }
         self.steering_joints, self.drive_joints = find_joints(self.car)
         self.keys_held = set()
 
         p.setRealTimeSimulation(0)
+
+    def reset(self):
+        yaw_90 = p.getQuaternionFromEuler([0, 0, math.pi/2])
+        car_pos = random_spawn()
+        p.resetBasePositionAndOrientation(self.car, car_pos, yaw_90, physicsClientId=self.client_id)
+        p.resetBaseVelocity(self.car, [0, 0, 0], [0, 0, 0], physicsClientId=self.client_id)
+        for joint in self.steering_joints + self.drive_joints:
+            p.resetJointState(self.car, joint, 0, physicsClientId=self.client_id)
 
     def follow_camera(self, object, distance=2, yaw=45, pitch=-30):
         pos = get_pos(object, self.client_id)
@@ -35,25 +49,37 @@ class Env:
 
     def get_state(self, object):
         pos = get_pos(object, self.client_id)
+        obs1_pos = get_pos(self.obstacles["obstacle1"], self.client_id)
+        obs2_pos = get_pos(self.obstacles["obstacle2"], self.client_id)
         orientation = get_orientation(object, self.client_id)[2]
         velocity = get_velocity(object, self.client_id)
         steer_angle = get_steer_angle(object, self.steering_joints)
         collision = check_collision(object, self.obstacles, self.client_id)
         front_middle, front_right, front_left, back_middle, back_right, back_left = compute_corners_position(pos, orientation)
+        obs1_fm, obs1_fr, obs1_fl, obs1_bm, obs1_br, obs1_bl = compute_corners_position(obs1_pos, orientation)
+        obs2_fm, obs2_fr, obs2_fl, obs2_bm, obs2_br, obs2_bl = compute_corners_position(obs2_pos, orientation)
+        target_dist = dist_to_target({"front_middle": front_middle, "front_right": front_right, "front_left": front_left, "back_middle": back_middle, "back_right": back_right, "back_left": back_left}, (0, 0.21))
+        obs1_dist = dist_to_obstacle({"front_middle": front_middle, "front_right": front_right, "front_left": front_left, "back_middle": back_middle, "back_right": back_right, "back_left": back_left}, {"front_middle": obs1_fm, "front_right": obs1_fr, "front_left": obs1_fl, "back_middle": obs1_bm, "back_right": obs1_br, "back_left": obs1_bl})
+        obs2_dist = dist_to_obstacle({"front_middle": front_middle, "front_right": front_right, "front_left": front_left, "back_middle": back_middle, "back_right": back_right, "back_left": back_left}, {"front_middle": obs2_fm, "front_right": obs2_fr, "front_left": obs2_fl, "back_middle": obs2_bm, "back_right": obs2_br, "back_left": obs2_bl})
+        yaw_err = orientation - (-math.pi/2 if pos[1] >= 0 else math.pi/2)
+
         return {
-            "position": pos,
+            "x": pos[0],
+            "y": pos[1],
             "orientation": orientation,
             "velocity": velocity,
             "steer_angle": steer_angle,
+            "dist_to_target": target_dist,
+            "yaw_err": yaw_err,
+            "obs1_dist": obs1_dist,
+            "obs2_dist": obs2_dist,
             "collision": collision,
-            "front_middle": front_middle,
-            "front_right": front_right,
-            "front_left": front_left,
-            "back_middle": back_middle,
-            "back_right": back_right,
-            "back_left": back_left
+            "action_steer": None,
+            "action_speed": None,
         }
     
+
+
     def apply_control(self, steer, speed):
         for j in self.steering_joints:
             p.setJointMotorControl2(

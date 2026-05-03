@@ -15,6 +15,7 @@ def main():
 
     step = 0
     phase = 0
+
     while True:
         state = env.get_state(env.car)
         action, phase = controller.scripted_controller(state, phase)
