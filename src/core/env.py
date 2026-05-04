@@ -18,9 +18,10 @@ class Env:
         p.setGravity(0, 0, -9.81)
 
         yaw_90 = p.getQuaternionFromEuler([0, 0, math.pi/2])
+        yaw_random = p.getQuaternionFromEuler([0, 0, random()*2*math.pi])
 
         self.plane = p.loadURDF("plane.urdf")
-        self.car = p.loadURDF("racecar/racecar.urdf", random_spawn(), yaw_90)
+        self.car = p.loadURDF("racecar/racecar.urdf", random_spawn(), yaw_random)
         self.obstacles = {
           "obstacle1": p.loadURDF("racecar/racecar.urdf", [0.35, 0, 0.2], yaw_90),
           "obstacle2": p.loadURDF("racecar/racecar.urdf", [-0.35, 0, 0.2], yaw_90)
@@ -32,11 +33,19 @@ class Env:
 
     def reset(self):
         yaw_90 = p.getQuaternionFromEuler([0, 0, math.pi/2])
+        yaw_random = p.getQuaternionFromEuler([0, 0, random()*2*math.pi])
+        
         car_pos = random_spawn()
-        p.resetBasePositionAndOrientation(self.car, car_pos, yaw_90, physicsClientId=self.client_id)
+        p.resetBasePositionAndOrientation(self.car, car_pos, yaw_random, physicsClientId=self.client_id)
         p.resetBaseVelocity(self.car, [0, 0, 0], [0, 0, 0], physicsClientId=self.client_id)
         for joint in self.steering_joints + self.drive_joints:
             p.resetJointState(self.car, joint, 0, physicsClientId=self.client_id)
+        
+        p.resetBasePositionAndOrientation(self.obstacles["obstacle1"], [0.35, 0, 0.2], yaw_90, physicsClientId=self.client_id)
+        p.resetBaseVelocity(self.obstacles["obstacle1"], [0, 0, 0], [0, 0, 0], physicsClientId=self.client_id)
+        
+        p.resetBasePositionAndOrientation(self.obstacles["obstacle2"], [-0.35, 0, 0.2], yaw_90, physicsClientId=self.client_id)
+        p.resetBaseVelocity(self.obstacles["obstacle2"], [0, 0, 0], [0, 0, 0], physicsClientId=self.client_id)
 
     def follow_camera(self, object, distance=2, yaw=45, pitch=-30):
         pos = get_pos(object, self.client_id)
@@ -79,7 +88,8 @@ class Env:
             "x": pos[0],
             "y": pos[1],
             "orientation": orientation,
-            "velocity": velocity,
+            "velocityx": velocity[0],
+            "velocityy": velocity[1],
             "steer_angle": steer_angle,
             "dist_to_target": target_dist,
             "yaw_err": yaw_err,

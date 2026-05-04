@@ -1,4 +1,4 @@
-import data.generate_data as gd, pybullet as p, pybullet_data, math
+import scripts.generate_data as gd, pybullet as p, pybullet_data, math
 from src.core.utils import find_joints
 
 p.connect(p.DIRECT)
