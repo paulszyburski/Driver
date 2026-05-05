@@ -52,9 +52,6 @@ class Controller:
         
         if phase == 3:
             return [0, 0, 0], phase
-
-    
-            
         
     def control(self, action, mode):# first position for drive second for steer third for hold
         speed = action[0]
@@ -82,3 +79,28 @@ class Controller:
             pass
 
         return steer, speed, hold
+    
+
+class MLController(Controller):
+    def __init__(self, model=None):
+        self.model = model
+    # Use sklearn
+
+    def save_model(self, filename):
+        pass
+
+    def load_model(self, filename):
+        if self.model == None:
+            return "No model defined"
+        pass
+
+    def split_data(self, data):
+        pass
+
+    def train(self, X_train, y_train):
+        pass
+
+    def predict(self, state):
+        pass
+    
+
