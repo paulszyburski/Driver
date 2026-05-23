@@ -2,7 +2,11 @@ import math
 
 import pybullet as p
 import random
+import pickle
+
 from core.utils import approach_target, steering_to_target, track_held_keys, is_facing_target, adjust_yaw_in_place
+
+
 
 class Controller:
     def __init__(self):
@@ -79,22 +83,21 @@ class Controller:
             pass
 
         return steer, speed, hold
-    
+
 
 class MLController(Controller):
     def __init__(self, model=None):
+        super().__init__()
         self.model = model
-    # Use sklearn
+    # sklearn-style model: exposes fit(X, y) and predict(X)
 
     def save_model(self, filename):
         pass
 
     def load_model(self, filename):
-        if self.model == None:
-            return "No model defined"
         pass
 
-    def split_data(self, data):
+    def split_data(self, data, test_size=0.2, random_state=42):
         pass
 
     def train(self, X_train, y_train):
@@ -102,5 +105,3 @@ class MLController(Controller):
 
     def predict(self, state):
         pass
-    
-

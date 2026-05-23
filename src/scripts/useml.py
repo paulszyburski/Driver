@@ -21,7 +21,8 @@ def predict(x, y, orientation, velocityx, velocityy,
     )
 
     result = model.predict(input_data)[0]  # [steer, speed]
-    return {col: round(float(val), 6) for col, val in zip(TARGET_COLS, result)}
+    return result
+    #return {col: round(float(val), 6) for col, val in zip(TARGET_COLS, result)}
 
 
 if __name__ == "__main__":

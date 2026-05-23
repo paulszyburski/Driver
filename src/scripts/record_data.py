@@ -17,7 +17,7 @@ def main():
 
     successful_episodes = 0
     
-    for episode in range(1000):
+    for episode in range(100000):
         record = []
         env.reset()
 

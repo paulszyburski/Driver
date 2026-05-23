@@ -67,7 +67,7 @@ def log(state, step):
     print(f"Collision: {state['collision']}")
     print(f"Orientation yaw: {compute_power(str(state['orientation']))}")
     print(f"Steer angle: {compute_power(str(state['steer_angle']))}")
-    print(f"Velocity: {compute_power(str(state['velocity'][0]))}, {compute_power(str(state['velocity'][1]))}, {compute_power(str(state['velocity'][2]))}")
+    print(f"Velocity: {compute_power(str(state['velocityx']))}, {compute_power(str(state['velocityy']))}")
     print(f"Front middle: {compute_power(str(state['front_middlex']))}, {compute_power(str(state['front_middley']))}")
     print(f"Front right: {compute_power(str(state['front_rightx']))}, {compute_power(str(state['front_righty']))}")
     print(f"Front left: {compute_power(str(state['front_leftx']))}, {compute_power(str(state['front_lefty']))}")

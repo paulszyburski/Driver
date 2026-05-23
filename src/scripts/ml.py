@@ -23,9 +23,9 @@ FEATURE_COLS = [
 TARGET_COLS = ["steer", "speed"]
 
 # Path to training data relative to the project root
-CSV_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "training_data_V1_2026-05-16_09-50-04.csv"
+CSV_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "training_data_V1_2026-05-05_21-48-18.csv"
 
-MODEL_FILE = Path(__file__).resolve().parent / "trained_robot_model.pkl"
+MODEL_FILE = Path(__file__).resolve().parent.parent.parent / "models" / "trained_robot_model.pkl"
 
 
 def train_and_evaluate_model(csv_path: Path):
@@ -43,7 +43,7 @@ def train_and_evaluate_model(csv_path: Path):
 
     # Train a Random Forest for multi-output regression
     print("\nTraining Random Forest Regressor...")
-    model = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
+    model = RandomForestRegressor(n_estimators=10, random_state=42, n_jobs=-1)
     model.fit(X_train, y_train)
     print("Training complete.")
 
