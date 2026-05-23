@@ -1,7 +1,9 @@
 import pandas as pd
 from pathlib import Path
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.neural_network import MLPRegressor
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 import joblib
 
@@ -26,11 +28,14 @@ TARGET_COLS = ["steer", "speed"]
 CSV_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "training_data_V1_2026-05-05_21-48-18.csv"
 
 MODEL_FILE = Path(__file__).resolve().parent.parent.parent / "models" / "trained_robot_model.pkl"
+MAX_TRAIN_SAMPLES = 500_000
 
 
 def train_and_evaluate_model(csv_path: Path):
     print(f"Loading data from: {csv_path}")
     df = pd.read_csv(csv_path, header=None, names=ALL_COLS)
+    if len(df) > MAX_TRAIN_SAMPLES:
+        df = df.sample(n=MAX_TRAIN_SAMPLES, random_state=42).reset_index(drop=True)
 
     X = df[FEATURE_COLS]
     y = df[TARGET_COLS]
@@ -41,9 +46,27 @@ def train_and_evaluate_model(csv_path: Path):
         X, y, test_size=0.2, random_state=42
     )
 
-    # Train a Random Forest for multi-output regression
-    print("\nTraining Random Forest Regressor...")
-    model = RandomForestRegressor(n_estimators=10, random_state=42, n_jobs=-1)
+    print("\nTraining Neural Network Regressor")
+    model = Pipeline(
+        [
+            ("scaler", StandardScaler()),
+            (
+                "mlp",
+                MLPRegressor(
+                    hidden_layer_sizes=(128, 64),
+                    activation="relu",
+                    solver="adam",
+                    learning_rate_init=1e-3,
+                    batch_size=128,
+                    max_iter=400,
+                    random_state=42,
+                    early_stopping=True,
+                    validation_fraction=0.1,
+                    n_iter_no_change=15,
+                ),
+            ),
+        ]
+    )
     model.fit(X_train, y_train)
     print("Training complete.")
 
