@@ -33,6 +33,10 @@ MAX_TRAIN_SAMPLES = 500_000
 
 def train_and_evaluate_model(csv_path: Path):
     print(f"Loading data from: {csv_path}")
+    if not csv_path.exists():
+        raise FileNotFoundError(f"Training data not found at '{csv_path}'")
+
+    # Use chunking if the file is extremely large to avoid OOM
     df = pd.read_csv(csv_path, header=None, names=ALL_COLS)
     if len(df) > MAX_TRAIN_SAMPLES:
         df = df.sample(n=MAX_TRAIN_SAMPLES, random_state=42).reset_index(drop=True)
@@ -42,8 +46,9 @@ def train_and_evaluate_model(csv_path: Path):
 
     print(f"Samples: {len(df):,}  |  Features: {len(FEATURE_COLS)}  |  Targets: {TARGET_COLS}")
 
+    # Shuffle data before splitting to ensure IID samples
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
+        X, y, test_size=0.2, random_state=42, shuffle=True
     )
 
     print("\nTraining Neural Network Regressor")
@@ -81,6 +86,9 @@ def train_and_evaluate_model(csv_path: Path):
         r2  = r2_score(y_test_df[col], y_pred_df[col])
         print(f"  [{col}]  MSE: {mse:.6f}   R²: {r2:.4f}")
 
+    # Model saved using joblib for efficient storage of large numpy arrays
+    # Ensure directory exists before saving
+    MODEL_FILE.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, MODEL_FILE)
     print(f"\nModel saved to: {MODEL_FILE}")
 

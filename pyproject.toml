@@ -6,4 +6,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "pybullet>=3.2.7",
+    "pandas",
+    "scikit-learn",
+    "joblib",
+    "numpy",
 ]
