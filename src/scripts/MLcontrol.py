@@ -3,32 +3,59 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+import pandas as pd
+
 from core.env import Env
 from core.utils import compute_power
-from core.controller import Controller
+from core.controller import MLController
 from core.utils import log
-from useml import predict
 import time
+import joblib
+
+ALL_COLS = [
+    "episode", "step",
+    "x", "y", "orientation", "velocityx", "velocityy", "steer_angle",
+    "dist_to_target", "yaw_err", "obs1_dist", "obs2_dist",
+    "steer", "speed"
+]
+
+CSV_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "training_data_V1_2026-05-05_21-48-18.csv"
+
+MODEL_FILE = Path(__file__).resolve().parent.parent.parent / "models" / "trained_robot_model.pkl"
+MAX_TRAIN_SAMPLES = 5_000_000
+
+def setup():
+    controller = MLController()
+
+    df = pd.read_csv(CSV_FILE, header=None, names=ALL_COLS)
+    df = df.sample(n=MAX_TRAIN_SAMPLES, random_state=42).reset_index(drop=True)
+
+    X_train, _, y_train, _ = controller.split_data(df, test_size=0.2, random_state=42)
+    controller.train(X_train, y_train)
+    controller.save_model(MODEL_FILE)
+    return controller
 
 
 def main():
     env = Env()
-    controller = Controller()
+    MLcontroller = MLController()
+    MLcontroller.load_model(MODEL_FILE)
 
     step = 0
     phase = 0
 
     while True:
         state = env.get_state(env.car)
-        steer, speed = predict(*list(state.values())[12:22])
+        steer, speed = MLcontroller.predict(state)
 
         env.apply_control(steer, speed)
         env.step()
-        env.follow_camera(env.car)
+
         time.sleep(1 / 240)
 
         log(state, step)
         step += 1
 
 if __name__ == "__main__":
+    setup()
     main()

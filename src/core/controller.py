@@ -3,6 +3,12 @@ import math
 import pybullet as p
 import random
 import pickle
+import joblib
+
+from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPRegressor
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 from core.utils import approach_target, steering_to_target, track_held_keys, is_facing_target, adjust_yaw_in_place
 
@@ -86,22 +92,67 @@ class Controller:
 
 
 class MLController(Controller):
+    FEATURE_COLS = [
+        "x",
+        "y",
+        "orientation",
+        "velocityx",
+        "velocityy",
+        "steer_angle",
+        "dist_to_target",
+        "yaw_err",
+        "obs1_dist",
+        "obs2_dist",
+    ]
+
     def __init__(self, model=None):
         super().__init__()
         self.model = model
-    # sklearn-style model: exposes fit(X, y) and predict(X)
+    # use sklearn
 
     def save_model(self, filename):
-        pass
+        if self.model is None:
+            raise ValueError("No model available to save.")
+        joblib.dump(self.model, filename)
 
     def load_model(self, filename):
-        pass
+        self.model = joblib.load(filename)
+        return self.model
 
     def split_data(self, data, test_size=0.2, random_state=42):
-        pass
+        X = data[self.FEATURE_COLS]
+        y = data[["steer", "speed"]]
+        return train_test_split(X, y, test_size=test_size, random_state=random_state)
 
     def train(self, X_train, y_train):
-        pass
+        self.model = Pipeline(
+            [
+                ("scaler", StandardScaler()),
+                (
+                    "mlp",
+                    MLPRegressor(
+                        hidden_layer_sizes=(128, 64),
+                        activation="relu",
+                        solver="adam",
+                        learning_rate_init=1e-3,
+                        batch_size=128,
+                        max_iter=400,
+                        random_state=42,
+                        early_stopping=True,
+                        validation_fraction=0.1,
+                        n_iter_no_change=15,
+                    ),
+                ),
+            ]
+        )
+        self.model.fit(X_train, y_train)
+        return self.model
 
     def predict(self, state):
-        pass
+        if self.model is None:
+            raise ValueError("No model set for prediction.")
+
+        features = [state[col] for col in self.FEATURE_COLS]
+        pred = self.model.predict([features])[0]
+        steer, speed = float(pred[0]), float(pred[1])
+        return steer, speed
