@@ -6,7 +6,6 @@ from core.env import Env
 from core.utils import compute_power
 from core.controller import Controller
 from core.utils import log
-from useml import predict
 import time
 
 
@@ -19,8 +18,6 @@ def main():
 
     while True:
         state = env.get_state(env.car)
-        print(state)
-        exit()
         action, phase = controller.scripted_controller(state, phase)
         steer, speed, hold = controller.control(action, mode="approach_target")
         for i in range(hold):

@@ -4,6 +4,7 @@ import pybullet as p
 import random
 import pickle
 import joblib
+import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPRegressor
@@ -11,7 +12,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
 from core.utils import approach_target, steering_to_target, track_held_keys, is_facing_target, adjust_yaw_in_place
-
 
 
 class Controller:
@@ -31,37 +31,6 @@ class Controller:
 
         return action
 
-    def scripted_controller(self, state, phase):
-        yaw_target = -math.pi/2 if state["y"] >= 0 else math.pi/2
-        yaw_err = state["orientation"] - yaw_target
-        
-        if phase == 0:
-            
-            y_pos = state["y"]
-            if y_pos >= 0:
-                target_pos = (0, 0.95)
-            elif y_pos <= 0:
-                target_pos = (0, -0.95)
-            action = approach_target(state, target_pos)
-            if action == [0,0,0]:
-                phase = 1.0
-            return action, phase
-        
-            
-        if phase in [1.0, 1.1]:
-            action, phase = adjust_yaw_in_place(yaw_err, phase)
-            if action == (0,0,0):
-                phase = 2
-            return action, phase
-        
-        if phase == 2:
-            action = approach_target(state, (0, 0.21))
-            if action == [0, 0, 0]:
-                phase = 3
-            return action, phase
-        
-        if phase == 3:
-            return [0, 0, 0], phase
         
     def control(self, action, mode):# first position for drive second for steer third for hold
         speed = action[0]
@@ -89,6 +58,51 @@ class Controller:
             pass
 
         return steer, speed, hold
+    
+    def redirect(self):
+        pass
+
+class EndOn(Controller):
+    def __init__(self, ):
+        pass
+
+    def scripted_controller(self, state, phase):
+        yaw_target = -math.pi/2 if state["y"] >= 0 else math.pi/2
+        yaw_err = state["orientation"] - yaw_target
+        
+        if phase == 0:
+            
+            y_pos = state["y"]
+            if y_pos >= 0:
+                target_pos = (0, 0.95)
+            elif y_pos <= 0:
+                target_pos = (0, -0.95)
+            action = approach_target(state, target_pos)
+            if action == [0,0,0]:
+                phase = 1.0
+            return action, phase
+        
+        if phase in [1.0, 1.1]:
+            action, phase = adjust_yaw_in_place(yaw_err, phase)
+            if action == (0,0,0):
+                phase = 2
+            return action, phase
+        
+        if phase == 2:
+            action = approach_target(state, (0, 0.21))
+            if action == [0, 0, 0]:
+                phase = 3
+            return action, phase
+        
+        if phase == 3:
+            return [0, 0, 0], phase
+
+class Paraller(Controller):
+    def __init__(self, ):
+        pass
+
+    def scripted_controller(self, state, phase):
+        pass
 
 
 class MLController(Controller):
@@ -124,28 +138,67 @@ class MLController(Controller):
         y = data[["steer", "speed"]]
         return train_test_split(X, y, test_size=test_size, random_state=random_state)
 
-    def train(self, X_train, y_train):
-        self.model = Pipeline(
-            [
-                ("scaler", StandardScaler()),
-                (
-                    "mlp",
-                    MLPRegressor(
-                        hidden_layer_sizes=(128, 64),
-                        activation="relu",
-                        solver="adam",
-                        learning_rate_init=1e-3,
-                        batch_size=128,
-                        max_iter=400,
-                        random_state=42,
-                        early_stopping=True,
-                        validation_fraction=0.1,
-                        n_iter_no_change=15,
-                    ),
-                ),
-            ]
+    def train(
+        self,
+        X_train,
+        y_train,
+        checkpoint_path=None,
+        checkpoint_every=10,
+        epochs=200,
+        batch_size=512,
+        learning_rate_init=8e-4,
+        hidden_layer_sizes=(128, 64),
+        patience=20,
+        min_delta=1e-5,
+        validation_split=0.1,
+    ):
+        X_subtrain, X_val, y_subtrain, y_val = train_test_split(
+            X_train, y_train, test_size=validation_split, random_state=42
         )
-        self.model.fit(X_train, y_train)
+
+        scaler = StandardScaler()
+        X_subtrain_scaled = scaler.fit_transform(X_subtrain)
+        X_val_scaled = scaler.transform(X_val)
+
+        mlp = MLPRegressor(
+            hidden_layer_sizes=hidden_layer_sizes,
+            activation="relu",
+            solver="adam",
+            learning_rate_init=learning_rate_init,
+            batch_size=batch_size,
+            max_iter=1,
+            warm_start=True,
+            random_state=42,
+            early_stopping=False,
+            shuffle=True,
+        )
+
+        best_val_loss = float("inf")
+        epochs_without_improve = 0
+
+        for epoch in range(1, epochs + 1):
+            mlp.fit(X_subtrain_scaled, y_subtrain)
+
+            val_pred = mlp.predict(X_val_scaled)
+            val_loss = float(np.mean((y_val.to_numpy() - val_pred) ** 2))
+            print(f"Epoch {epoch}/{epochs} - train_loss: {mlp.loss_:.6f} - val_mse: {val_loss:.6f}")
+
+            if val_loss + min_delta < best_val_loss:
+                best_val_loss = val_loss
+                epochs_without_improve = 0
+            else:
+                epochs_without_improve += 1
+
+            if checkpoint_path and epoch % checkpoint_every == 0:
+                self.model = Pipeline([("scaler", scaler), ("mlp", mlp)])
+                self.save_model(checkpoint_path)
+                print(f"Checkpoint saved at epoch {epoch}: {checkpoint_path}")
+
+            if epochs_without_improve >= patience:
+                print(f"Early stopping at epoch {epoch} (no val improvement for {patience} epochs).")
+                break
+
+        self.model = Pipeline([("scaler", scaler), ("mlp", mlp)])
         return self.model
 
     def predict(self, state):

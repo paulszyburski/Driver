@@ -4,7 +4,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from core.env import Env
 from core.utils import compute_power
-from core.controller import Controller
+from core.controller import EndOn
 from core.utils import log
 import time
 import csv
@@ -13,7 +13,7 @@ import datetime
 def main():
     date = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     env = Env() 
-    controller = Controller()  
+    controller = EndOn()  
 
     successful_episodes = 0
     
@@ -36,6 +36,8 @@ def main():
                 env.step()
                 env.follow_camera(env.car)
                 step += 1
+
+                time.sleep(1 / 240)
 
                 curr_state = [episode, step] + [env.get_state(env.car)[key] for key in ["x", "y", "orientation", "velocityx", "velocityy", "steer_angle", "dist_to_target", "yaw_err", "obs1_dist", "obs2_dist"]] + [steer, speed]
                 record.append(curr_state)

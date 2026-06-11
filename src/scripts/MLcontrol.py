@@ -22,16 +22,33 @@ ALL_COLS = [
 CSV_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "training_data_V1_2026-05-05_21-48-18.csv"
 
 MODEL_FILE = Path(__file__).resolve().parent.parent.parent / "models" / "trained_robot_model.pkl"
-MAX_TRAIN_SAMPLES = 5_000_000
+MAX_TRAIN_SAMPLES = 4_500_000
+EPOCHS = 200
+CHECKPOINT_EVERY_EPOCHS = 10
+BATCH_SIZE = 512
+LEARNING_RATE = 8e-4
+HIDDEN_LAYERS = (128, 64)
 
 def setup():
     controller = MLController()
 
     df = pd.read_csv(CSV_FILE, header=None, names=ALL_COLS)
-    df = df.sample(n=MAX_TRAIN_SAMPLES, random_state=42).reset_index(drop=True)
+    sample_n = min(MAX_TRAIN_SAMPLES, len(df))
+    df = df.sample(n=sample_n, random_state=42).reset_index(drop=True)
 
     X_train, _, y_train, _ = controller.split_data(df, test_size=0.2, random_state=42)
-    controller.train(X_train, y_train)
+    print("Starting model training...")
+    controller.train(
+        X_train,
+        y_train,
+        checkpoint_path=MODEL_FILE,
+        checkpoint_every=CHECKPOINT_EVERY_EPOCHS,
+        epochs=EPOCHS,
+        batch_size=BATCH_SIZE,
+        learning_rate_init=LEARNING_RATE,
+        hidden_layer_sizes=HIDDEN_LAYERS,
+    )
+    print("Training finished. Saving model...")
     controller.save_model(MODEL_FILE)
     return controller
 
@@ -57,5 +74,5 @@ def main():
         step += 1
 
 if __name__ == "__main__":
-    setup()
+    #setup()
     main()

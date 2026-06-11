@@ -106,7 +106,7 @@ def is_facing_target(x0, y0, orientation, x1, y1, eps=0.6):
     t = dx * math.cos(orientation) + dy * math.sin(orientation)
     return True if t >= 0 else False
 
-def steering_to_target(x0, y0, orientation, x1, y1, max_steer=0.8):
+def steering_to_target(x0, y0, orientation, x1, y1, max_steer=0.6):
     dx = x1 - x0
     dy = y1 - y0
 
