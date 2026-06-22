@@ -10,4 +10,5 @@ dependencies = [
     "scikit-learn",
     "joblib",
     "numpy",
+    "pygame",
 ]

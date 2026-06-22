@@ -8,7 +8,7 @@ import pybullet as p
 import pybullet_data
 import time
 
-from core.utils import find_joints, dist_to_target, dist_to_obstacle, random_spawn, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
+from core.ML.utils import find_joints, dist_to_target, dist_to_obstacle, random_spawn, track_held_keys, get_pos, get_orientation, compute_power, compute_corners_position, get_velocity, get_steer_angle, check_collision
 
 
 class Env:

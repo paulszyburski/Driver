@@ -2,10 +2,10 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from core.env import Env
-from core.utils import compute_power
-from core.controller import Controller
-from core.utils import log
+from core.ml.env import Env
+from core.ml.utils import compute_power
+from core.ml.controller import Controller
+from core.ml.utils import log
 import time
 
 

@@ -11,7 +11,7 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-from core.utils import approach_target, steering_to_target, track_held_keys, is_facing_target, adjust_yaw_in_place
+from core.ml.utils import approach_target, steering_to_target, track_held_keys, is_facing_target, adjust_yaw_in_place
 
 
 class Controller:

@@ -5,10 +5,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pandas as pd
 
-from core.env import Env
-from core.utils import compute_power
-from core.controller import MLController
-from core.utils import log
+from core.ML.env import Env
+from core.ML.utils import compute_power
+from core.ML.controller import MLController
+from core.ML.utils import log
 import time
 import joblib
 
