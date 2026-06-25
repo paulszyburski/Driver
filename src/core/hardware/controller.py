@@ -1,7 +1,7 @@
 from time import sleep
 
 from utils import scan_with_ultrasonic
-from lib.mBot import mBot
+from MBotlib.mBot import mBot
 
 
 class BotController:

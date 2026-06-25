@@ -3,12 +3,17 @@ from time import sleep
 def scan_with_ultrasonic(bot):
     print("test")
     distances = []
-    for i in range(31):
-        bot.doMove(80, -80)
-        
-        distance = bot.requestUltrasonicSensor(1, 4)
-        distances.append(distance)
 
-        print("distance:", distance)
-        sleep(0.1)
+
+
+
+    bot.doMove(100, -100)
+    sleep(2.17)
+        
+        #distance = bot.requestUltrasonicSensor(1, 4)
+        #distances.append(distance)
+
+        #print("distance:", distance)
+
+
     bot.doMove(0, 0)
