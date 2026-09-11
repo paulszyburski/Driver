@@ -1,0 +1,223 @@
+[LOG] Saving calibration log to: /home/paul/Projects/Driver/src/scripts/logs/parking_log_2026-07-26_16-34-57.txt
+
+========== STARTING PARKING CALIBRATION ==========
+[STATE] Initial position: (0.0, 0.0)
+[STATE] Initial angle: 0.00°
+[CAMERA] Configuring camera...
+[CAMERA] Camera configured
+
+======================================================================
+[SEARCH] Loop number: 1
+[SEARCH] Search rotation count: 0
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: 0.00°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 0.00°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 2 tapes
+[DETECTION] Raw detections: [{'box': (340, 144, 5, 6), 'center': (342.5, 147.0), 'area': 14.5, 'angle': np.float64(30.646128598837592)}, {'box': (174, 285, 3, 2), 'center': (175.5, 286.0), 'area': 1.0, 'angle': np.float64(-62.20486037516466)}]
+[DETECTION] Angle difference: 92.85°
+
+========== FOUND TWO VALID TAPES ==========
+[STATE] Scan position: (0.0, 0.0)
+[STATE] Picture heading: 0.00°
+[DETECTION] Sorted detections: [{'box': (174, 285, 3, 2), 'center': (175.5, 286.0), 'area': 1.0, 'angle': np.float64(-62.20486037516466)}, {'box': (340, 144, 5, 6), 'center': (342.5, 147.0), 'area': 14.5, 'angle': np.float64(30.646128598837592)}]
+
+------------------------------------------------------------
+[TAPE 1] Starting measurement
+[TAPE 1] Camera-relative angle: -62.20°
+[TAPE 1] Global target angle: -62.20°
+[TAPE 1] Current robot angle: 0.00°
+[TAPE 1] Rotation needed: -62.20°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: -62.20°
+[ROTATE] Starting global angle: 0.00°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: -1
+[ROTATE] Target magnitude: 62.20°
+[ROTATE] Wheel speeds: left=-150, right=150
+[ROTATE] measured=1.11° | remaining=61.26° | raw gyro=-75.88°/s | corrected=-76.18°/s | dt=2.13ms | increment=0.1622°
+[ROTATE] measured=4.62° | remaining=57.75° | raw gyro=-84.18°/s | corrected=-84.48°/s | dt=1.96ms | increment=0.1656°
+[ROTATE] measured=8.78° | remaining=53.63° | raw gyro=-107.79°/s | corrected=-108.09°/s | dt=1.95ms | increment=0.2105°
+[ROTATE] measured=13.43° | remaining=49.01° | raw gyro=-118.92°/s | corrected=-119.21°/s | dt=1.96ms | increment=0.2332°
+[ROTATE] measured=18.40° | remaining=44.05° | raw gyro=-126.03°/s | corrected=-126.33°/s | dt=1.94ms | increment=0.2450°
+[ROTATE] measured=23.48° | remaining=38.97° | raw gyro=-126.66°/s | corrected=-126.96°/s | dt=1.94ms | increment=0.2460°
+[ROTATE] measured=28.67° | remaining=33.79° | raw gyro=-127.73°/s | corrected=-128.02°/s | dt=1.95ms | increment=0.2491°
+[ROTATE] Wheel speeds: left=-100, right=100
+[ROTATE] measured=35.33° | remaining=27.11° | raw gyro=-120.00°/s | corrected=-120.30°/s | dt=1.96ms | increment=0.2361°
+[ROTATE] measured=39.58° | remaining=22.82° | raw gyro=-99.68°/s | corrected=-99.98°/s | dt=1.96ms | increment=0.1958°
+[ROTATE] measured=43.10° | remaining=19.27° | raw gyro=-83.95°/s | corrected=-84.25°/s | dt=1.96ms | increment=0.1652°
+[ROTATE] measured=46.32° | remaining=16.04° | raw gyro=-71.69°/s | corrected=-71.99°/s | dt=2.04ms | increment=0.1472°
+[ROTATE] measured=49.35° | remaining=13.00° | raw gyro=-71.94°/s | corrected=-72.24°/s | dt=1.95ms | increment=0.1410°
+[ROTATE] measured=52.15° | remaining=10.19° | raw gyro=-67.77°/s | corrected=-68.07°/s | dt=1.96ms | increment=0.1333°
+[ROTATE] measured=54.80° | remaining=7.54° | raw gyro=-69.86°/s | corrected=-70.16°/s | dt=1.95ms | increment=0.1371°
+[ROTATE] measured=57.38° | remaining=4.95° | raw gyro=-61.63°/s | corrected=-61.93°/s | dt=2.00ms | increment=0.1237°
+[ROTATE] measured=60.13° | remaining=2.21° | raw gyro=-69.69°/s | corrected=-69.99°/s | dt=1.97ms | increment=0.1380°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 61.32°
+[ROTATE] Global angle updated from 0.00° to -61.32°
+[TAPE 1] Angle changed from 0.00° to -61.32°
+[TAPE 1] Starting ultrasonic scan
+
+[ULTRASONIC] Requesting measurement
+[ULTRASONIC] Port: 1, slot: 1
+[ULTRASONIC] Raw distance: 400.0
+[ULTRASONIC] Correction: 40.00
+[ULTRASONIC] Corrected distance: 440.00
+[TAPE 1] Distance: 440.00
+[TAPE 1] Stored global angle: -61.32°
+[DATA] Angles: [-61.32378102698013]
+[DATA] Distances: [440.0]
+
+------------------------------------------------------------
+[TAPE 2] Starting measurement
+[TAPE 2] Camera-relative angle: 30.65°
+[TAPE 2] Global target angle: 30.65°
+[TAPE 2] Current robot angle: -61.32°
+[TAPE 2] Rotation needed: 91.97°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 91.97°
+[ROTATE] Starting global angle: -61.32°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 91.97°
+[ROTATE] Wheel speeds: left=150, right=-150
+[ROTATE] measured=1.42° | remaining=90.69° | raw gyro=76.26°/s | corrected=75.96°/s | dt=1.94ms | increment=0.1471°
+[ROTATE] measured=4.60° | remaining=87.54° | raw gyro=88.50°/s | corrected=88.21°/s | dt=1.94ms | increment=0.1708°
+[ROTATE] measured=8.56° | remaining=83.63° | raw gyro=105.02°/s | corrected=104.72°/s | dt=2.08ms | increment=0.2180°
+[ROTATE] measured=13.39° | remaining=78.80° | raw gyro=113.50°/s | corrected=113.20°/s | dt=1.99ms | increment=0.2248°
+[ROTATE] measured=18.55° | remaining=73.65° | raw gyro=122.63°/s | corrected=122.33°/s | dt=1.94ms | increment=0.2378°
+[ROTATE] measured=23.75° | remaining=68.52° | raw gyro=136.76°/s | corrected=136.46°/s | dt=2.14ms | increment=0.2922°
+[ROTATE] measured=29.14° | remaining=63.10° | raw gyro=141.16°/s | corrected=140.86°/s | dt=1.94ms | increment=0.2727°
+[ROTATE] measured=34.67° | remaining=57.58° | raw gyro=144.53°/s | corrected=144.24°/s | dt=1.95ms | increment=0.2807°
+[ROTATE] measured=40.30° | remaining=51.95° | raw gyro=143.53°/s | corrected=143.23°/s | dt=1.97ms | increment=0.2815°
+[ROTATE] measured=45.94° | remaining=46.31° | raw gyro=141.60°/s | corrected=141.30°/s | dt=1.97ms | increment=0.2783°
+[ROTATE] measured=51.71° | remaining=40.54° | raw gyro=140.70°/s | corrected=140.40°/s | dt=2.00ms | increment=0.2806°
+[ROTATE] measured=57.32° | remaining=34.93° | raw gyro=144.18°/s | corrected=143.88°/s | dt=1.96ms | increment=0.2816°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=64.42° | remaining=27.82° | raw gyro=142.18°/s | corrected=141.88°/s | dt=1.93ms | increment=0.2744°
+[ROTATE] measured=69.16° | remaining=23.02° | raw gyro=107.19°/s | corrected=106.89°/s | dt=1.94ms | increment=0.2069°
+[ROTATE] measured=73.32° | remaining=18.83° | raw gyro=95.65°/s | corrected=95.35°/s | dt=1.94ms | increment=0.1852°
+[ROTATE] measured=77.12° | remaining=15.03° | raw gyro=91.54°/s | corrected=91.24°/s | dt=2.00ms | increment=0.1828°
+[ROTATE] measured=80.62° | remaining=11.52° | raw gyro=85.80°/s | corrected=85.50°/s | dt=1.96ms | increment=0.1680°
+[ROTATE] measured=84.04° | remaining=8.09° | raw gyro=84.09°/s | corrected=83.79°/s | dt=1.95ms | increment=0.1636°
+[ROTATE] measured=87.33° | remaining=4.81° | raw gyro=87.82°/s | corrected=87.52°/s | dt=1.95ms | increment=0.1705°
+[ROTATE] measured=90.71° | remaining=1.43° | raw gyro=88.09°/s | corrected=87.79°/s | dt=1.95ms | increment=0.1713°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 91.07°
+[ROTATE] Global angle updated from -61.32° to 29.75°
+[TAPE 2] Angle changed from -61.32° to 29.75°
+[TAPE 2] Starting ultrasonic scan
+
+[ULTRASONIC] Requesting measurement
+[ULTRASONIC] Port: 1, slot: 1
+[ULTRASONIC] Raw distance: 29.827587127685547
+[ULTRASONIC] Correction: 2.98
+[ULTRASONIC] Corrected distance: 32.81
+[TAPE 2] Distance: 32.81
+[TAPE 2] Stored global angle: 29.75°
+[DATA] Angles: [-61.32378102698013, 29.746451031016505]
+[DATA] Distances: [440.0, 32.810345840454104]
+
+[SCAN] Both tapes measured
+[SCAN] Distances: [440.0, 32.810345840454104]
+[SCAN] Angles: [-61.32378102698013, 29.746451031016505]
+[SCAN] Robot position: (0.0, 0.0)
+
+========== CALCULATING CENTER ==========
+[CENTER] Distance 1: 440.00
+[CENTER] Distance 2: 32.81
+[CENTER] Angle 1: -61.32°
+[CENTER] Angle 2: 29.75°
+[CENTER] Scan position: (0.0, 0.0)
+
+[GEOMETRY] calculate_center_and_backset_position()
+[GEOMETRY] Robot position: (0.0, 0.0)
+[GEOMETRY] Distance 1: 440.00
+[GEOMETRY] Distance 2: 32.81
+[GEOMETRY] Angle 1: -61.32°
+[GEOMETRY] Angle 2: 29.75°
+[GEOMETRY] Point A: (-386.03, 211.14)
+[GEOMETRY] Point B: (16.28, 28.49)
+[GEOMETRY] Center S: (-184.88, 119.81)
+[GEOMETRY] AB dx: 402.31
+[GEOMETRY] AB dy: -182.65
+[GEOMETRY] AB has a finite slope
+[GEOMETRY] Slope AB: -0.4540047532739575
+[GEOMETRY] Perpendicular slope: 2.2026201108880805
+[GEOMETRY] Perpendicular line: y - 119.8125 = 2.2026(x - -184.8764)
+[GEOMETRY] Backset 1: (-178.68, 133.47)
+[GEOMETRY] Backset 2: (-191.08, 106.15)
+[CENTER] Complete result: {'center': (-184.876354535052, 119.81252173978798), 'point_a': (-386.0319796853358, 211.13813170581125), 'point_b': (16.27927061523179, 28.486911773764714), 'line_slope': -0.4540047532739575, 'perpendicular_slope': 2.2026201108880805, 'perpendicular_formula': 'y - 119.8125 = 2.2026(x - -184.8764)', 'backset_positions': ((-178.67543147914105, 133.470799568807), (-191.07727759096295, 106.15424391076897))}
+[CENTER] Target center: (-184.88, 119.81)
+
+========== MOVING TO CENTER ==========
+[MOVE] Current position: (0.0, 0.0)
+[MOVE] Current angle: 29.75°
+
+[MOVE_TO] move_to() called
+[MOVE_TO] Current position: (0.0, 0.0)
+[MOVE_TO] Target position: (-184.88, 119.81)
+[MOVE_TO] Current angle: 29.75°
+[MOVE_TO] dx: -184.88
+[MOVE_TO] dy: 119.81
+[MOVE_TO] Target angle: -57.05°
+[MOVE_TO] Required turn: -86.80°
+[MOVE_TO] Required distance: 220.31
+[MOVE_TO] Starting rotation
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: -86.80°
+[ROTATE] Starting global angle: 29.75°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: -1
+[ROTATE] Target magnitude: 86.80°
+[ROTATE] Wheel speeds: left=-150, right=150
+[ROTATE] measured=2.26° | remaining=84.73° | raw gyro=-75.98°/s | corrected=-76.28°/s | dt=2.49ms | increment=0.1902°
+[ROTATE] measured=6.66° | remaining=80.35° | raw gyro=-106.31°/s | corrected=-106.60°/s | dt=1.97ms | increment=0.2098°
+[ROTATE] measured=11.15° | remaining=75.88° | raw gyro=-118.52°/s | corrected=-118.82°/s | dt=1.95ms | increment=0.2314°
+[ROTATE] measured=16.22° | remaining=70.84° | raw gyro=-128.98°/s | corrected=-129.28°/s | dt=2.02ms | increment=0.2617°
+[ROTATE] measured=21.65° | remaining=65.42° | raw gyro=-134.82°/s | corrected=-135.12°/s | dt=1.96ms | increment=0.2652°
+[ROTATE] measured=26.85° | remaining=60.20° | raw gyro=-130.60°/s | corrected=-130.89°/s | dt=1.95ms | increment=0.2548°
+[ROTATE] measured=32.35° | remaining=54.71° | raw gyro=-132.20°/s | corrected=-132.50°/s | dt=1.94ms | increment=0.2575°
+[ROTATE] measured=37.74° | remaining=49.32° | raw gyro=-135.19°/s | corrected=-135.49°/s | dt=1.95ms | increment=0.2636°
+[ROTATE] measured=43.18° | remaining=43.89° | raw gyro=-136.27°/s | corrected=-136.57°/s | dt=1.96ms | increment=0.2676°
+[ROTATE] measured=48.66° | remaining=38.41° | raw gyro=-136.70°/s | corrected=-137.00°/s | dt=1.97ms | increment=0.2696°
+[ROTATE] measured=54.13° | remaining=32.94° | raw gyro=-138.26°/s | corrected=-138.56°/s | dt=1.96ms | increment=0.2715°
+[ROTATE] Wheel speeds: left=-100, right=100
+[ROTATE] measured=60.84° | remaining=26.20° | raw gyro=-123.88°/s | corrected=-124.18°/s | dt=1.94ms | increment=0.2405°
+[ROTATE] measured=65.08° | remaining=21.92° | raw gyro=-102.11°/s | corrected=-102.41°/s | dt=1.95ms | increment=0.2000°
+[ROTATE] measured=68.93° | remaining=18.04° | raw gyro=-90.17°/s | corrected=-90.47°/s | dt=1.95ms | increment=0.1763°
+[ROTATE] measured=72.36° | remaining=14.61° | raw gyro=-85.94°/s | corrected=-86.24°/s | dt=1.95ms | increment=0.1682°
+[ROTATE] measured=75.51° | remaining=11.44° | raw gyro=-75.71°/s | corrected=-76.01°/s | dt=1.95ms | increment=0.1486°
+[ROTATE] measured=78.61° | remaining=8.33° | raw gyro=-73.08°/s | corrected=-73.38°/s | dt=1.99ms | increment=0.1460°
+[ROTATE] measured=81.69° | remaining=5.26° | raw gyro=-74.73°/s | corrected=-75.03°/s | dt=1.95ms | increment=0.1465°
+[ROTATE] measured=84.72° | remaining=2.23° | raw gyro=-77.07°/s | corrected=-77.37°/s | dt=1.94ms | increment=0.1504°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 85.91°
+[ROTATE] Global angle updated from 29.75° to -56.16°
+[MOVE_TO] Rotation finished
+[MOVE_TO] Angle after rotation: -56.16°
+[MOVE_TO] Starting forward drive
+
+[DRIVE] drive_distance() called
+[DRIVE] Requested distance: 220.31
+[DRIVE] Starting position: (0.0, 0.0)
+[DRIVE] Current heading: -56.16°
+[DRIVE] Drive time: 15.736s
+[DRIVE] Starting motors: left=100, right=100
+[DRIVE] Motors stopped
+[DRIVE] Delta X: -182.98
+[DRIVE] Delta Y: 122.68
+[DRIVE] Position updated from (0.00, 0.00) to (-182.98, 122.68)
+[MOVE_TO] Forward drive finished
+[MOVE_TO] Estimated position: (-182.98400906139867, 122.68316616241766)
+[MOVE_TO] Position set to target: (-184.876354535052, 119.81252173978798)
+
+========== PARKING COMPLETE ==========
+[STATE] Final position: (-184.876354535052, 119.81252173978798)
+[STATE] Final angle: -56.16°
+[LOG] Closing log file: /home/paul/Projects/Driver/src/scripts/logs/parking_log_2026-07-26_16-34-57.txt

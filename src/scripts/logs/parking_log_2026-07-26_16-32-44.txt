@@ -1,0 +1,2098 @@
+[LOG] Saving calibration log to: /home/paul/Projects/Driver/src/scripts/logs/parking_log_2026-07-26_16-32-44.txt
+
+========== STARTING PARKING CALIBRATION ==========
+[STATE] Initial position: (0.0, 0.0)
+[STATE] Initial angle: 0.00°
+[CAMERA] Configuring camera...
+[CAMERA] Camera configured
+
+======================================================================
+[SEARCH] Loop number: 1
+[SEARCH] Search rotation count: 0
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: 0.00°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 0.00°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 1 tapes
+[DETECTION] Raw detections: [{'box': (234, 514, 1, 2), 'center': (234.5, 515.0), 'area': 0.0, 'angle': np.float64(-178.38439352311303)}]
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 0.00°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.84° | remaining=29.25° | raw gyro=45.74°/s | corrected=45.43°/s | dt=2.14ms | increment=0.0974°
+[ROTATE] measured=2.90° | remaining=27.22° | raw gyro=58.43°/s | corrected=58.11°/s | dt=2.07ms | increment=0.1201°
+[ROTATE] measured=5.76° | remaining=24.37° | raw gyro=67.83°/s | corrected=67.52°/s | dt=2.05ms | increment=0.1383°
+[ROTATE] measured=8.65° | remaining=21.50° | raw gyro=76.27°/s | corrected=75.96°/s | dt=1.94ms | increment=0.1475°
+[ROTATE] measured=11.75° | remaining=18.39° | raw gyro=73.11°/s | corrected=72.80°/s | dt=1.94ms | increment=0.1412°
+[ROTATE] measured=14.96° | remaining=15.19° | raw gyro=77.39°/s | corrected=77.08°/s | dt=1.94ms | increment=0.1494°
+[ROTATE] measured=18.44° | remaining=11.72° | raw gyro=83.50°/s | corrected=83.18°/s | dt=1.94ms | increment=0.1612°
+[ROTATE] measured=21.82° | remaining=8.36° | raw gyro=91.04°/s | corrected=90.73°/s | dt=1.95ms | increment=0.1767°
+[ROTATE] measured=25.33° | remaining=4.84° | raw gyro=83.95°/s | corrected=83.64°/s | dt=1.98ms | increment=0.1655°
+[ROTATE] measured=28.68° | remaining=1.48° | raw gyro=83.08°/s | corrected=82.77°/s | dt=1.95ms | increment=0.1613°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.01°
+[ROTATE] Global angle updated from 0.00° to 29.01°
+[SEARCH] Angle changed from 0.00° to 29.01°
+[SEARCH] Rotation counter: 1
+[SEARCH] rots % 12 = 1
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 2
+[SEARCH] Search rotation count: 1
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: 29.01°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 29.01°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 29.01°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.39° | remaining=29.67° | raw gyro=34.46°/s | corrected=34.15°/s | dt=1.97ms | increment=0.0671°
+[ROTATE] measured=2.81° | remaining=27.30° | raw gyro=55.57°/s | corrected=55.26°/s | dt=1.98ms | increment=0.1094°
+[ROTATE] measured=5.18° | remaining=24.98° | raw gyro=78.52°/s | corrected=78.21°/s | dt=2.09ms | increment=0.1631°
+[ROTATE] measured=8.17° | remaining=21.97° | raw gyro=71.91°/s | corrected=71.60°/s | dt=1.95ms | increment=0.1394°
+[ROTATE] measured=11.38° | remaining=18.78° | raw gyro=83.80°/s | corrected=83.49°/s | dt=1.97ms | increment=0.1641°
+[ROTATE] measured=14.67° | remaining=15.50° | raw gyro=87.01°/s | corrected=86.70°/s | dt=1.95ms | increment=0.1692°
+[ROTATE] measured=17.97° | remaining=12.19° | raw gyro=84.99°/s | corrected=84.68°/s | dt=1.95ms | increment=0.1648°
+[ROTATE] measured=21.14° | remaining=9.03° | raw gyro=83.83°/s | corrected=83.52°/s | dt=1.95ms | increment=0.1628°
+[ROTATE] measured=24.37° | remaining=5.78° | raw gyro=79.01°/s | corrected=78.70°/s | dt=1.96ms | increment=0.1542°
+[ROTATE] measured=27.64° | remaining=2.52° | raw gyro=77.08°/s | corrected=76.77°/s | dt=1.97ms | increment=0.1514°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.09°
+[ROTATE] Global angle updated from 29.01° to 58.10°
+[SEARCH] Angle changed from 29.01° to 58.10°
+[SEARCH] Rotation counter: 2
+[SEARCH] rots % 12 = 2
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 3
+[SEARCH] Search rotation count: 2
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: 58.10°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 58.10°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 58.10°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.32° | remaining=29.72° | raw gyro=23.94°/s | corrected=23.63°/s | dt=1.94ms | increment=0.0458°
+[ROTATE] measured=2.52° | remaining=27.59° | raw gyro=51.94°/s | corrected=51.63°/s | dt=1.96ms | increment=0.1012°
+[ROTATE] measured=4.78° | remaining=25.34° | raw gyro=60.08°/s | corrected=59.76°/s | dt=1.94ms | increment=0.1162°
+[ROTATE] measured=7.66° | remaining=22.49° | raw gyro=72.46°/s | corrected=72.15°/s | dt=1.95ms | increment=0.1410°
+[ROTATE] measured=10.33° | remaining=19.82° | raw gyro=73.73°/s | corrected=73.41°/s | dt=1.96ms | increment=0.1438°
+[ROTATE] measured=13.51° | remaining=16.66° | raw gyro=70.61°/s | corrected=70.30°/s | dt=2.49ms | increment=0.1751°
+[ROTATE] measured=16.57° | remaining=13.58° | raw gyro=73.63°/s | corrected=73.32°/s | dt=1.99ms | increment=0.1462°
+[ROTATE] measured=19.48° | remaining=10.66° | raw gyro=72.55°/s | corrected=72.24°/s | dt=1.95ms | increment=0.1409°
+[ROTATE] measured=22.36° | remaining=7.79° | raw gyro=77.07°/s | corrected=76.76°/s | dt=1.96ms | increment=0.1502°
+[ROTATE] measured=25.29° | remaining=4.85° | raw gyro=72.50°/s | corrected=72.19°/s | dt=1.96ms | increment=0.1412°
+[ROTATE] measured=28.21° | remaining=1.94° | raw gyro=73.21°/s | corrected=72.89°/s | dt=1.96ms | increment=0.1426°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.09°
+[ROTATE] Global angle updated from 58.10° to 87.19°
+[SEARCH] Angle changed from 58.10° to 87.19°
+[SEARCH] Rotation counter: 3
+[SEARCH] rots % 12 = 3
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 4
+[SEARCH] Search rotation count: 3
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: 87.19°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 87.19°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 87.19°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.27° | remaining=29.80° | raw gyro=39.01°/s | corrected=38.70°/s | dt=1.95ms | increment=0.0753°
+[ROTATE] measured=2.00° | remaining=28.06° | raw gyro=29.80°/s | corrected=29.49°/s | dt=1.94ms | increment=0.0573°
+[ROTATE] measured=3.94° | remaining=26.15° | raw gyro=43.57°/s | corrected=43.26°/s | dt=1.94ms | increment=0.0839°
+[ROTATE] measured=6.14° | remaining=23.97° | raw gyro=57.97°/s | corrected=57.66°/s | dt=1.94ms | increment=0.1121°
+[ROTATE] measured=8.56° | remaining=21.57° | raw gyro=66.44°/s | corrected=66.13°/s | dt=1.94ms | increment=0.1282°
+[ROTATE] measured=11.15° | remaining=18.98° | raw gyro=65.05°/s | corrected=64.74°/s | dt=1.95ms | increment=0.1261°
+[ROTATE] measured=13.77° | remaining=16.36° | raw gyro=70.29°/s | corrected=69.98°/s | dt=1.93ms | increment=0.1354°
+[ROTATE] measured=16.78° | remaining=13.37° | raw gyro=79.37°/s | corrected=79.06°/s | dt=1.94ms | increment=0.1535°
+[ROTATE] measured=19.78° | remaining=10.38° | raw gyro=79.16°/s | corrected=78.85°/s | dt=1.94ms | increment=0.1526°
+[ROTATE] measured=22.86° | remaining=7.29° | raw gyro=74.27°/s | corrected=73.96°/s | dt=1.94ms | increment=0.1438°
+[ROTATE] measured=25.99° | remaining=4.17° | raw gyro=81.97°/s | corrected=81.66°/s | dt=1.94ms | increment=0.1584°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.08°
+[ROTATE] Global angle updated from 87.19° to 116.27°
+[SEARCH] Angle changed from 87.19° to 116.27°
+[SEARCH] Rotation counter: 4
+[SEARCH] rots % 12 = 4
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 5
+[SEARCH] Search rotation count: 4
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: 116.27°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 116.27°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 116.27°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.17° | remaining=29.84° | raw gyro=7.85°/s | corrected=7.53°/s | dt=1.99ms | increment=0.0150°
+[ROTATE] measured=2.15° | remaining=27.94° | raw gyro=44.27°/s | corrected=43.96°/s | dt=1.96ms | increment=0.0863°
+[ROTATE] measured=3.93° | remaining=26.18° | raw gyro=57.71°/s | corrected=57.40°/s | dt=1.99ms | increment=0.1142°
+[ROTATE] measured=6.22° | remaining=23.89° | raw gyro=55.94°/s | corrected=55.63°/s | dt=1.95ms | increment=0.1083°
+[ROTATE] measured=8.75° | remaining=21.37° | raw gyro=65.08°/s | corrected=64.77°/s | dt=1.95ms | increment=0.1265°
+[ROTATE] measured=11.38° | remaining=18.75° | raw gyro=67.19°/s | corrected=66.88°/s | dt=1.95ms | increment=0.1302°
+[ROTATE] measured=14.01° | remaining=16.12° | raw gyro=69.47°/s | corrected=69.15°/s | dt=1.94ms | increment=0.1345°
+[ROTATE] measured=16.78° | remaining=13.35° | raw gyro=65.59°/s | corrected=65.28°/s | dt=1.99ms | increment=0.1300°
+[ROTATE] measured=19.57° | remaining=10.58° | raw gyro=73.44°/s | corrected=73.12°/s | dt=1.97ms | increment=0.1443°
+[ROTATE] measured=22.38° | remaining=7.77° | raw gyro=77.47°/s | corrected=77.15°/s | dt=1.95ms | increment=0.1501°
+[ROTATE] measured=25.44° | remaining=4.71° | raw gyro=77.36°/s | corrected=77.05°/s | dt=1.95ms | increment=0.1502°
+[ROTATE] measured=28.60° | remaining=1.55° | raw gyro=76.23°/s | corrected=75.92°/s | dt=1.95ms | increment=0.1482°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.09°
+[ROTATE] Global angle updated from 116.27° to 145.36°
+[SEARCH] Angle changed from 116.27° to 145.36°
+[SEARCH] Rotation counter: 5
+[SEARCH] rots % 12 = 5
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 6
+[SEARCH] Search rotation count: 5
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: 145.36°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 145.36°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 145.36°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.24° | remaining=29.80° | raw gyro=22.06°/s | corrected=21.75°/s | dt=1.95ms | increment=0.0425°
+[ROTATE] measured=2.54° | remaining=27.56° | raw gyro=50.61°/s | corrected=50.30°/s | dt=1.96ms | increment=0.0985°
+[ROTATE] measured=5.23° | remaining=24.92° | raw gyro=78.46°/s | corrected=78.15°/s | dt=1.99ms | increment=0.1558°
+[ROTATE] measured=8.42° | remaining=21.74° | raw gyro=79.21°/s | corrected=78.89°/s | dt=1.96ms | increment=0.1548°
+[ROTATE] measured=11.72° | remaining=18.45° | raw gyro=88.49°/s | corrected=88.18°/s | dt=1.95ms | increment=0.1718°
+[ROTATE] measured=15.19° | remaining=14.97° | raw gyro=86.53°/s | corrected=86.22°/s | dt=1.94ms | increment=0.1676°
+[ROTATE] measured=18.71° | remaining=11.46° | raw gyro=84.66°/s | corrected=84.34°/s | dt=1.96ms | increment=0.1657°
+[ROTATE] measured=22.14° | remaining=8.03° | raw gyro=85.15°/s | corrected=84.83°/s | dt=1.95ms | increment=0.1657°
+[ROTATE] measured=25.48° | remaining=4.70° | raw gyro=88.38°/s | corrected=88.07°/s | dt=1.96ms | increment=0.1730°
+[ROTATE] measured=28.71° | remaining=1.45° | raw gyro=83.05°/s | corrected=82.74°/s | dt=1.95ms | increment=0.1613°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.06°
+[ROTATE] Global angle updated from 145.36° to 174.42°
+[SEARCH] Angle changed from 145.36° to 174.42°
+[SEARCH] Rotation counter: 6
+[SEARCH] rots % 12 = 6
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 7
+[SEARCH] Search rotation count: 6
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: 174.42°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 174.42°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 2 tapes
+[DETECTION] Raw detections: [{'box': (173, 288, 1, 2), 'center': (173.5, 289.0), 'area': 0.0, 'angle': np.float64(-65.00669473774026)}, {'box': (174, 286, 1, 1), 'center': (174.5, 286.5), 'area': 0.0, 'angle': np.float64(-62.91250938596326)}]
+[DETECTION] Angle difference: 2.09°
+[SEARCH] The two detections are less than 5° apart
+[SEARCH] Treating detection pair as invalid
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 174.42°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.22° | remaining=29.81° | raw gyro=17.47°/s | corrected=17.15°/s | dt=1.94ms | increment=0.0333°
+[ROTATE] measured=2.32° | remaining=27.77° | raw gyro=49.22°/s | corrected=48.91°/s | dt=1.94ms | increment=0.0949°
+[ROTATE] measured=4.78° | remaining=25.35° | raw gyro=68.43°/s | corrected=68.11°/s | dt=1.94ms | increment=0.1322°
+[ROTATE] measured=7.74° | remaining=22.40° | raw gyro=73.65°/s | corrected=73.34°/s | dt=1.94ms | increment=0.1423°
+[ROTATE] measured=10.87° | remaining=19.29° | raw gyro=83.92°/s | corrected=83.61°/s | dt=1.94ms | increment=0.1626°
+[ROTATE] measured=14.21° | remaining=15.96° | raw gyro=91.63°/s | corrected=91.32°/s | dt=1.94ms | increment=0.1772°
+[ROTATE] measured=17.74° | remaining=12.43° | raw gyro=87.77°/s | corrected=87.46°/s | dt=1.93ms | increment=0.1692°
+[ROTATE] measured=21.24° | remaining=8.93° | raw gyro=90.03°/s | corrected=89.72°/s | dt=1.94ms | increment=0.1740°
+[ROTATE] measured=24.83° | remaining=5.34° | raw gyro=91.54°/s | corrected=91.23°/s | dt=1.94ms | increment=0.1768°
+[ROTATE] measured=28.38° | remaining=1.81° | raw gyro=96.70°/s | corrected=96.39°/s | dt=1.94ms | increment=0.1871°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.10°
+[ROTATE] Global angle updated from 174.42° to -156.48°
+[SEARCH] Angle changed from 174.42° to -156.48°
+[SEARCH] Rotation counter: 7
+
+======================================================================
+[SEARCH] Loop number: 8
+[SEARCH] Search rotation count: 7
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: -156.48°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -156.48°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -156.48°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.21° | remaining=29.82° | raw gyro=15.34°/s | corrected=15.03°/s | dt=1.99ms | increment=0.0299°
+[ROTATE] measured=2.46° | remaining=27.65° | raw gyro=56.15°/s | corrected=55.84°/s | dt=2.04ms | increment=0.1137°
+[ROTATE] measured=4.90° | remaining=25.24° | raw gyro=70.44°/s | corrected=70.13°/s | dt=1.95ms | increment=0.1370°
+[ROTATE] measured=7.77° | remaining=22.36° | raw gyro=71.54°/s | corrected=71.23°/s | dt=1.95ms | increment=0.1386°
+[ROTATE] measured=10.62° | remaining=19.51° | raw gyro=63.51°/s | corrected=63.20°/s | dt=1.94ms | increment=0.1227°
+[ROTATE] measured=13.46° | remaining=16.66° | raw gyro=61.74°/s | corrected=61.43°/s | dt=1.98ms | increment=0.1214°
+[ROTATE] measured=16.42° | remaining=13.73° | raw gyro=77.83°/s | corrected=77.52°/s | dt=1.95ms | increment=0.1511°
+[ROTATE] measured=19.36° | remaining=10.79° | raw gyro=76.78°/s | corrected=76.47°/s | dt=1.95ms | increment=0.1494°
+[ROTATE] measured=22.41° | remaining=7.74° | raw gyro=76.96°/s | corrected=76.65°/s | dt=1.96ms | increment=0.1499°
+[ROTATE] measured=25.59° | remaining=4.56° | raw gyro=79.59°/s | corrected=79.28°/s | dt=1.96ms | increment=0.1557°
+[ROTATE] measured=28.80° | remaining=1.36° | raw gyro=82.78°/s | corrected=82.47°/s | dt=1.95ms | increment=0.1609°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.15°
+[ROTATE] Global angle updated from -156.48° to -127.33°
+[SEARCH] Angle changed from -156.48° to -127.33°
+[SEARCH] Rotation counter: 8
+[SEARCH] rots % 12 = 8
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 9
+[SEARCH] Search rotation count: 8
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: -127.33°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -127.33°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -127.33°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.30° | remaining=29.76° | raw gyro=31.98°/s | corrected=31.67°/s | dt=1.95ms | increment=0.0617°
+[ROTATE] measured=2.78° | remaining=27.33° | raw gyro=55.11°/s | corrected=54.80°/s | dt=2.02ms | increment=0.1105°
+[ROTATE] measured=5.40° | remaining=24.75° | raw gyro=78.02°/s | corrected=77.70°/s | dt=1.95ms | increment=0.1515°
+[ROTATE] measured=8.39° | remaining=21.75° | raw gyro=75.97°/s | corrected=75.66°/s | dt=1.94ms | increment=0.1469°
+[ROTATE] measured=11.71° | remaining=18.45° | raw gyro=80.64°/s | corrected=80.33°/s | dt=1.95ms | increment=0.1565°
+[ROTATE] measured=15.19° | remaining=14.98° | raw gyro=84.72°/s | corrected=84.40°/s | dt=1.95ms | increment=0.1646°
+[ROTATE] measured=18.66° | remaining=11.53° | raw gyro=95.25°/s | corrected=94.94°/s | dt=1.97ms | increment=0.1872°
+[ROTATE] measured=22.13° | remaining=8.04° | raw gyro=83.01°/s | corrected=82.70°/s | dt=1.96ms | increment=0.1624°
+[ROTATE] measured=25.61° | remaining=4.56° | raw gyro=84.37°/s | corrected=84.05°/s | dt=1.96ms | increment=0.1649°
+[ROTATE] measured=29.13° | remaining=1.05° | raw gyro=88.76°/s | corrected=88.45°/s | dt=2.02ms | increment=0.1788°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.13°
+[ROTATE] Global angle updated from -127.33° to -98.20°
+[SEARCH] Angle changed from -127.33° to -98.20°
+[SEARCH] Rotation counter: 9
+[SEARCH] rots % 12 = 9
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 10
+[SEARCH] Search rotation count: 9
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: -98.20°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -98.20°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 1 tapes
+[DETECTION] Raw detections: [{'box': (81, 422, 1, 2), 'center': (81.5, 423.0), 'area': 0.0, 'angle': np.float64(-123.0175140650805)}]
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -98.20°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.44° | remaining=29.63° | raw gyro=36.72°/s | corrected=36.40°/s | dt=1.98ms | increment=0.0720°
+[ROTATE] measured=2.62° | remaining=27.45° | raw gyro=37.62°/s | corrected=37.31°/s | dt=2.00ms | increment=0.0745°
+[ROTATE] measured=5.08° | remaining=25.07° | raw gyro=75.18°/s | corrected=74.86°/s | dt=1.95ms | increment=0.1457°
+[ROTATE] measured=7.63° | remaining=22.50° | raw gyro=66.37°/s | corrected=66.05°/s | dt=1.95ms | increment=0.1291°
+[ROTATE] measured=10.61° | remaining=19.54° | raw gyro=75.34°/s | corrected=75.03°/s | dt=1.96ms | increment=0.1471°
+[ROTATE] measured=13.44° | remaining=16.71° | raw gyro=79.44°/s | corrected=79.12°/s | dt=1.95ms | increment=0.1542°
+[ROTATE] measured=16.33° | remaining=13.80° | raw gyro=67.39°/s | corrected=67.08°/s | dt=1.95ms | increment=0.1309°
+[ROTATE] measured=19.05° | remaining=11.09° | raw gyro=70.12°/s | corrected=69.81°/s | dt=1.97ms | increment=0.1377°
+[ROTATE] measured=21.67° | remaining=8.46° | raw gyro=69.60°/s | corrected=69.29°/s | dt=1.95ms | increment=0.1351°
+[ROTATE] measured=24.93° | remaining=5.22° | raw gyro=78.63°/s | corrected=78.31°/s | dt=1.94ms | increment=0.1520°
+[ROTATE] measured=28.13° | remaining=2.03° | raw gyro=82.55°/s | corrected=82.24°/s | dt=1.97ms | increment=0.1623°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.13°
+[ROTATE] Global angle updated from -98.20° to -69.07°
+[SEARCH] Angle changed from -98.20° to -69.07°
+[SEARCH] Rotation counter: 10
+[SEARCH] rots % 12 = 10
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 11
+[SEARCH] Search rotation count: 10
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: -69.07°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -69.07°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 1 tapes
+[DETECTION] Raw detections: [{'box': (158, 492, 2, 2), 'center': (159.0, 493.0), 'area': 0.0, 'angle': np.float64(-154.9106261310714)}]
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -69.07°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.44° | remaining=29.61° | raw gyro=23.25°/s | corrected=22.94°/s | dt=2.03ms | increment=0.0466°
+[ROTATE] measured=2.47° | remaining=27.62° | raw gyro=49.01°/s | corrected=48.70°/s | dt=1.98ms | increment=0.0965°
+[ROTATE] measured=4.99° | remaining=25.14° | raw gyro=65.01°/s | corrected=64.70°/s | dt=1.96ms | increment=0.1268°
+[ROTATE] measured=7.57° | remaining=22.57° | raw gyro=73.62°/s | corrected=73.31°/s | dt=1.97ms | increment=0.1446°
+[ROTATE] measured=10.71° | remaining=19.44° | raw gyro=77.85°/s | corrected=77.53°/s | dt=1.97ms | increment=0.1524°
+[ROTATE] measured=13.82° | remaining=16.33° | raw gyro=78.47°/s | corrected=78.16°/s | dt=1.95ms | increment=0.1523°
+[ROTATE] measured=17.05° | remaining=13.11° | raw gyro=86.05°/s | corrected=85.73°/s | dt=1.96ms | increment=0.1678°
+[ROTATE] measured=20.42° | remaining=9.75° | raw gyro=86.06°/s | corrected=85.75°/s | dt=1.95ms | increment=0.1676°
+[ROTATE] measured=23.88° | remaining=6.30° | raw gyro=87.56°/s | corrected=87.24°/s | dt=1.98ms | increment=0.1729°
+[ROTATE] measured=27.24° | remaining=2.93° | raw gyro=87.34°/s | corrected=87.03°/s | dt=1.96ms | increment=0.1709°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.16°
+[ROTATE] Global angle updated from -69.07° to -39.91°
+[SEARCH] Angle changed from -69.07° to -39.91°
+[SEARCH] Rotation counter: 11
+[SEARCH] rots % 12 = 11
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 12
+[SEARCH] Search rotation count: 11
+[STATE] Position: (0.0, 0.0)
+[STATE] Global angle: -39.91°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -39.91°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -39.91°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.28° | remaining=29.78° | raw gyro=31.11°/s | corrected=30.80°/s | dt=1.97ms | increment=0.0607°
+[ROTATE] measured=2.69° | remaining=27.43° | raw gyro=59.60°/s | corrected=59.29°/s | dt=2.01ms | increment=0.1190°
+[ROTATE] measured=5.47° | remaining=24.69° | raw gyro=82.11°/s | corrected=81.79°/s | dt=1.95ms | increment=0.1594°
+[ROTATE] measured=8.60° | remaining=21.56° | raw gyro=83.76°/s | corrected=83.44°/s | dt=1.95ms | increment=0.1623°
+[ROTATE] measured=12.13° | remaining=18.03° | raw gyro=82.81°/s | corrected=82.50°/s | dt=1.97ms | increment=0.1624°
+[ROTATE] measured=15.83° | remaining=14.35° | raw gyro=93.44°/s | corrected=93.12°/s | dt=1.96ms | increment=0.1827°
+[ROTATE] measured=19.51° | remaining=10.67° | raw gyro=93.19°/s | corrected=92.88°/s | dt=1.94ms | increment=0.1805°
+[ROTATE] measured=23.11° | remaining=7.07° | raw gyro=91.71°/s | corrected=91.40°/s | dt=1.95ms | increment=0.1780°
+[ROTATE] measured=26.71° | remaining=3.45° | raw gyro=84.63°/s | corrected=84.31°/s | dt=1.95ms | increment=0.1648°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.03°
+[ROTATE] Global angle updated from -39.91° to -10.88°
+[SEARCH] Angle changed from -39.91° to -10.88°
+[SEARCH] Rotation counter: 12
+[SEARCH] rots % 12 = 0
+[SEARCH] Completed approximately one full rotation
+[SEARCH] Driving forward 10 units
+
+[DRIVE] drive_distance() called
+[DRIVE] Requested distance: 10.00
+[DRIVE] Starting position: (0.0, 0.0)
+[DRIVE] Current heading: -10.88°
+[DRIVE] Drive time: 0.714s
+[DRIVE] Starting motors: left=100, right=100
+[DRIVE] Motors stopped
+[DRIVE] Delta X: -1.89
+[DRIVE] Delta Y: 9.82
+[DRIVE] Position updated from (0.00, 0.00) to (-1.89, 9.82)
+[SEARCH] Position changed from (0.0, 0.0) to (-1.8880149164839353, 9.820152731762077)
+
+======================================================================
+[SEARCH] Loop number: 13
+[SEARCH] Search rotation count: 12
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: -10.88°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -10.88°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -10.88°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.17° | remaining=29.85° | raw gyro=11.94°/s | corrected=11.63°/s | dt=1.98ms | increment=0.0230°
+[ROTATE] measured=1.68° | remaining=28.38° | raw gyro=32.03°/s | corrected=31.72°/s | dt=1.96ms | increment=0.0621°
+[ROTATE] measured=3.35° | remaining=26.77° | raw gyro=57.74°/s | corrected=57.43°/s | dt=1.96ms | increment=0.1128°
+[ROTATE] measured=4.97° | remaining=25.13° | raw gyro=52.75°/s | corrected=52.44°/s | dt=1.96ms | increment=0.1026°
+[ROTATE] measured=6.80° | remaining=23.29° | raw gyro=46.82°/s | corrected=46.51°/s | dt=1.94ms | increment=0.0903°
+[ROTATE] measured=9.09° | remaining=21.02° | raw gyro=53.34°/s | corrected=53.03°/s | dt=1.95ms | increment=0.1036°
+[ROTATE] measured=11.26° | remaining=18.85° | raw gyro=56.35°/s | corrected=56.04°/s | dt=1.94ms | increment=0.1086°
+[ROTATE] measured=13.60° | remaining=16.51° | raw gyro=59.18°/s | corrected=58.86°/s | dt=1.95ms | increment=0.1150°
+[ROTATE] measured=15.92° | remaining=14.19° | raw gyro=53.34°/s | corrected=53.03°/s | dt=1.95ms | increment=0.1033°
+[ROTATE] measured=18.15° | remaining=11.97° | raw gyro=62.96°/s | corrected=62.65°/s | dt=1.95ms | increment=0.1222°
+[ROTATE] measured=20.60° | remaining=9.50° | raw gyro=53.44°/s | corrected=53.12°/s | dt=1.97ms | increment=0.1046°
+[ROTATE] measured=23.18° | remaining=6.96° | raw gyro=72.53°/s | corrected=72.22°/s | dt=1.96ms | increment=0.1416°
+[ROTATE] measured=26.03° | remaining=4.11° | raw gyro=69.45°/s | corrected=69.14°/s | dt=1.99ms | increment=0.1378°
+[ROTATE] measured=28.87° | remaining=1.28° | raw gyro=78.15°/s | corrected=77.84°/s | dt=1.99ms | increment=0.1553°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.04°
+[ROTATE] Global angle updated from -10.88° to 18.15°
+[SEARCH] Angle changed from -10.88° to 18.15°
+[SEARCH] Rotation counter: 13
+[SEARCH] rots % 12 = 1
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 14
+[SEARCH] Search rotation count: 13
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: 18.15°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 18.15°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 18.15°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.44° | remaining=29.63° | raw gyro=37.65°/s | corrected=37.34°/s | dt=1.93ms | increment=0.0722°
+[ROTATE] measured=2.09° | remaining=27.97° | raw gyro=27.02°/s | corrected=26.71°/s | dt=1.97ms | increment=0.0525°
+[ROTATE] measured=2.99° | remaining=27.03° | raw gyro=8.98°/s | corrected=8.66°/s | dt=1.98ms | increment=0.0172°
+[ROTATE] measured=3.55° | remaining=26.52° | raw gyro=34.11°/s | corrected=33.79°/s | dt=1.96ms | increment=0.0663°
+[ROTATE] measured=4.89° | remaining=25.16° | raw gyro=30.44°/s | corrected=30.13°/s | dt=1.96ms | increment=0.0592°
+[ROTATE] measured=5.82° | remaining=24.22° | raw gyro=17.04°/s | corrected=16.73°/s | dt=1.95ms | increment=0.0327°
+[ROTATE] measured=6.36° | remaining=23.69° | raw gyro=30.53°/s | corrected=30.22°/s | dt=1.94ms | increment=0.0587°
+[ROTATE] measured=7.66° | remaining=22.39° | raw gyro=27.57°/s | corrected=27.26°/s | dt=1.95ms | increment=0.0532°
+[ROTATE] measured=8.84° | remaining=21.21° | raw gyro=24.24°/s | corrected=23.93°/s | dt=1.97ms | increment=0.0470°
+[ROTATE] measured=9.72° | remaining=20.33° | raw gyro=27.22°/s | corrected=26.91°/s | dt=1.98ms | increment=0.0534°
+[ROTATE] measured=10.74° | remaining=19.31° | raw gyro=25.08°/s | corrected=24.77°/s | dt=1.98ms | increment=0.0490°
+[ROTATE] measured=11.69° | remaining=18.34° | raw gyro=16.64°/s | corrected=16.33°/s | dt=1.95ms | increment=0.0318°
+[ROTATE] measured=11.97° | remaining=18.04° | raw gyro=7.62°/s | corrected=7.31°/s | dt=1.96ms | increment=0.0143°
+[ROTATE] measured=12.43° | remaining=17.59° | raw gyro=8.76°/s | corrected=8.45°/s | dt=1.96ms | increment=0.0165°
+[ROTATE] measured=13.23° | remaining=16.78° | raw gyro=7.16°/s | corrected=6.85°/s | dt=1.95ms | increment=0.0134°
+[ROTATE] measured=13.67° | remaining=16.38° | raw gyro=22.92°/s | corrected=22.60°/s | dt=1.98ms | increment=0.0447°
+[ROTATE] measured=15.02° | remaining=15.04° | raw gyro=31.45°/s | corrected=31.14°/s | dt=1.96ms | increment=0.0610°
+[ROTATE] measured=15.73° | remaining=14.29° | raw gyro=10.05°/s | corrected=9.73°/s | dt=1.95ms | increment=0.0190°
+[ROTATE] measured=15.95° | remaining=14.06° | raw gyro=9.28°/s | corrected=8.97°/s | dt=2.00ms | increment=0.0180°
+[ROTATE] measured=16.98° | remaining=13.08° | raw gyro=29.83°/s | corrected=29.52°/s | dt=1.98ms | increment=0.0584°
+[ROTATE] measured=17.50° | remaining=12.51° | raw gyro=4.72°/s | corrected=4.40°/s | dt=1.95ms | increment=0.0086°
+[ROTATE] measured=17.63° | remaining=12.38° | raw gyro=4.63°/s | corrected=4.31°/s | dt=1.95ms | increment=0.0084°
+[ROTATE] measured=17.83° | remaining=12.17° | raw gyro=-0.43°/s | corrected=-0.74°/s | dt=1.95ms | increment=0.0014°
+[ROTATE] measured=17.95° | remaining=12.06° | raw gyro=-4.60°/s | corrected=-4.91°/s | dt=1.95ms | increment=0.0096°
+[ROTATE] measured=18.06° | remaining=11.94° | raw gyro=2.02°/s | corrected=1.70°/s | dt=2.04ms | increment=0.0035°
+[ROTATE] measured=18.11° | remaining=11.89° | raw gyro=1.95°/s | corrected=1.64°/s | dt=1.94ms | increment=0.0032°
+[ROTATE] measured=18.18° | remaining=11.82° | raw gyro=1.40°/s | corrected=1.09°/s | dt=2.46ms | increment=0.0027°
+[ROTATE] measured=18.21° | remaining=11.79° | raw gyro=0.44°/s | corrected=0.13°/s | dt=2.45ms | increment=0.0003°
+[ROTATE] measured=18.26° | remaining=11.74° | raw gyro=1.30°/s | corrected=0.99°/s | dt=2.44ms | increment=0.0024°
+[ROTATE] measured=18.27° | remaining=11.73° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.46ms | increment=0.0001°
+[ROTATE] measured=18.30° | remaining=11.70° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.42ms | increment=0.0001°
+[ROTATE] measured=18.31° | remaining=11.69° | raw gyro=0.66°/s | corrected=0.34°/s | dt=2.42ms | increment=0.0008°
+[ROTATE] measured=18.33° | remaining=11.67° | raw gyro=-0.38°/s | corrected=-0.69°/s | dt=2.49ms | increment=0.0017°
+[ROTATE] measured=18.34° | remaining=11.66° | raw gyro=0.43°/s | corrected=0.11°/s | dt=2.48ms | increment=0.0003°
+[ROTATE] measured=18.35° | remaining=11.65° | raw gyro=0.46°/s | corrected=0.15°/s | dt=2.45ms | increment=0.0004°
+[ROTATE] measured=18.37° | remaining=11.63° | raw gyro=0.46°/s | corrected=0.15°/s | dt=2.45ms | increment=0.0004°
+[ROTATE] measured=18.37° | remaining=11.63° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.46ms | increment=0.0001°
+[ROTATE] measured=18.38° | remaining=11.62° | raw gyro=0.32°/s | corrected=0.01°/s | dt=2.52ms | increment=0.0000°
+[ROTATE] measured=18.39° | remaining=11.61° | raw gyro=0.11°/s | corrected=-0.21°/s | dt=2.45ms | increment=0.0005°
+[ROTATE] measured=18.40° | remaining=11.60° | raw gyro=0.70°/s | corrected=0.39°/s | dt=2.53ms | increment=0.0010°
+[ROTATE] measured=18.40° | remaining=11.60° | raw gyro=0.06°/s | corrected=-0.25°/s | dt=2.45ms | increment=0.0006°
+[ROTATE] measured=18.41° | remaining=11.59° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.52ms | increment=0.0003°
+[ROTATE] measured=18.42° | remaining=11.58° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.49ms | increment=0.0003°
+[ROTATE] measured=18.42° | remaining=11.58° | raw gyro=0.61°/s | corrected=0.30°/s | dt=2.49ms | increment=0.0007°
+[ROTATE] measured=18.43° | remaining=11.57° | raw gyro=0.32°/s | corrected=0.01°/s | dt=2.45ms | increment=0.0000°
+[ROTATE] measured=18.43° | remaining=11.57° | raw gyro=0.21°/s | corrected=-0.10°/s | dt=2.48ms | increment=0.0002°
+[ROTATE] measured=18.44° | remaining=11.56° | raw gyro=0.58°/s | corrected=0.27°/s | dt=2.48ms | increment=0.0007°
+[ROTATE] measured=18.45° | remaining=11.55° | raw gyro=0.35°/s | corrected=0.04°/s | dt=2.49ms | increment=0.0001°
+[ROTATE] measured=18.46° | remaining=11.54° | raw gyro=0.32°/s | corrected=0.01°/s | dt=2.45ms | increment=0.0000°
+[ROTATE] measured=18.46° | remaining=11.54° | raw gyro=0.21°/s | corrected=-0.10°/s | dt=2.47ms | increment=0.0002°
+[ROTATE] measured=18.47° | remaining=11.53° | raw gyro=0.18°/s | corrected=-0.13°/s | dt=2.45ms | increment=0.0003°
+[ROTATE] measured=18.48° | remaining=11.52° | raw gyro=0.70°/s | corrected=0.39°/s | dt=2.44ms | increment=0.0010°
+[ROTATE] measured=18.48° | remaining=11.52° | raw gyro=0.52°/s | corrected=0.21°/s | dt=2.44ms | increment=0.0005°
+[ROTATE] measured=18.49° | remaining=11.51° | raw gyro=0.27°/s | corrected=-0.04°/s | dt=2.46ms | increment=0.0001°
+[ROTATE] measured=18.50° | remaining=11.50° | raw gyro=0.47°/s | corrected=0.16°/s | dt=2.46ms | increment=0.0004°
+[ROTATE] measured=18.50° | remaining=11.50° | raw gyro=0.50°/s | corrected=0.19°/s | dt=2.44ms | increment=0.0005°
+[ROTATE] measured=18.51° | remaining=11.49° | raw gyro=0.02°/s | corrected=-0.30°/s | dt=2.44ms | increment=0.0007°
+[ROTATE] measured=18.52° | remaining=11.48° | raw gyro=0.63°/s | corrected=0.31°/s | dt=2.45ms | increment=0.0008°
+[ROTATE] measured=18.53° | remaining=11.47° | raw gyro=0.12°/s | corrected=-0.19°/s | dt=2.44ms | increment=0.0005°
+[ROTATE] measured=18.53° | remaining=11.47° | raw gyro=0.18°/s | corrected=-0.13°/s | dt=2.47ms | increment=0.0003°
+[ROTATE] measured=18.54° | remaining=11.46° | raw gyro=0.64°/s | corrected=0.33°/s | dt=2.45ms | increment=0.0008°
+[ROTATE] measured=18.55° | remaining=11.45° | raw gyro=0.14°/s | corrected=-0.18°/s | dt=2.45ms | increment=0.0004°
+[ROTATE] measured=18.55° | remaining=11.45° | raw gyro=0.52°/s | corrected=0.21°/s | dt=2.44ms | increment=0.0005°
+[ROTATE] measured=18.56° | remaining=11.44° | raw gyro=0.12°/s | corrected=-0.19°/s | dt=2.44ms | increment=0.0005°
+[ROTATE] measured=18.56° | remaining=11.44° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.48ms | increment=0.0001°
+[ROTATE] measured=18.57° | remaining=11.43° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.47ms | increment=0.0003°
+[ROTATE] measured=18.58° | remaining=11.42° | raw gyro=0.06°/s | corrected=-0.25°/s | dt=2.44ms | increment=0.0006°
+[ROTATE] measured=18.58° | remaining=11.42° | raw gyro=0.41°/s | corrected=0.10°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=18.59° | remaining=11.41° | raw gyro=0.53°/s | corrected=0.22°/s | dt=2.45ms | increment=0.0005°
+[ROTATE] measured=18.60° | remaining=11.40° | raw gyro=0.23°/s | corrected=-0.08°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=18.60° | remaining=11.40° | raw gyro=0.03°/s | corrected=-0.28°/s | dt=2.46ms | increment=0.0007°
+[ROTATE] measured=18.61° | remaining=11.39° | raw gyro=0.21°/s | corrected=-0.10°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=18.62° | remaining=11.38° | raw gyro=0.11°/s | corrected=-0.21°/s | dt=2.46ms | increment=0.0005°
+[ROTATE] measured=18.62° | remaining=11.38° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.45ms | increment=0.0001°
+[ROTATE] measured=18.63° | remaining=11.37° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.45ms | increment=0.0001°
+[ROTATE] measured=18.64° | remaining=11.37° | raw gyro=0.14°/s | corrected=-0.18°/s | dt=2.44ms | increment=0.0004°
+[ROTATE] measured=18.64° | remaining=11.36° | raw gyro=0.06°/s | corrected=-0.25°/s | dt=2.44ms | increment=0.0006°
+[ROTATE] measured=18.65° | remaining=11.35° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.44ms | increment=0.0000°
+[ROTATE] measured=18.65° | remaining=11.35° | raw gyro=0.24°/s | corrected=-0.07°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=18.66° | remaining=11.34° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.47ms | increment=0.0000°
+[ROTATE] measured=18.66° | remaining=11.34° | raw gyro=0.27°/s | corrected=-0.04°/s | dt=2.46ms | increment=0.0001°
+[ROTATE] measured=18.67° | remaining=11.33° | raw gyro=0.21°/s | corrected=-0.10°/s | dt=2.47ms | increment=0.0002°
+[ROTATE] measured=18.68° | remaining=11.32° | raw gyro=0.24°/s | corrected=-0.07°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=18.68° | remaining=11.32° | raw gyro=-0.09°/s | corrected=-0.40°/s | dt=2.46ms | increment=0.0010°
+[ROTATE] measured=18.69° | remaining=11.31° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.53ms | increment=0.0000°
+[ROTATE] measured=18.70° | remaining=11.30° | raw gyro=0.46°/s | corrected=0.15°/s | dt=2.50ms | increment=0.0004°
+[ROTATE] measured=18.70° | remaining=11.30° | raw gyro=0.49°/s | corrected=0.18°/s | dt=2.44ms | increment=0.0004°
+[ROTATE] measured=18.71° | remaining=11.29° | raw gyro=0.41°/s | corrected=0.10°/s | dt=2.46ms | increment=0.0002°
+[ROTATE] measured=18.72° | remaining=11.29° | raw gyro=0.11°/s | corrected=-0.21°/s | dt=2.72ms | increment=0.0006°
+[ROTATE] measured=18.72° | remaining=11.28° | raw gyro=0.23°/s | corrected=-0.08°/s | dt=2.46ms | increment=0.0002°
+[ROTATE] measured=18.73° | remaining=11.27° | raw gyro=0.14°/s | corrected=-0.18°/s | dt=2.46ms | increment=0.0004°
+[ROTATE] measured=18.73° | remaining=11.27° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.47ms | increment=0.0001°
+[ROTATE] measured=18.74° | remaining=11.26° | raw gyro=0.37°/s | corrected=0.05°/s | dt=2.42ms | increment=0.0001°
+[ROTATE] measured=18.75° | remaining=11.25° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.42ms | increment=0.0003°
+[ROTATE] measured=18.75° | remaining=11.25° | raw gyro=0.24°/s | corrected=-0.07°/s | dt=2.42ms | increment=0.0002°
+[ROTATE] measured=18.76° | remaining=11.24° | raw gyro=0.35°/s | corrected=0.04°/s | dt=2.42ms | increment=0.0001°
+[ROTATE] measured=18.76° | remaining=11.24° | raw gyro=0.37°/s | corrected=0.05°/s | dt=2.45ms | increment=0.0001°
+[ROTATE] measured=18.77° | remaining=11.23° | raw gyro=0.60°/s | corrected=0.28°/s | dt=2.46ms | increment=0.0007°
+[ROTATE] measured=18.78° | remaining=11.22° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.44ms | increment=0.0000°
+[ROTATE] measured=18.78° | remaining=11.22° | raw gyro=-0.08°/s | corrected=-0.39°/s | dt=2.43ms | increment=0.0009°
+[ROTATE] measured=18.79° | remaining=11.21° | raw gyro=0.23°/s | corrected=-0.08°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=18.80° | remaining=11.20° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.46ms | increment=0.0000°
+[ROTATE] measured=18.80° | remaining=11.20° | raw gyro=0.27°/s | corrected=-0.04°/s | dt=2.46ms | increment=0.0001°
+[ROTATE] measured=18.81° | remaining=11.19° | raw gyro=0.29°/s | corrected=-0.02°/s | dt=2.47ms | increment=0.0001°
+[ROTATE] measured=18.82° | remaining=11.18° | raw gyro=0.53°/s | corrected=0.22°/s | dt=2.52ms | increment=0.0006°
+[ROTATE] measured=18.83° | remaining=11.17° | raw gyro=0.23°/s | corrected=-0.08°/s | dt=2.48ms | increment=0.0002°
+[ROTATE] measured=18.83° | remaining=11.17° | raw gyro=0.40°/s | corrected=0.08°/s | dt=2.42ms | increment=0.0002°
+[ROTATE] measured=18.84° | remaining=11.16° | raw gyro=0.41°/s | corrected=0.10°/s | dt=2.42ms | increment=0.0002°
+[ROTATE] measured=18.85° | remaining=11.15° | raw gyro=0.27°/s | corrected=-0.04°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=18.85° | remaining=11.15° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=18.86° | remaining=11.14° | raw gyro=0.05°/s | corrected=-0.27°/s | dt=2.44ms | increment=0.0007°
+[ROTATE] measured=18.86° | remaining=11.14° | raw gyro=0.46°/s | corrected=0.15°/s | dt=2.45ms | increment=0.0004°
+[ROTATE] measured=18.87° | remaining=11.13° | raw gyro=0.49°/s | corrected=0.18°/s | dt=2.45ms | increment=0.0004°
+[ROTATE] measured=18.88° | remaining=11.13° | raw gyro=0.21°/s | corrected=-0.10°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=18.88° | remaining=11.12° | raw gyro=0.29°/s | corrected=-0.02°/s | dt=2.46ms | increment=0.0001°
+[ROTATE] measured=18.89° | remaining=11.11° | raw gyro=0.23°/s | corrected=-0.08°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=18.89° | remaining=11.11° | raw gyro=0.24°/s | corrected=-0.07°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=18.90° | remaining=11.10° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=18.91° | remaining=11.09° | raw gyro=0.60°/s | corrected=0.28°/s | dt=2.45ms | increment=0.0007°
+[ROTATE] measured=18.91° | remaining=11.09° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.47ms | increment=0.0000°
+[ROTATE] measured=18.92° | remaining=11.08° | raw gyro=0.32°/s | corrected=0.01°/s | dt=2.45ms | increment=0.0000°
+[ROTATE] measured=18.93° | remaining=11.07° | raw gyro=0.61°/s | corrected=0.30°/s | dt=2.45ms | increment=0.0007°
+[ROTATE] measured=18.93° | remaining=11.07° | raw gyro=0.46°/s | corrected=0.15°/s | dt=2.47ms | increment=0.0004°
+[ROTATE] measured=18.94° | remaining=11.06° | raw gyro=0.40°/s | corrected=0.08°/s | dt=2.49ms | increment=0.0002°
+[ROTATE] measured=18.94° | remaining=11.06° | raw gyro=0.21°/s | corrected=-0.10°/s | dt=2.48ms | increment=0.0002°
+[ROTATE] measured=18.95° | remaining=11.05° | raw gyro=0.11°/s | corrected=-0.21°/s | dt=2.45ms | increment=0.0005°
+[ROTATE] measured=18.96° | remaining=11.04° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.44ms | increment=0.0003°
+[ROTATE] measured=18.96° | remaining=11.04° | raw gyro=0.40°/s | corrected=0.08°/s | dt=2.46ms | increment=0.0002°
+[ROTATE] measured=18.97° | remaining=11.03° | raw gyro=0.43°/s | corrected=0.11°/s | dt=2.50ms | increment=0.0003°
+[ROTATE] measured=18.98° | remaining=11.02° | raw gyro=0.12°/s | corrected=-0.19°/s | dt=2.46ms | increment=0.0005°
+[ROTATE] measured=18.98° | remaining=11.02° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=18.99° | remaining=11.01° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.46ms | increment=0.0003°
+[ROTATE] measured=19.00° | remaining=11.00° | raw gyro=0.49°/s | corrected=0.18°/s | dt=2.44ms | increment=0.0004°
+[ROTATE] measured=19.00° | remaining=11.00° | raw gyro=0.43°/s | corrected=0.11°/s | dt=2.45ms | increment=0.0003°
+[ROTATE] measured=19.01° | remaining=10.99° | raw gyro=0.02°/s | corrected=-0.30°/s | dt=2.46ms | increment=0.0007°
+[ROTATE] measured=19.01° | remaining=10.99° | raw gyro=0.15°/s | corrected=-0.16°/s | dt=2.47ms | increment=0.0004°
+[ROTATE] measured=19.02° | remaining=10.98° | raw gyro=0.09°/s | corrected=-0.22°/s | dt=2.50ms | increment=0.0006°
+[ROTATE] measured=19.02° | remaining=10.98° | raw gyro=0.37°/s | corrected=0.05°/s | dt=2.45ms | increment=0.0001°
+[ROTATE] measured=19.03° | remaining=10.97° | raw gyro=0.37°/s | corrected=0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=19.04° | remaining=10.96° | raw gyro=0.32°/s | corrected=0.01°/s | dt=2.44ms | increment=0.0000°
+[ROTATE] measured=19.04° | remaining=10.96° | raw gyro=0.43°/s | corrected=0.11°/s | dt=2.45ms | increment=0.0003°
+[ROTATE] measured=19.05° | remaining=10.95° | raw gyro=0.44°/s | corrected=0.13°/s | dt=2.44ms | increment=0.0003°
+[ROTATE] measured=19.05° | remaining=10.95° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.47ms | increment=0.0003°
+[ROTATE] measured=19.06° | remaining=10.94° | raw gyro=0.60°/s | corrected=0.28°/s | dt=2.54ms | increment=0.0007°
+[ROTATE] measured=19.08° | remaining=10.93° | raw gyro=0.76°/s | corrected=0.45°/s | dt=2.50ms | increment=0.0011°
+[ROTATE] measured=19.08° | remaining=10.92° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.46ms | increment=0.0000°
+[ROTATE] measured=19.09° | remaining=10.91° | raw gyro=0.29°/s | corrected=-0.02°/s | dt=2.47ms | increment=0.0001°
+[ROTATE] measured=19.10° | remaining=10.90° | raw gyro=0.15°/s | corrected=-0.16°/s | dt=2.45ms | increment=0.0004°
+[ROTATE] measured=19.10° | remaining=10.90° | raw gyro=0.12°/s | corrected=-0.19°/s | dt=2.45ms | increment=0.0005°
+[ROTATE] measured=19.11° | remaining=10.89° | raw gyro=0.12°/s | corrected=-0.19°/s | dt=2.45ms | increment=0.0005°
+[ROTATE] measured=19.12° | remaining=10.88° | raw gyro=0.49°/s | corrected=0.18°/s | dt=2.48ms | increment=0.0004°
+[ROTATE] measured=19.12° | remaining=10.88° | raw gyro=0.44°/s | corrected=0.13°/s | dt=2.45ms | increment=0.0003°
+[ROTATE] measured=19.13° | remaining=10.87° | raw gyro=0.40°/s | corrected=0.08°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=19.14° | remaining=10.86° | raw gyro=0.37°/s | corrected=0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=19.14° | remaining=10.86° | raw gyro=0.06°/s | corrected=-0.25°/s | dt=2.41ms | increment=0.0006°
+[ROTATE] measured=19.22° | remaining=10.79° | raw gyro=5.76°/s | corrected=5.44°/s | dt=2.42ms | increment=0.0132°
+[ROTATE] measured=19.46° | remaining=10.55° | raw gyro=-1.97°/s | corrected=-2.28°/s | dt=2.44ms | increment=0.0056°
+[ROTATE] measured=19.51° | remaining=10.49° | raw gyro=1.44°/s | corrected=1.12°/s | dt=2.44ms | increment=0.0027°
+[ROTATE] measured=19.56° | remaining=10.44° | raw gyro=0.81°/s | corrected=0.50°/s | dt=2.47ms | increment=0.0012°
+[ROTATE] measured=19.62° | remaining=10.38° | raw gyro=-0.31°/s | corrected=-0.62°/s | dt=2.49ms | increment=0.0015°
+[ROTATE] measured=19.67° | remaining=10.33° | raw gyro=-2.47°/s | corrected=-2.79°/s | dt=2.46ms | increment=0.0069°
+[ROTATE] measured=19.82° | remaining=10.20° | raw gyro=-4.92°/s | corrected=-5.23°/s | dt=2.45ms | increment=0.0128°
+[ROTATE] measured=19.99° | remaining=10.02° | raw gyro=-3.60°/s | corrected=-3.92°/s | dt=2.44ms | increment=0.0096°
+[ROTATE] measured=20.13° | remaining=9.87° | raw gyro=-1.11°/s | corrected=-1.43°/s | dt=2.46ms | increment=0.0035°
+[ROTATE] measured=20.21° | remaining=9.80° | raw gyro=1.34°/s | corrected=1.03°/s | dt=2.47ms | increment=0.0026°
+[ROTATE] measured=20.53° | remaining=9.54° | raw gyro=-28.95°/s | corrected=-29.26°/s | dt=2.49ms | increment=0.0729°
+[ROTATE] measured=20.94° | remaining=9.06° | raw gyro=0.60°/s | corrected=0.28°/s | dt=2.45ms | increment=0.0007°
+[ROTATE] measured=21.37° | remaining=8.64° | raw gyro=-4.67°/s | corrected=-4.98°/s | dt=2.41ms | increment=0.0120°
+[ROTATE] measured=21.61° | remaining=8.39° | raw gyro=-1.68°/s | corrected=-1.99°/s | dt=2.44ms | increment=0.0049°
+[ROTATE] measured=21.95° | remaining=8.09° | raw gyro=-15.37°/s | corrected=-15.69°/s | dt=2.56ms | increment=0.0402°
+[ROTATE] measured=22.37° | remaining=7.64° | raw gyro=4.02°/s | corrected=3.70°/s | dt=2.32ms | increment=0.0086°
+[ROTATE] measured=22.61° | remaining=7.40° | raw gyro=-6.50°/s | corrected=-6.82°/s | dt=2.33ms | increment=0.0159°
+[ROTATE] measured=22.95° | remaining=7.05° | raw gyro=-0.02°/s | corrected=-0.33°/s | dt=2.44ms | increment=0.0008°
+[ROTATE] measured=23.28° | remaining=6.73° | raw gyro=-2.93°/s | corrected=-3.24°/s | dt=2.45ms | increment=0.0079°
+[ROTATE] measured=23.52° | remaining=6.50° | raw gyro=-9.57°/s | corrected=-9.89°/s | dt=2.47ms | increment=0.0244°
+[ROTATE] measured=24.18° | remaining=5.85° | raw gyro=12.53°/s | corrected=12.22°/s | dt=2.44ms | increment=0.0298°
+[ROTATE] measured=24.48° | remaining=5.54° | raw gyro=-6.98°/s | corrected=-7.29°/s | dt=2.45ms | increment=0.0179°
+[ROTATE] measured=24.80° | remaining=5.21° | raw gyro=3.53°/s | corrected=3.21°/s | dt=2.44ms | increment=0.0078°
+[ROTATE] measured=25.05° | remaining=4.96° | raw gyro=-5.07°/s | corrected=-5.38°/s | dt=2.42ms | increment=0.0130°
+[ROTATE] measured=25.14° | remaining=4.86° | raw gyro=-0.15°/s | corrected=-0.47°/s | dt=2.44ms | increment=0.0011°
+[ROTATE] measured=25.28° | remaining=4.73° | raw gyro=5.56°/s | corrected=5.24°/s | dt=2.45ms | increment=0.0128°
+[ROTATE] measured=25.46° | remaining=4.54° | raw gyro=-0.03°/s | corrected=-0.34°/s | dt=2.44ms | increment=0.0008°
+[ROTATE] measured=25.66° | remaining=4.35° | raw gyro=3.79°/s | corrected=3.47°/s | dt=2.47ms | increment=0.0086°
+[ROTATE] measured=25.77° | remaining=4.25° | raw gyro=-6.35°/s | corrected=-6.66°/s | dt=2.54ms | increment=0.0169°
+[ROTATE] measured=25.97° | remaining=4.03° | raw gyro=-0.20°/s | corrected=-0.51°/s | dt=2.47ms | increment=0.0013°
+[ROTATE] measured=26.08° | remaining=3.93° | raw gyro=2.37°/s | corrected=2.05°/s | dt=2.48ms | increment=0.0051°
+[ROTATE] measured=26.24° | remaining=3.77° | raw gyro=-2.02°/s | corrected=-2.33°/s | dt=2.47ms | increment=0.0057°
+[ROTATE] measured=26.38° | remaining=3.62° | raw gyro=2.34°/s | corrected=2.02°/s | dt=2.42ms | increment=0.0049°
+[ROTATE] measured=26.59° | remaining=3.42° | raw gyro=5.79°/s | corrected=5.47°/s | dt=2.42ms | increment=0.0132°
+[ROTATE] measured=27.18° | remaining=2.83° | raw gyro=5.68°/s | corrected=5.37°/s | dt=2.42ms | increment=0.0130°
+[ROTATE] measured=27.37° | remaining=2.64° | raw gyro=2.99°/s | corrected=2.68°/s | dt=2.45ms | increment=0.0066°
+[ROTATE] measured=27.56° | remaining=2.45° | raw gyro=-4.09°/s | corrected=-4.40°/s | dt=2.45ms | increment=0.0108°
+[ROTATE] measured=27.65° | remaining=2.35° | raw gyro=0.38°/s | corrected=0.07°/s | dt=2.46ms | increment=0.0002°
+[ROTATE] measured=27.76° | remaining=2.24° | raw gyro=0.15°/s | corrected=-0.16°/s | dt=2.46ms | increment=0.0004°
+[ROTATE] measured=28.19° | remaining=1.93° | raw gyro=50.95°/s | corrected=50.63°/s | dt=2.46ms | increment=0.1244°
+[ROTATE] measured=29.00° | remaining=1.04° | raw gyro=-13.54°/s | corrected=-13.85°/s | dt=2.48ms | increment=0.0343°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.04°
+[ROTATE] Global angle updated from 18.15° to 47.19°
+[SEARCH] Angle changed from 18.15° to 47.19°
+[SEARCH] Rotation counter: 14
+[SEARCH] rots % 12 = 2
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 15
+[SEARCH] Search rotation count: 14
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: 47.19°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 47.19°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 47.19°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=1.42° | remaining=28.60° | raw gyro=13.24°/s | corrected=12.92°/s | dt=1.94ms | increment=0.0250°
+[ROTATE] measured=1.93° | remaining=28.09° | raw gyro=12.95°/s | corrected=12.63°/s | dt=2.00ms | increment=0.0252°
+[ROTATE] measured=3.16° | remaining=26.93° | raw gyro=49.71°/s | corrected=49.40°/s | dt=1.95ms | increment=0.0964°
+[ROTATE] measured=4.55° | remaining=25.51° | raw gyro=27.15°/s | corrected=26.83°/s | dt=1.95ms | increment=0.0523°
+[ROTATE] measured=5.63° | remaining=24.45° | raw gyro=-41.77°/s | corrected=-42.08°/s | dt=1.97ms | increment=0.0830°
+[ROTATE] measured=7.86° | remaining=22.26° | raw gyro=-58.90°/s | corrected=-59.21°/s | dt=1.96ms | increment=0.1163°
+[ROTATE] measured=9.64° | remaining=20.40° | raw gyro=-19.76°/s | corrected=-20.07°/s | dt=1.95ms | increment=0.0391°
+[ROTATE] measured=9.87° | remaining=20.15° | raw gyro=-8.46°/s | corrected=-8.77°/s | dt=1.97ms | increment=0.0173°
+[ROTATE] measured=10.39° | remaining=19.67° | raw gyro=27.68°/s | corrected=27.37°/s | dt=1.95ms | increment=0.0533°
+[ROTATE] measured=11.84° | remaining=18.24° | raw gyro=41.77°/s | corrected=41.46°/s | dt=1.95ms | increment=0.0807°
+[ROTATE] measured=13.27° | remaining=16.77° | raw gyro=20.44°/s | corrected=20.13°/s | dt=1.95ms | increment=0.0393°
+[ROTATE] measured=13.74° | remaining=16.29° | raw gyro=-15.71°/s | corrected=-16.02°/s | dt=1.95ms | increment=0.0312°
+[ROTATE] measured=14.29° | remaining=15.74° | raw gyro=-15.42°/s | corrected=-15.73°/s | dt=1.96ms | increment=0.0308°
+[ROTATE] measured=15.44° | remaining=14.65° | raw gyro=-42.44°/s | corrected=-42.76°/s | dt=1.98ms | increment=0.0849°
+[ROTATE] measured=17.11° | remaining=12.95° | raw gyro=-32.76°/s | corrected=-33.08°/s | dt=1.96ms | increment=0.0648°
+[ROTATE] measured=17.92° | remaining=12.11° | raw gyro=-15.56°/s | corrected=-15.87°/s | dt=1.95ms | increment=0.0310°
+[ROTATE] measured=18.46° | remaining=11.55° | raw gyro=-5.54°/s | corrected=-5.85°/s | dt=1.95ms | increment=0.0114°
+[ROTATE] measured=18.60° | remaining=11.40° | raw gyro=-1.13°/s | corrected=-1.44°/s | dt=1.95ms | increment=0.0028°
+[ROTATE] measured=18.73° | remaining=11.29° | raw gyro=-7.37°/s | corrected=-7.69°/s | dt=1.95ms | increment=0.0150°
+[ROTATE] measured=19.02° | remaining=11.00° | raw gyro=-9.19°/s | corrected=-9.50°/s | dt=1.95ms | increment=0.0185°
+[ROTATE] measured=19.71° | remaining=10.34° | raw gyro=-24.76°/s | corrected=-25.08°/s | dt=1.95ms | increment=0.0489°
+[ROTATE] measured=20.88° | remaining=9.16° | raw gyro=-21.28°/s | corrected=-21.60°/s | dt=1.95ms | increment=0.0421°
+[ROTATE] measured=21.38° | remaining=8.63° | raw gyro=6.72°/s | corrected=6.40°/s | dt=1.96ms | increment=0.0125°
+[ROTATE] measured=21.64° | remaining=8.38° | raw gyro=-11.54°/s | corrected=-11.85°/s | dt=1.96ms | increment=0.0233°
+[ROTATE] measured=22.49° | remaining=7.56° | raw gyro=-25.56°/s | corrected=-25.87°/s | dt=1.96ms | increment=0.0507°
+[ROTATE] measured=23.93° | remaining=6.16° | raw gyro=-47.95°/s | corrected=-48.27°/s | dt=1.96ms | increment=0.0944°
+[ROTATE] measured=26.36° | remaining=3.74° | raw gyro=-51.56°/s | corrected=-51.87°/s | dt=1.96ms | increment=0.1015°
+[ROTATE] measured=27.36° | remaining=2.64° | raw gyro=0.60°/s | corrected=0.28°/s | dt=1.97ms | increment=0.0006°
+[ROTATE] measured=27.85° | remaining=2.18° | raw gyro=17.82°/s | corrected=17.50°/s | dt=1.95ms | increment=0.0342°
+[ROTATE] measured=28.59° | remaining=1.44° | raw gyro=13.89°/s | corrected=13.58°/s | dt=2.20ms | increment=0.0298°
+[ROTATE] measured=28.91° | remaining=1.09° | raw gyro=0.55°/s | corrected=0.24°/s | dt=1.99ms | increment=0.0005°
+[ROTATE] measured=28.95° | remaining=1.05° | raw gyro=-0.35°/s | corrected=-0.66°/s | dt=1.96ms | increment=0.0013°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.01°
+[ROTATE] Global angle updated from 47.19° to 76.20°
+[SEARCH] Angle changed from 47.19° to 76.20°
+[SEARCH] Rotation counter: 15
+[SEARCH] rots % 12 = 3
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 16
+[SEARCH] Search rotation count: 15
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: 76.20°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 76.20°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 76.20°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.62° | remaining=29.39° | raw gyro=-3.91°/s | corrected=-4.22°/s | dt=1.94ms | increment=0.0082°
+[ROTATE] measured=1.02° | remaining=29.07° | raw gyro=20.50°/s | corrected=20.19°/s | dt=4.15ms | increment=0.0838°
+[ROTATE] measured=1.36° | remaining=28.65° | raw gyro=5.42°/s | corrected=5.11°/s | dt=1.96ms | increment=0.0100°
+[ROTATE] measured=1.82° | remaining=28.23° | raw gyro=-23.33°/s | corrected=-23.64°/s | dt=2.19ms | increment=0.0518°
+[ROTATE] measured=3.45° | remaining=26.67° | raw gyro=-58.08°/s | corrected=-58.39°/s | dt=1.96ms | increment=0.1144°
+[ROTATE] measured=4.98° | remaining=25.06° | raw gyro=-20.26°/s | corrected=-20.57°/s | dt=2.01ms | increment=0.0413°
+[ROTATE] measured=5.40° | remaining=24.60° | raw gyro=1.19°/s | corrected=0.88°/s | dt=1.95ms | increment=0.0017°
+[ROTATE] measured=5.50° | remaining=24.50° | raw gyro=4.55°/s | corrected=4.24°/s | dt=1.95ms | increment=0.0083°
+[ROTATE] measured=5.97° | remaining=24.07° | raw gyro=-22.98°/s | corrected=-23.29°/s | dt=1.95ms | increment=0.0455°
+[ROTATE] measured=6.64° | remaining=23.37° | raw gyro=-9.13°/s | corrected=-9.44°/s | dt=1.96ms | increment=0.0185°
+[ROTATE] measured=7.02° | remaining=23.00° | raw gyro=-10.40°/s | corrected=-10.71°/s | dt=1.96ms | increment=0.0210°
+[ROTATE] measured=7.48° | remaining=22.54° | raw gyro=-13.48°/s | corrected=-13.79°/s | dt=1.97ms | increment=0.0271°
+[ROTATE] measured=8.15° | remaining=21.88° | raw gyro=-16.46°/s | corrected=-16.77°/s | dt=1.96ms | increment=0.0329°
+[ROTATE] measured=8.74° | remaining=21.28° | raw gyro=-14.50°/s | corrected=-14.82°/s | dt=1.95ms | increment=0.0289°
+[ROTATE] measured=9.31° | remaining=20.72° | raw gyro=-12.79°/s | corrected=-13.11°/s | dt=1.95ms | increment=0.0256°
+[ROTATE] measured=9.87° | remaining=20.15° | raw gyro=-12.38°/s | corrected=-12.69°/s | dt=1.95ms | increment=0.0247°
+[ROTATE] measured=10.28° | remaining=19.73° | raw gyro=-7.10°/s | corrected=-7.41°/s | dt=1.97ms | increment=0.0146°
+[ROTATE] measured=11.05° | remaining=19.00° | raw gyro=-26.87°/s | corrected=-27.18°/s | dt=1.95ms | increment=0.0531°
+[ROTATE] measured=12.16° | remaining=17.90° | raw gyro=-31.16°/s | corrected=-31.47°/s | dt=2.02ms | increment=0.0635°
+[ROTATE] measured=13.65° | remaining=16.44° | raw gyro=-45.22°/s | corrected=-45.53°/s | dt=1.96ms | increment=0.0893°
+[ROTATE] measured=14.42° | remaining=15.59° | raw gyro=7.39°/s | corrected=7.08°/s | dt=1.96ms | increment=0.0139°
+[ROTATE] measured=14.99° | remaining=15.04° | raw gyro=15.89°/s | corrected=15.58°/s | dt=1.94ms | increment=0.0303°
+[ROTATE] measured=15.68° | remaining=14.34° | raw gyro=11.97°/s | corrected=11.66°/s | dt=1.95ms | increment=0.0227°
+[ROTATE] measured=15.86° | remaining=14.16° | raw gyro=-7.60°/s | corrected=-7.92°/s | dt=1.95ms | increment=0.0154°
+[ROTATE] measured=16.29° | remaining=13.72° | raw gyro=-7.53°/s | corrected=-7.84°/s | dt=1.96ms | increment=0.0153°
+[ROTATE] measured=16.53° | remaining=13.49° | raw gyro=11.85°/s | corrected=11.53°/s | dt=1.96ms | increment=0.0226°
+[ROTATE] measured=17.10° | remaining=12.93° | raw gyro=16.63°/s | corrected=16.31°/s | dt=1.96ms | increment=0.0320°
+[ROTATE] measured=17.65° | remaining=12.36° | raw gyro=9.45°/s | corrected=9.14°/s | dt=1.98ms | increment=0.0181°
+[ROTATE] measured=17.80° | remaining=12.20° | raw gyro=1.82°/s | corrected=1.50°/s | dt=1.95ms | increment=0.0029°
+[ROTATE] measured=17.86° | remaining=12.15° | raw gyro=-5.04°/s | corrected=-5.35°/s | dt=1.95ms | increment=0.0104°
+[ROTATE] measured=18.19° | remaining=11.81° | raw gyro=-1.82°/s | corrected=-2.13°/s | dt=1.98ms | increment=0.0042°
+[ROTATE] measured=18.40° | remaining=11.61° | raw gyro=6.20°/s | corrected=5.89°/s | dt=1.97ms | increment=0.0116°
+[ROTATE] measured=18.54° | remaining=11.47° | raw gyro=3.13°/s | corrected=2.82°/s | dt=1.96ms | increment=0.0055°
+[ROTATE] measured=19.07° | remaining=10.98° | raw gyro=-26.92°/s | corrected=-27.23°/s | dt=1.95ms | increment=0.0532°
+[ROTATE] measured=20.18° | remaining=9.86° | raw gyro=-21.80°/s | corrected=-22.11°/s | dt=1.95ms | increment=0.0430°
+[ROTATE] measured=20.85° | remaining=9.17° | raw gyro=-9.07°/s | corrected=-9.38°/s | dt=1.96ms | increment=0.0184°
+[ROTATE] measured=21.07° | remaining=8.94° | raw gyro=-6.00°/s | corrected=-6.31°/s | dt=1.95ms | increment=0.0123°
+[ROTATE] measured=21.73° | remaining=8.32° | raw gyro=-27.56°/s | corrected=-27.87°/s | dt=1.95ms | increment=0.0544°
+[ROTATE] measured=23.09° | remaining=6.98° | raw gyro=-34.34°/s | corrected=-34.65°/s | dt=1.96ms | increment=0.0678°
+[ROTATE] measured=24.32° | remaining=5.73° | raw gyro=-22.73°/s | corrected=-23.05°/s | dt=1.95ms | increment=0.0450°
+[ROTATE] measured=24.73° | remaining=5.29° | raw gyro=10.17°/s | corrected=9.86°/s | dt=1.95ms | increment=0.0192°
+[ROTATE] measured=25.57° | remaining=4.47° | raw gyro=24.41°/s | corrected=24.10°/s | dt=1.95ms | increment=0.0469°
+[ROTATE] measured=26.19° | remaining=3.82° | raw gyro=6.29°/s | corrected=5.98°/s | dt=1.96ms | increment=0.0117°
+[ROTATE] measured=26.44° | remaining=3.57° | raw gyro=4.12°/s | corrected=3.81°/s | dt=1.95ms | increment=0.0074°
+[ROTATE] measured=26.77° | remaining=3.25° | raw gyro=-13.07°/s | corrected=-13.38°/s | dt=1.99ms | increment=0.0267°
+[ROTATE] measured=27.36° | remaining=2.67° | raw gyro=-15.13°/s | corrected=-15.44°/s | dt=1.95ms | increment=0.0302°
+[ROTATE] measured=27.64° | remaining=2.36° | raw gyro=1.54°/s | corrected=1.23°/s | dt=1.94ms | increment=0.0024°
+[ROTATE] measured=27.74° | remaining=2.28° | raw gyro=8.21°/s | corrected=7.90°/s | dt=1.97ms | increment=0.0156°
+[ROTATE] measured=28.84° | remaining=1.25° | raw gyro=45.50°/s | corrected=45.18°/s | dt=1.95ms | increment=0.0881°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.04°
+[ROTATE] Global angle updated from 76.20° to 105.24°
+[SEARCH] Angle changed from 76.20° to 105.24°
+[SEARCH] Rotation counter: 16
+[SEARCH] rots % 12 = 4
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 17
+[SEARCH] Search rotation count: 16
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: 105.24°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 105.24°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 1 tapes
+[DETECTION] Raw detections: [{'box': (367, 423, 1, 1), 'center': (367.5, 423.5), 'area': 0.0, 'angle': np.float64(129.06847307508022)}]
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 105.24°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=2.80° | remaining=27.30° | raw gyro=55.01°/s | corrected=54.70°/s | dt=1.95ms | increment=0.1069°
+[ROTATE] measured=4.32° | remaining=25.71° | raw gyro=13.57°/s | corrected=13.26°/s | dt=1.96ms | increment=0.0260°
+[ROTATE] measured=4.57° | remaining=25.45° | raw gyro=10.24°/s | corrected=9.93°/s | dt=1.95ms | increment=0.0194°
+[ROTATE] measured=5.44° | remaining=24.61° | raw gyro=27.74°/s | corrected=27.43°/s | dt=1.95ms | increment=0.0534°
+[ROTATE] measured=6.11° | remaining=23.90° | raw gyro=5.76°/s | corrected=5.44°/s | dt=1.97ms | increment=0.0107°
+[ROTATE] measured=6.45° | remaining=23.57° | raw gyro=10.52°/s | corrected=10.21°/s | dt=2.01ms | increment=0.0205°
+[ROTATE] measured=6.81° | remaining=23.20° | raw gyro=8.32°/s | corrected=8.01°/s | dt=1.96ms | increment=0.0157°
+[ROTATE] measured=7.41° | remaining=22.64° | raw gyro=26.29°/s | corrected=25.98°/s | dt=1.95ms | increment=0.0507°
+[ROTATE] measured=9.07° | remaining=21.04° | raw gyro=55.89°/s | corrected=55.58°/s | dt=1.95ms | increment=0.1086°
+[ROTATE] measured=11.27° | remaining=18.83° | raw gyro=51.05°/s | corrected=50.74°/s | dt=1.95ms | increment=0.0989°
+[ROTATE] measured=13.05° | remaining=17.04° | raw gyro=44.72°/s | corrected=44.40°/s | dt=1.95ms | increment=0.0867°
+[ROTATE] measured=14.84° | remaining=15.25° | raw gyro=43.50°/s | corrected=43.18°/s | dt=1.96ms | increment=0.0846°
+[ROTATE] measured=16.33° | remaining=13.73° | raw gyro=32.58°/s | corrected=32.27°/s | dt=1.95ms | increment=0.0629°
+[ROTATE] measured=17.77° | remaining=12.31° | raw gyro=39.69°/s | corrected=39.38°/s | dt=1.95ms | increment=0.0769°
+[ROTATE] measured=19.63° | remaining=10.46° | raw gyro=51.22°/s | corrected=50.91°/s | dt=1.95ms | increment=0.0994°
+[ROTATE] measured=21.92° | remaining=8.19° | raw gyro=55.39°/s | corrected=55.08°/s | dt=1.95ms | increment=0.1076°
+[ROTATE] measured=23.72° | remaining=6.34° | raw gyro=33.21°/s | corrected=32.89°/s | dt=1.96ms | increment=0.0644°
+[ROTATE] measured=24.29° | remaining=5.72° | raw gyro=5.77°/s | corrected=5.46°/s | dt=1.97ms | increment=0.0108°
+[ROTATE] measured=24.51° | remaining=5.50° | raw gyro=-7.08°/s | corrected=-7.40°/s | dt=1.95ms | increment=0.0145°
+[ROTATE] measured=25.18° | remaining=4.86° | raw gyro=-17.21°/s | corrected=-17.52°/s | dt=2.08ms | increment=0.0364°
+[ROTATE] measured=25.64° | remaining=4.36° | raw gyro=0.81°/s | corrected=0.50°/s | dt=1.95ms | increment=0.0010°
+[ROTATE] measured=25.84° | remaining=4.18° | raw gyro=9.34°/s | corrected=9.03°/s | dt=1.95ms | increment=0.0176°
+[ROTATE] measured=26.55° | remaining=3.48° | raw gyro=15.89°/s | corrected=15.58°/s | dt=1.96ms | increment=0.0305°
+[ROTATE] measured=27.22° | remaining=2.82° | raw gyro=20.78°/s | corrected=20.47°/s | dt=1.96ms | increment=0.0401°
+[ROTATE] measured=28.47° | remaining=1.60° | raw gyro=35.50°/s | corrected=35.18°/s | dt=1.96ms | increment=0.0691°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.01°
+[ROTATE] Global angle updated from 105.24° to 134.25°
+[SEARCH] Angle changed from 105.24° to 134.25°
+[SEARCH] Rotation counter: 17
+[SEARCH] rots % 12 = 5
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 18
+[SEARCH] Search rotation count: 17
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: 134.25°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 134.25°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 134.25°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=1.05° | remaining=28.98° | raw gyro=-18.17°/s | corrected=-18.48°/s | dt=1.95ms | increment=0.0361°
+[ROTATE] measured=1.53° | remaining=28.48° | raw gyro=-4.55°/s | corrected=-4.86°/s | dt=1.96ms | increment=0.0095°
+[ROTATE] measured=1.64° | remaining=28.38° | raw gyro=7.34°/s | corrected=7.03°/s | dt=1.96ms | increment=0.0138°
+[ROTATE] measured=2.23° | remaining=27.82° | raw gyro=-23.33°/s | corrected=-23.64°/s | dt=2.02ms | increment=0.0477°
+[ROTATE] measured=2.95° | remaining=27.12° | raw gyro=-33.50°/s | corrected=-33.81°/s | dt=1.95ms | increment=0.0658°
+[ROTATE] measured=3.51° | remaining=26.51° | raw gyro=10.41°/s | corrected=10.10°/s | dt=1.96ms | increment=0.0198°
+[ROTATE] measured=4.26° | remaining=25.81° | raw gyro=32.41°/s | corrected=32.10°/s | dt=1.96ms | increment=0.0629°
+[ROTATE] measured=5.44° | remaining=24.66° | raw gyro=51.42°/s | corrected=51.11°/s | dt=1.95ms | increment=0.0998°
+[ROTATE] measured=6.23° | remaining=23.83° | raw gyro=31.01°/s | corrected=30.70°/s | dt=1.95ms | increment=0.0599°
+[ROTATE] measured=8.50° | remaining=21.60° | raw gyro=51.59°/s | corrected=51.28°/s | dt=1.95ms | increment=0.1002°
+[ROTATE] measured=10.62° | remaining=19.54° | raw gyro=81.51°/s | corrected=81.20°/s | dt=1.95ms | increment=0.1587°
+[ROTATE] measured=14.76° | remaining=15.42° | raw gyro=71.82°/s | corrected=71.50°/s | dt=2.46ms | increment=0.1760°
+[ROTATE] measured=18.52° | remaining=11.71° | raw gyro=91.34°/s | corrected=91.03°/s | dt=2.48ms | increment=0.2261°
+[ROTATE] measured=21.68° | remaining=8.46° | raw gyro=59.08°/s | corrected=58.77°/s | dt=2.47ms | increment=0.1454°
+[ROTATE] measured=23.61° | remaining=6.48° | raw gyro=35.80°/s | corrected=35.49°/s | dt=2.51ms | increment=0.0891°
+[ROTATE] measured=26.25° | remaining=3.87° | raw gyro=49.80°/s | corrected=49.49°/s | dt=2.45ms | increment=0.1212°
+[ROTATE] measured=29.08° | remaining=1.04° | raw gyro=48.78°/s | corrected=48.47°/s | dt=2.47ms | increment=0.1196°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.08°
+[ROTATE] Global angle updated from 134.25° to 163.34°
+[SEARCH] Angle changed from 134.25° to 163.34°
+[SEARCH] Rotation counter: 18
+[SEARCH] rots % 12 = 6
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 19
+[SEARCH] Search rotation count: 18
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: 163.34°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 163.34°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 163.34°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.41° | remaining=29.66° | raw gyro=37.01°/s | corrected=36.70°/s | dt=1.95ms | increment=0.0715°
+[ROTATE] measured=2.63° | remaining=27.45° | raw gyro=44.31°/s | corrected=43.99°/s | dt=1.95ms | increment=0.0858°
+[ROTATE] measured=5.04° | remaining=25.12° | raw gyro=80.15°/s | corrected=79.84°/s | dt=1.94ms | increment=0.1546°
+[ROTATE] measured=8.00° | remaining=22.17° | raw gyro=83.40°/s | corrected=83.09°/s | dt=1.94ms | increment=0.1611°
+[ROTATE] measured=11.33° | remaining=18.83° | raw gyro=82.32°/s | corrected=82.01°/s | dt=1.94ms | increment=0.1590°
+[ROTATE] measured=14.77° | remaining=15.40° | raw gyro=86.78°/s | corrected=86.47°/s | dt=1.94ms | increment=0.1677°
+[ROTATE] measured=18.23° | remaining=11.95° | raw gyro=91.27°/s | corrected=90.95°/s | dt=1.94ms | increment=0.1766°
+[ROTATE] measured=21.77° | remaining=8.41° | raw gyro=92.49°/s | corrected=92.18°/s | dt=1.94ms | increment=0.1788°
+[ROTATE] measured=25.37° | remaining=4.81° | raw gyro=91.21°/s | corrected=90.89°/s | dt=1.95ms | increment=0.1777°
+[ROTATE] measured=29.06° | remaining=1.12° | raw gyro=91.69°/s | corrected=91.38°/s | dt=1.94ms | increment=0.1777°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.06°
+[ROTATE] Global angle updated from 163.34° to -167.60°
+[SEARCH] Angle changed from 163.34° to -167.60°
+[SEARCH] Rotation counter: 19
+[SEARCH] rots % 12 = 7
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 20
+[SEARCH] Search rotation count: 19
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: -167.60°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -167.60°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -167.60°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.57° | remaining=29.49° | raw gyro=29.97°/s | corrected=29.66°/s | dt=1.94ms | increment=0.0575°
+[ROTATE] measured=2.96° | remaining=27.16° | raw gyro=62.11°/s | corrected=61.79°/s | dt=1.95ms | increment=0.1204°
+[ROTATE] measured=5.78° | remaining=24.36° | raw gyro=71.25°/s | corrected=70.94°/s | dt=1.96ms | increment=0.1389°
+[ROTATE] measured=8.54° | remaining=21.61° | raw gyro=75.28°/s | corrected=74.97°/s | dt=1.97ms | increment=0.1481°
+[ROTATE] measured=11.73° | remaining=18.44° | raw gyro=87.05°/s | corrected=86.74°/s | dt=1.94ms | increment=0.1685°
+[ROTATE] measured=15.02° | remaining=15.14° | raw gyro=81.18°/s | corrected=80.86°/s | dt=1.95ms | increment=0.1578°
+[ROTATE] measured=18.37° | remaining=11.80° | raw gyro=83.16°/s | corrected=82.85°/s | dt=1.96ms | increment=0.1622°
+[ROTATE] measured=21.77° | remaining=8.40° | raw gyro=87.22°/s | corrected=86.91°/s | dt=1.97ms | increment=0.1715°
+[ROTATE] measured=25.19° | remaining=4.97° | raw gyro=85.05°/s | corrected=84.74°/s | dt=1.96ms | increment=0.1664°
+[ROTATE] measured=28.78° | remaining=1.39° | raw gyro=89.51°/s | corrected=89.20°/s | dt=1.94ms | increment=0.1733°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.14°
+[ROTATE] Global angle updated from -167.60° to -138.46°
+[SEARCH] Angle changed from -167.60° to -138.46°
+[SEARCH] Rotation counter: 20
+[SEARCH] rots % 12 = 8
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 21
+[SEARCH] Search rotation count: 20
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: -138.46°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -138.46°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 1 tapes
+[DETECTION] Raw detections: [{'box': (175, 285, 1, 1), 'center': (175.5, 285.5), 'area': 0.0, 'angle': np.float64(-61.85839876773828)}]
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -138.46°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.38° | remaining=29.63° | raw gyro=4.12°/s | corrected=3.81°/s | dt=1.95ms | increment=0.0074°
+[ROTATE] measured=2.52° | remaining=27.59° | raw gyro=53.30°/s | corrected=52.99°/s | dt=1.96ms | increment=0.1039°
+[ROTATE] measured=4.50° | remaining=25.63° | raw gyro=63.77°/s | corrected=63.46°/s | dt=1.96ms | increment=0.1243°
+[ROTATE] measured=7.31° | remaining=22.83° | raw gyro=68.18°/s | corrected=67.87°/s | dt=1.94ms | increment=0.1319°
+[ROTATE] measured=10.51° | remaining=19.66° | raw gyro=83.57°/s | corrected=83.26°/s | dt=1.95ms | increment=0.1627°
+[ROTATE] measured=13.72° | remaining=16.44° | raw gyro=83.88°/s | corrected=83.57°/s | dt=1.97ms | increment=0.1647°
+[ROTATE] measured=17.09° | remaining=13.07° | raw gyro=82.02°/s | corrected=81.70°/s | dt=1.98ms | increment=0.1616°
+[ROTATE] measured=20.52° | remaining=9.64° | raw gyro=85.22°/s | corrected=84.91°/s | dt=1.96ms | increment=0.1665°
+[ROTATE] measured=23.90° | remaining=6.27° | raw gyro=84.56°/s | corrected=84.25°/s | dt=1.97ms | increment=0.1660°
+[ROTATE] measured=27.33° | remaining=2.84° | raw gyro=87.24°/s | corrected=86.92°/s | dt=1.97ms | increment=0.1710°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.12°
+[ROTATE] Global angle updated from -138.46° to -109.34°
+[SEARCH] Angle changed from -138.46° to -109.34°
+[SEARCH] Rotation counter: 21
+[SEARCH] rots % 12 = 9
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 22
+[SEARCH] Search rotation count: 21
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: -109.34°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -109.34°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 1 tapes
+[DETECTION] Raw detections: [{'box': (178, 286, 1, 1), 'center': (178.5, 286.5), 'area': 0.0, 'angle': np.float64(-61.422187498315296)}]
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -109.34°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.65° | remaining=29.39° | raw gyro=21.54°/s | corrected=21.23°/s | dt=1.95ms | increment=0.0415°
+[ROTATE] measured=2.59° | remaining=27.49° | raw gyro=42.27°/s | corrected=41.96°/s | dt=1.94ms | increment=0.0816°
+[ROTATE] measured=4.13° | remaining=25.95° | raw gyro=39.30°/s | corrected=38.99°/s | dt=1.96ms | increment=0.0765°
+[ROTATE] measured=6.38° | remaining=23.74° | raw gyro=60.29°/s | corrected=59.98°/s | dt=1.98ms | increment=0.1185°
+[ROTATE] measured=8.48° | remaining=21.62° | raw gyro=51.60°/s | corrected=51.29°/s | dt=1.95ms | increment=0.0999°
+[ROTATE] measured=11.01° | remaining=19.11° | raw gyro=62.72°/s | corrected=62.40°/s | dt=1.96ms | increment=0.1224°
+[ROTATE] measured=13.86° | remaining=16.30° | raw gyro=79.95°/s | corrected=79.64°/s | dt=2.06ms | increment=0.1643°
+[ROTATE] measured=16.90° | remaining=13.25° | raw gyro=76.61°/s | corrected=76.30°/s | dt=1.95ms | increment=0.1488°
+[ROTATE] measured=20.00° | remaining=10.16° | raw gyro=78.23°/s | corrected=77.92°/s | dt=1.95ms | increment=0.1522°
+[ROTATE] measured=23.10° | remaining=7.06° | raw gyro=80.31°/s | corrected=79.99°/s | dt=2.00ms | increment=0.1596°
+[ROTATE] measured=26.30° | remaining=3.86° | raw gyro=82.00°/s | corrected=81.69°/s | dt=1.95ms | increment=0.1595°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.14°
+[ROTATE] Global angle updated from -109.34° to -80.20°
+[SEARCH] Angle changed from -109.34° to -80.20°
+[SEARCH] Rotation counter: 22
+[SEARCH] rots % 12 = 10
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 23
+[SEARCH] Search rotation count: 22
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: -80.20°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -80.20°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -80.20°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.57° | remaining=29.46° | raw gyro=13.24°/s | corrected=12.92°/s | dt=1.94ms | increment=0.0250°
+[ROTATE] measured=2.51° | remaining=27.60° | raw gyro=52.29°/s | corrected=51.98°/s | dt=2.12ms | increment=0.1100°
+[ROTATE] measured=4.98° | remaining=25.16° | raw gyro=72.11°/s | corrected=71.79°/s | dt=1.95ms | increment=0.1399°
+[ROTATE] measured=7.82° | remaining=22.32° | raw gyro=72.93°/s | corrected=72.62°/s | dt=1.95ms | increment=0.1415°
+[ROTATE] measured=10.93° | remaining=19.22° | raw gyro=73.73°/s | corrected=73.41°/s | dt=1.95ms | increment=0.1430°
+[ROTATE] measured=14.23° | remaining=15.93° | raw gyro=84.41°/s | corrected=84.10°/s | dt=1.95ms | increment=0.1637°
+[ROTATE] measured=17.69° | remaining=12.49° | raw gyro=90.66°/s | corrected=90.34°/s | dt=1.97ms | increment=0.1780°
+[ROTATE] measured=21.23° | remaining=8.95° | raw gyro=91.50°/s | corrected=91.18°/s | dt=1.95ms | increment=0.1779°
+[ROTATE] measured=24.66° | remaining=5.51° | raw gyro=86.49°/s | corrected=86.18°/s | dt=1.97ms | increment=0.1699°
+[ROTATE] measured=28.18° | remaining=1.98° | raw gyro=85.69°/s | corrected=85.38°/s | dt=1.95ms | increment=0.1667°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.07°
+[ROTATE] Global angle updated from -80.20° to -51.12°
+[SEARCH] Angle changed from -80.20° to -51.12°
+[SEARCH] Rotation counter: 23
+[SEARCH] rots % 12 = 11
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 24
+[SEARCH] Search rotation count: 23
+[STATE] Position: (-1.8880149164839353, 9.820152731762077)
+[STATE] Global angle: -51.12°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -51.12°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -51.12°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.43° | remaining=29.60° | raw gyro=13.83°/s | corrected=13.52°/s | dt=1.94ms | increment=0.0262°
+[ROTATE] measured=2.59° | remaining=27.52° | raw gyro=59.19°/s | corrected=58.88°/s | dt=1.98ms | increment=0.1167°
+[ROTATE] measured=5.14° | remaining=25.02° | raw gyro=84.18°/s | corrected=83.87°/s | dt=1.94ms | increment=0.1623°
+[ROTATE] measured=7.98° | remaining=22.18° | raw gyro=79.53°/s | corrected=79.21°/s | dt=1.94ms | increment=0.1537°
+[ROTATE] measured=11.49° | remaining=18.66° | raw gyro=81.10°/s | corrected=80.79°/s | dt=1.95ms | increment=0.1574°
+[ROTATE] measured=14.86° | remaining=15.32° | raw gyro=94.03°/s | corrected=93.72°/s | dt=1.94ms | increment=0.1814°
+[ROTATE] measured=18.37° | remaining=11.80° | raw gyro=89.39°/s | corrected=89.08°/s | dt=1.94ms | increment=0.1728°
+[ROTATE] measured=21.90° | remaining=8.27° | raw gyro=86.73°/s | corrected=86.42°/s | dt=1.96ms | increment=0.1694°
+[ROTATE] measured=25.50° | remaining=4.69° | raw gyro=95.77°/s | corrected=95.46°/s | dt=1.94ms | increment=0.1850°
+[ROTATE] measured=29.06° | remaining=1.12° | raw gyro=91.34°/s | corrected=91.03°/s | dt=1.94ms | increment=0.1765°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.06°
+[ROTATE] Global angle updated from -51.12° to -22.07°
+[SEARCH] Angle changed from -51.12° to -22.07°
+[SEARCH] Rotation counter: 24
+[SEARCH] rots % 12 = 0
+[SEARCH] Completed approximately one full rotation
+[SEARCH] Driving forward 10 units
+
+[DRIVE] drive_distance() called
+[DRIVE] Requested distance: 10.00
+[DRIVE] Starting position: (-1.8880149164839353, 9.820152731762077)
+[DRIVE] Current heading: -22.07°
+[DRIVE] Drive time: 0.714s
+[DRIVE] Starting motors: left=100, right=100
+[DRIVE] Motors stopped
+[DRIVE] Delta X: -3.76
+[DRIVE] Delta Y: 9.27
+[DRIVE] Position updated from (-1.89, 9.82) to (-5.64, 19.09)
+[SEARCH] Position changed from (-1.8880149164839353, 9.820152731762077) to (-5.644814315410928, 19.08764744588098)
+
+======================================================================
+[SEARCH] Loop number: 25
+[SEARCH] Search rotation count: 24
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: -22.07°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -22.07°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -22.07°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.73° | remaining=29.29° | raw gyro=15.37°/s | corrected=15.06°/s | dt=1.94ms | increment=0.0292°
+[ROTATE] measured=2.70° | remaining=27.39° | raw gyro=45.53°/s | corrected=45.21°/s | dt=1.94ms | increment=0.0876°
+[ROTATE] measured=4.70° | remaining=25.40° | raw gyro=51.37°/s | corrected=51.06°/s | dt=1.97ms | increment=0.1008°
+[ROTATE] measured=6.74° | remaining=23.37° | raw gyro=57.85°/s | corrected=57.53°/s | dt=1.99ms | increment=0.1145°
+[ROTATE] measured=8.78° | remaining=21.34° | raw gyro=63.36°/s | corrected=63.05°/s | dt=1.95ms | increment=0.1227°
+[ROTATE] measured=11.09° | remaining=19.04° | raw gyro=64.69°/s | corrected=64.37°/s | dt=1.99ms | increment=0.1280°
+[ROTATE] measured=13.79° | remaining=16.33° | raw gyro=61.10°/s | corrected=60.79°/s | dt=1.94ms | increment=0.1181°
+[ROTATE] measured=16.59° | remaining=13.54° | raw gyro=69.65°/s | corrected=69.34°/s | dt=1.94ms | increment=0.1346°
+[ROTATE] measured=19.50° | remaining=10.65° | raw gyro=75.36°/s | corrected=75.05°/s | dt=1.95ms | increment=0.1465°
+[ROTATE] measured=22.38° | remaining=7.76° | raw gyro=71.68°/s | corrected=71.37°/s | dt=1.95ms | increment=0.1394°
+[ROTATE] measured=25.33° | remaining=4.81° | raw gyro=72.05°/s | corrected=71.73°/s | dt=1.96ms | increment=0.1405°
+[ROTATE] measured=28.27° | remaining=1.88° | raw gyro=76.15°/s | corrected=75.84°/s | dt=1.96ms | increment=0.1483°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.04°
+[ROTATE] Global angle updated from -22.07° to 6.98°
+[SEARCH] Angle changed from -22.07° to 6.98°
+[SEARCH] Rotation counter: 25
+[SEARCH] rots % 12 = 1
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 26
+[SEARCH] Search rotation count: 25
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: 6.98°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 6.98°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 6.98°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.34° | remaining=29.70° | raw gyro=21.97°/s | corrected=21.66°/s | dt=1.94ms | increment=0.0419°
+[ROTATE] measured=2.52° | remaining=27.56° | raw gyro=39.74°/s | corrected=39.43°/s | dt=1.94ms | increment=0.0766°
+[ROTATE] measured=4.97° | remaining=25.16° | raw gyro=64.66°/s | corrected=64.34°/s | dt=1.97ms | increment=0.1267°
+[ROTATE] measured=7.43° | remaining=22.73° | raw gyro=83.13°/s | corrected=82.82°/s | dt=1.95ms | increment=0.1612°
+[ROTATE] measured=10.24° | remaining=19.89° | raw gyro=66.40°/s | corrected=66.08°/s | dt=1.96ms | increment=0.1296°
+[ROTATE] measured=13.09° | remaining=17.06° | raw gyro=75.11°/s | corrected=74.80°/s | dt=1.95ms | increment=0.1461°
+[ROTATE] measured=16.02° | remaining=14.13° | raw gyro=75.54°/s | corrected=75.23°/s | dt=1.99ms | increment=0.1498°
+[ROTATE] measured=18.93° | remaining=11.21° | raw gyro=72.38°/s | corrected=72.07°/s | dt=1.95ms | increment=0.1405°
+[ROTATE] measured=21.79° | remaining=8.36° | raw gyro=74.37°/s | corrected=74.05°/s | dt=1.95ms | increment=0.1443°
+[ROTATE] measured=24.69° | remaining=5.45° | raw gyro=75.05°/s | corrected=74.74°/s | dt=1.96ms | increment=0.1464°
+[ROTATE] measured=27.69° | remaining=2.45° | raw gyro=74.66°/s | corrected=74.34°/s | dt=1.96ms | increment=0.1457°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.01°
+[ROTATE] Global angle updated from 6.98° to 35.99°
+[SEARCH] Angle changed from 6.98° to 35.99°
+[SEARCH] Rotation counter: 26
+[SEARCH] rots % 12 = 2
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 27
+[SEARCH] Search rotation count: 26
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: 35.99°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 35.99°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 35.99°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.78° | remaining=29.27° | raw gyro=25.01°/s | corrected=24.70°/s | dt=1.96ms | increment=0.0484°
+[ROTATE] measured=2.46° | remaining=27.61° | raw gyro=32.50°/s | corrected=32.19°/s | dt=2.13ms | increment=0.0684°
+[ROTATE] measured=4.42° | remaining=25.71° | raw gyro=47.59°/s | corrected=47.28°/s | dt=2.80ms | increment=0.1323°
+[ROTATE] measured=6.51° | remaining=23.61° | raw gyro=59.11°/s | corrected=58.80°/s | dt=1.98ms | increment=0.1166°
+[ROTATE] measured=8.85° | remaining=21.30° | raw gyro=60.98°/s | corrected=60.66°/s | dt=2.47ms | increment=0.1499°
+[ROTATE] measured=12.20° | remaining=17.98° | raw gyro=71.15°/s | corrected=70.83°/s | dt=2.47ms | increment=0.1749°
+[ROTATE] measured=15.45° | remaining=14.69° | raw gyro=59.30°/s | corrected=58.99°/s | dt=2.45ms | increment=0.1445°
+[ROTATE] measured=19.14° | remaining=11.02° | raw gyro=67.62°/s | corrected=67.31°/s | dt=2.50ms | increment=0.1680°
+[ROTATE] measured=22.87° | remaining=7.31° | raw gyro=73.88°/s | corrected=73.57°/s | dt=2.41ms | increment=0.1777°
+[ROTATE] measured=26.75° | remaining=3.43° | raw gyro=77.13°/s | corrected=76.82°/s | dt=2.44ms | increment=0.1873°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.02°
+[ROTATE] Global angle updated from 35.99° to 65.01°
+[SEARCH] Angle changed from 35.99° to 65.01°
+[SEARCH] Rotation counter: 27
+[SEARCH] rots % 12 = 3
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 28
+[SEARCH] Search rotation count: 27
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: 65.01°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 65.01°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 65.01°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.75° | remaining=29.31° | raw gyro=34.03°/s | corrected=33.72°/s | dt=1.97ms | increment=0.0663°
+[ROTATE] measured=2.95° | remaining=27.16° | raw gyro=59.47°/s | corrected=59.15°/s | dt=1.95ms | increment=0.1153°
+[ROTATE] measured=5.98° | remaining=24.18° | raw gyro=81.44°/s | corrected=81.12°/s | dt=1.94ms | increment=0.1573°
+[ROTATE] measured=9.00° | remaining=21.17° | raw gyro=85.92°/s | corrected=85.61°/s | dt=1.94ms | increment=0.1661°
+[ROTATE] measured=12.39° | remaining=17.78° | raw gyro=86.34°/s | corrected=86.02°/s | dt=1.94ms | increment=0.1669°
+[ROTATE] measured=15.81° | remaining=14.36° | raw gyro=87.18°/s | corrected=86.86°/s | dt=1.96ms | increment=0.1701°
+[ROTATE] measured=19.24° | remaining=10.93° | raw gyro=88.21°/s | corrected=87.90°/s | dt=1.94ms | increment=0.1706°
+[ROTATE] measured=22.69° | remaining=7.48° | raw gyro=89.40°/s | corrected=89.09°/s | dt=1.94ms | increment=0.1729°
+[ROTATE] measured=26.06° | remaining=4.11° | raw gyro=87.05°/s | corrected=86.74°/s | dt=1.94ms | increment=0.1683°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.06°
+[ROTATE] Global angle updated from 65.01° to 94.07°
+[SEARCH] Angle changed from 65.01° to 94.07°
+[SEARCH] Rotation counter: 28
+[SEARCH] rots % 12 = 4
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 29
+[SEARCH] Search rotation count: 28
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: 94.07°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 94.07°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 94.07°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.32° | remaining=29.70° | raw gyro=7.92°/s | corrected=7.61°/s | dt=1.95ms | increment=0.0148°
+[ROTATE] measured=2.24° | remaining=27.85° | raw gyro=44.85°/s | corrected=44.54°/s | dt=1.94ms | increment=0.0863°
+[ROTATE] measured=4.09° | remaining=26.04° | raw gyro=69.48°/s | corrected=69.17°/s | dt=1.93ms | increment=0.1338°
+[ROTATE] measured=6.57° | remaining=23.56° | raw gyro=68.02°/s | corrected=67.70°/s | dt=1.98ms | increment=0.1338°
+[ROTATE] measured=9.53° | remaining=20.60° | raw gyro=70.44°/s | corrected=70.13°/s | dt=1.95ms | increment=0.1365°
+[ROTATE] measured=12.51° | remaining=17.64° | raw gyro=73.66°/s | corrected=73.35°/s | dt=1.93ms | increment=0.1418°
+[ROTATE] measured=15.52° | remaining=14.63° | raw gyro=76.27°/s | corrected=75.96°/s | dt=1.94ms | increment=0.1473°
+[ROTATE] measured=18.54° | remaining=11.61° | raw gyro=75.51°/s | corrected=75.20°/s | dt=1.94ms | increment=0.1463°
+[ROTATE] measured=21.50° | remaining=8.65° | raw gyro=77.59°/s | corrected=77.28°/s | dt=1.94ms | increment=0.1499°
+[ROTATE] measured=24.58° | remaining=5.57° | raw gyro=77.65°/s | corrected=77.34°/s | dt=1.95ms | increment=0.1506°
+[ROTATE] measured=27.60° | remaining=2.55° | raw gyro=75.76°/s | corrected=75.44°/s | dt=1.94ms | increment=0.1464°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.16°
+[ROTATE] Global angle updated from 94.07° to 123.23°
+[SEARCH] Angle changed from 94.07° to 123.23°
+[SEARCH] Rotation counter: 29
+[SEARCH] rots % 12 = 5
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 30
+[SEARCH] Search rotation count: 29
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: 123.23°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 123.23°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 123.23°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.73° | remaining=29.33° | raw gyro=33.30°/s | corrected=32.99°/s | dt=2.01ms | increment=0.0663°
+[ROTATE] measured=2.73° | remaining=27.35° | raw gyro=38.23°/s | corrected=37.92°/s | dt=1.97ms | increment=0.0746°
+[ROTATE] measured=5.11° | remaining=25.03° | raw gyro=70.09°/s | corrected=69.78°/s | dt=1.99ms | increment=0.1387°
+[ROTATE] measured=7.54° | remaining=22.59° | raw gyro=66.92°/s | corrected=66.60°/s | dt=1.95ms | increment=0.1300°
+[ROTATE] measured=9.97° | remaining=20.16° | raw gyro=67.91°/s | corrected=67.60°/s | dt=1.94ms | increment=0.1315°
+[ROTATE] measured=12.77° | remaining=17.36° | raw gyro=67.68°/s | corrected=67.37°/s | dt=1.94ms | increment=0.1310°
+[ROTATE] measured=15.67° | remaining=14.47° | raw gyro=72.26°/s | corrected=71.95°/s | dt=1.96ms | increment=0.1413°
+[ROTATE] measured=18.53° | remaining=11.61° | raw gyro=73.44°/s | corrected=73.12°/s | dt=1.95ms | increment=0.1427°
+[ROTATE] measured=21.34° | remaining=8.79° | raw gyro=68.21°/s | corrected=67.90°/s | dt=1.95ms | increment=0.1325°
+[ROTATE] measured=24.29° | remaining=5.86° | raw gyro=73.77°/s | corrected=73.46°/s | dt=1.95ms | increment=0.1435°
+[ROTATE] measured=27.22° | remaining=2.93° | raw gyro=76.14°/s | corrected=75.82°/s | dt=1.98ms | increment=0.1498°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.12°
+[ROTATE] Global angle updated from 123.23° to 152.36°
+[SEARCH] Angle changed from 123.23° to 152.36°
+[SEARCH] Rotation counter: 30
+[SEARCH] rots % 12 = 6
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 31
+[SEARCH] Search rotation count: 30
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: 152.36°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: 152.36°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: 152.36°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.51° | remaining=29.53° | raw gyro=23.56°/s | corrected=23.24°/s | dt=2.01ms | increment=0.0467°
+[ROTATE] measured=2.64° | remaining=27.46° | raw gyro=48.66°/s | corrected=48.34°/s | dt=1.95ms | increment=0.0945°
+[ROTATE] measured=4.94° | remaining=25.20° | raw gyro=68.69°/s | corrected=68.37°/s | dt=1.95ms | increment=0.1336°
+[ROTATE] measured=7.59° | remaining=22.56° | raw gyro=74.63°/s | corrected=74.31°/s | dt=1.95ms | increment=0.1450°
+[ROTATE] measured=10.55° | remaining=19.58° | raw gyro=69.45°/s | corrected=69.14°/s | dt=1.94ms | increment=0.1341°
+[ROTATE] measured=13.54° | remaining=16.62° | raw gyro=79.28°/s | corrected=78.97°/s | dt=1.97ms | increment=0.1559°
+[ROTATE] measured=16.57° | remaining=13.59° | raw gyro=81.28°/s | corrected=80.97°/s | dt=1.95ms | increment=0.1581°
+[ROTATE] measured=19.62° | remaining=10.52° | raw gyro=75.51°/s | corrected=75.20°/s | dt=1.96ms | increment=0.1475°
+[ROTATE] measured=22.65° | remaining=7.50° | raw gyro=72.50°/s | corrected=72.19°/s | dt=1.96ms | increment=0.1413°
+[ROTATE] measured=25.65° | remaining=4.50° | raw gyro=74.87°/s | corrected=74.56°/s | dt=1.95ms | increment=0.1454°
+[ROTATE] measured=28.79° | remaining=1.37° | raw gyro=79.15°/s | corrected=78.83°/s | dt=1.98ms | increment=0.1564°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.12°
+[ROTATE] Global angle updated from 152.36° to -178.53°
+[SEARCH] Angle changed from 152.36° to -178.53°
+[SEARCH] Rotation counter: 31
+[SEARCH] rots % 12 = 7
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 32
+[SEARCH] Search rotation count: 31
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: -178.53°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -178.53°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 2 tapes
+[DETECTION] Raw detections: [{'box': (173, 286, 2, 5), 'center': (174.0, 288.5), 'area': 0.0, 'angle': np.float64(-64.48612957246576)}, {'box': (176, 285, 1, 1), 'center': (176.5, 285.5), 'area': 0.0, 'angle': np.float64(-61.48445318953567)}]
+[DETECTION] Angle difference: 3.00°
+[SEARCH] The two detections are less than 5° apart
+[SEARCH] Treating detection pair as invalid
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -178.53°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.37° | remaining=29.67° | raw gyro=20.95°/s | corrected=20.63°/s | dt=1.96ms | increment=0.0404°
+[ROTATE] measured=2.44° | remaining=27.65° | raw gyro=47.86°/s | corrected=47.55°/s | dt=2.02ms | increment=0.0962°
+[ROTATE] measured=4.90° | remaining=25.23° | raw gyro=69.86°/s | corrected=69.55°/s | dt=2.00ms | increment=0.1394°
+[ROTATE] measured=7.55° | remaining=22.59° | raw gyro=70.18°/s | corrected=69.87°/s | dt=1.96ms | increment=0.1372°
+[ROTATE] measured=10.44° | remaining=19.70° | raw gyro=69.59°/s | corrected=69.28°/s | dt=1.96ms | increment=0.1354°
+[ROTATE] measured=13.42° | remaining=16.73° | raw gyro=75.24°/s | corrected=74.92°/s | dt=1.96ms | increment=0.1472°
+[ROTATE] measured=16.35° | remaining=13.80° | raw gyro=78.38°/s | corrected=78.07°/s | dt=1.96ms | increment=0.1529°
+[ROTATE] measured=19.47° | remaining=10.68° | raw gyro=75.01°/s | corrected=74.70°/s | dt=1.95ms | increment=0.1458°
+[ROTATE] measured=22.44° | remaining=7.70° | raw gyro=74.99°/s | corrected=74.68°/s | dt=1.95ms | increment=0.1459°
+[ROTATE] measured=25.47° | remaining=4.68° | raw gyro=74.98°/s | corrected=74.66°/s | dt=1.94ms | increment=0.1447°
+[ROTATE] measured=28.54° | remaining=1.60° | raw gyro=73.36°/s | corrected=73.05°/s | dt=1.95ms | increment=0.1426°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.02°
+[ROTATE] Global angle updated from -178.53° to -149.51°
+[SEARCH] Angle changed from -178.53° to -149.51°
+[SEARCH] Rotation counter: 32
+
+======================================================================
+[SEARCH] Loop number: 33
+[SEARCH] Search rotation count: 32
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: -149.51°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -149.51°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 1 tapes
+[DETECTION] Raw detections: [{'box': (174, 286, 3, 2), 'center': (175.5, 287.0), 'area': 0.0, 'angle': np.float64(-62.9044475062482)}]
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -149.51°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.33° | remaining=29.72° | raw gyro=26.23°/s | corrected=25.92°/s | dt=1.95ms | increment=0.0505°
+[ROTATE] measured=2.30° | remaining=27.80° | raw gyro=49.59°/s | corrected=49.28°/s | dt=1.96ms | increment=0.0968°
+[ROTATE] measured=4.61° | remaining=25.53° | raw gyro=66.81°/s | corrected=66.50°/s | dt=1.99ms | increment=0.1327°
+[ROTATE] measured=7.33° | remaining=22.81° | raw gyro=73.91°/s | corrected=73.60°/s | dt=1.95ms | increment=0.1434°
+[ROTATE] measured=10.23° | remaining=19.91° | raw gyro=71.16°/s | corrected=70.85°/s | dt=1.95ms | increment=0.1384°
+[ROTATE] measured=13.27° | remaining=16.88° | raw gyro=74.55°/s | corrected=74.24°/s | dt=1.97ms | increment=0.1463°
+[ROTATE] measured=16.29° | remaining=13.86° | raw gyro=77.54°/s | corrected=77.23°/s | dt=1.95ms | increment=0.1505°
+[ROTATE] measured=19.42° | remaining=10.73° | raw gyro=76.98°/s | corrected=76.66°/s | dt=1.95ms | increment=0.1496°
+[ROTATE] measured=22.54° | remaining=7.60° | raw gyro=74.98°/s | corrected=74.66°/s | dt=1.95ms | increment=0.1453°
+[ROTATE] measured=25.57° | remaining=4.59° | raw gyro=78.24°/s | corrected=77.93°/s | dt=1.99ms | increment=0.1553°
+[ROTATE] measured=28.72° | remaining=1.43° | raw gyro=79.16°/s | corrected=78.85°/s | dt=1.96ms | increment=0.1549°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.06°
+[ROTATE] Global angle updated from -149.51° to -120.45°
+[SEARCH] Angle changed from -149.51° to -120.45°
+[SEARCH] Rotation counter: 33
+[SEARCH] rots % 12 = 9
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 34
+[SEARCH] Search rotation count: 33
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: -120.45°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -120.45°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -120.45°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.26° | remaining=29.78° | raw gyro=16.75°/s | corrected=16.44°/s | dt=1.95ms | increment=0.0321°
+[ROTATE] measured=2.25° | remaining=27.86° | raw gyro=53.79°/s | corrected=53.47°/s | dt=1.98ms | increment=0.1059°
+[ROTATE] measured=4.51° | remaining=25.63° | raw gyro=70.08°/s | corrected=69.76°/s | dt=1.94ms | increment=0.1352°
+[ROTATE] measured=7.26° | remaining=22.87° | raw gyro=67.62°/s | corrected=67.31°/s | dt=1.94ms | increment=0.1306°
+[ROTATE] measured=10.23° | remaining=19.92° | raw gyro=76.43°/s | corrected=76.11°/s | dt=1.94ms | increment=0.1478°
+[ROTATE] measured=13.30° | remaining=16.86° | raw gyro=80.82°/s | corrected=80.51°/s | dt=1.94ms | increment=0.1562°
+[ROTATE] measured=16.51° | remaining=13.66° | raw gyro=84.85°/s | corrected=84.54°/s | dt=1.94ms | increment=0.1636°
+[ROTATE] measured=19.67° | remaining=10.48° | raw gyro=78.11°/s | corrected=77.79°/s | dt=1.95ms | increment=0.1513°
+[ROTATE] measured=22.89° | remaining=7.27° | raw gyro=78.82°/s | corrected=78.51°/s | dt=1.94ms | increment=0.1521°
+[ROTATE] measured=26.31° | remaining=3.85° | raw gyro=80.02°/s | corrected=79.70°/s | dt=1.96ms | increment=0.1563°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.06°
+[ROTATE] Global angle updated from -120.45° to -91.40°
+[SEARCH] Angle changed from -120.45° to -91.40°
+[SEARCH] Rotation counter: 34
+[SEARCH] rots % 12 = 10
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 35
+[SEARCH] Search rotation count: 34
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: -91.40°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -91.40°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -91.40°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=0.89° | remaining=29.21° | raw gyro=50.52°/s | corrected=50.21°/s | dt=2.01ms | increment=0.1007°
+[ROTATE] measured=3.20° | remaining=26.92° | raw gyro=58.06°/s | corrected=57.75°/s | dt=1.95ms | increment=0.1127°
+[ROTATE] measured=5.88° | remaining=24.25° | raw gyro=69.97°/s | corrected=69.66°/s | dt=1.95ms | increment=0.1359°
+[ROTATE] measured=8.79° | remaining=21.34° | raw gyro=66.26°/s | corrected=65.95°/s | dt=1.94ms | increment=0.1281°
+[ROTATE] measured=10.62° | remaining=19.43° | raw gyro=25.53°/s | corrected=25.21°/s | dt=1.95ms | increment=0.0492°
+[ROTATE] measured=11.05° | remaining=18.97° | raw gyro=-7.59°/s | corrected=-7.90°/s | dt=1.95ms | increment=0.0154°
+[ROTATE] measured=11.39° | remaining=18.63° | raw gyro=-12.02°/s | corrected=-12.33°/s | dt=1.95ms | increment=0.0240°
+[ROTATE] measured=11.91° | remaining=18.12° | raw gyro=13.28°/s | corrected=12.97°/s | dt=1.98ms | increment=0.0256°
+[ROTATE] measured=12.37° | remaining=17.63° | raw gyro=-2.38°/s | corrected=-2.69°/s | dt=1.95ms | increment=0.0053°
+[ROTATE] measured=13.18° | remaining=16.88° | raw gyro=-29.22°/s | corrected=-29.53°/s | dt=1.95ms | increment=0.0576°
+[ROTATE] measured=14.22° | remaining=15.81° | raw gyro=-13.65°/s | corrected=-13.96°/s | dt=1.96ms | increment=0.0273°
+[ROTATE] measured=15.01° | remaining=15.07° | raw gyro=-39.60°/s | corrected=-39.92°/s | dt=1.97ms | increment=0.0784°
+[ROTATE] measured=17.23° | remaining=12.91° | raw gyro=-68.79°/s | corrected=-69.11°/s | dt=1.95ms | increment=0.1349°
+[ROTATE] measured=20.12° | remaining=10.02° | raw gyro=-70.76°/s | corrected=-71.08°/s | dt=1.96ms | increment=0.1391°
+[ROTATE] measured=23.00° | remaining=7.14° | raw gyro=-71.88°/s | corrected=-72.19°/s | dt=1.99ms | increment=0.1433°
+[ROTATE] measured=25.91° | remaining=4.22° | raw gyro=-67.66°/s | corrected=-67.98°/s | dt=1.95ms | increment=0.1326°
+[ROTATE] measured=28.83° | remaining=1.29° | raw gyro=-62.43°/s | corrected=-62.74°/s | dt=1.96ms | increment=0.1231°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.08°
+[ROTATE] Global angle updated from -91.40° to -62.32°
+[SEARCH] Angle changed from -91.40° to -62.32°
+[SEARCH] Rotation counter: 35
+[SEARCH] rots % 12 = 11
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 36
+[SEARCH] Search rotation count: 35
+[STATE] Position: (-5.644814315410928, 19.08764744588098)
+[STATE] Global angle: -62.32°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -62.32°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 0 tapes
+[DETECTION] Raw detections: []
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -62.32°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=1.73° | remaining=28.38° | raw gyro=-52.70°/s | corrected=-53.01°/s | dt=1.94ms | increment=0.1030°
+[ROTATE] measured=3.98° | remaining=26.12° | raw gyro=-49.31°/s | corrected=-49.63°/s | dt=1.99ms | increment=0.0990°
+[ROTATE] measured=5.73° | remaining=24.34° | raw gyro=-40.37°/s | corrected=-40.68°/s | dt=1.94ms | increment=0.0790°
+[ROTATE] measured=7.56° | remaining=22.56° | raw gyro=-63.31°/s | corrected=-63.63°/s | dt=1.95ms | increment=0.1241°
+[ROTATE] measured=10.15° | remaining=19.97° | raw gyro=-60.49°/s | corrected=-60.80°/s | dt=1.94ms | increment=0.1177°
+[ROTATE] measured=12.47° | remaining=17.63° | raw gyro=-52.69°/s | corrected=-53.00°/s | dt=1.94ms | increment=0.1028°
+[ROTATE] measured=14.35° | remaining=15.73° | raw gyro=-42.99°/s | corrected=-43.30°/s | dt=1.94ms | increment=0.0841°
+[ROTATE] measured=16.10° | remaining=13.99° | raw gyro=-46.93°/s | corrected=-47.24°/s | dt=1.94ms | increment=0.0916°
+[ROTATE] measured=18.04° | remaining=12.06° | raw gyro=-48.89°/s | corrected=-49.20°/s | dt=1.94ms | increment=0.0954°
+[ROTATE] measured=19.91° | remaining=10.18° | raw gyro=-44.09°/s | corrected=-44.40°/s | dt=1.95ms | increment=0.0867°
+[ROTATE] measured=21.50° | remaining=8.56° | raw gyro=-34.05°/s | corrected=-34.36°/s | dt=1.94ms | increment=0.0666°
+[ROTATE] measured=22.70° | remaining=7.35° | raw gyro=-24.29°/s | corrected=-24.60°/s | dt=1.94ms | increment=0.0477°
+[ROTATE] measured=23.51° | remaining=6.53° | raw gyro=-23.50°/s | corrected=-23.81°/s | dt=1.94ms | increment=0.0461°
+[ROTATE] measured=24.77° | remaining=5.30° | raw gyro=-34.55°/s | corrected=-34.86°/s | dt=1.94ms | increment=0.0678°
+[ROTATE] measured=26.02° | remaining=4.03° | raw gyro=-25.82°/s | corrected=-26.13°/s | dt=1.95ms | increment=0.0509°
+[ROTATE] measured=27.29° | remaining=2.77° | raw gyro=-25.36°/s | corrected=-25.67°/s | dt=2.51ms | increment=0.0645°
+[ROTATE] measured=28.36° | remaining=1.66° | raw gyro=-10.15°/s | corrected=-10.47°/s | dt=2.44ms | increment=0.0256°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.01°
+[ROTATE] Global angle updated from -62.32° to -33.31°
+[SEARCH] Angle changed from -62.32° to -33.31°
+[SEARCH] Rotation counter: 36
+[SEARCH] rots % 12 = 0
+[SEARCH] Completed approximately one full rotation
+[SEARCH] Driving forward 10 units
+
+[DRIVE] drive_distance() called
+[DRIVE] Requested distance: 10.00
+[DRIVE] Starting position: (-5.644814315410928, 19.08764744588098)
+[DRIVE] Current heading: -33.31°
+[DRIVE] Drive time: 0.714s
+[DRIVE] Starting motors: left=100, right=100
+[DRIVE] Motors stopped
+[DRIVE] Delta X: -5.49
+[DRIVE] Delta Y: 8.36
+[DRIVE] Position updated from (-5.64, 19.09) to (-11.14, 27.44)
+[SEARCH] Position changed from (-5.644814315410928, 19.08764744588098) to (-11.136374953561731, 27.444845646086158)
+
+======================================================================
+[SEARCH] Loop number: 37
+[SEARCH] Search rotation count: 36
+[STATE] Position: (-11.136374953561731, 27.444845646086158)
+[STATE] Global angle: -33.31°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -33.31°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 3 tapes
+[DETECTION] Raw detections: [{'box': (82, 210, 5, 6), 'center': (84.5, 213.0), 'area': 17.5, 'angle': np.float64(-55.46802717209398)}, {'box': (201, 125, 8, 5), 'center': (205.0, 127.5), 'area': 8.5, 'angle': np.float64(-10.304846468766033)}, {'box': (175, 286, 1, 1), 'center': (175.5, 286.5), 'area': 0.0, 'angle': np.float64(-62.553544826339866)}]
+[SEARCH] Did not find exactly two tapes
+[SEARCH] Rotating by 30°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 30.00°
+[ROTATE] Starting global angle: -33.31°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 30.00°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=1.21° | remaining=28.86° | raw gyro=39.34°/s | corrected=39.03°/s | dt=1.97ms | increment=0.0770°
+[ROTATE] measured=2.64° | remaining=27.44° | raw gyro=41.74°/s | corrected=41.43°/s | dt=1.94ms | increment=0.0802°
+[ROTATE] measured=4.64° | remaining=25.45° | raw gyro=51.21°/s | corrected=50.89°/s | dt=1.94ms | increment=0.0988°
+[ROTATE] measured=7.25° | remaining=22.87° | raw gyro=60.53°/s | corrected=60.22°/s | dt=1.96ms | increment=0.1180°
+[ROTATE] measured=10.04° | remaining=20.12° | raw gyro=80.82°/s | corrected=80.51°/s | dt=1.95ms | increment=0.1567°
+[ROTATE] measured=13.06° | remaining=17.09° | raw gyro=76.98°/s | corrected=76.66°/s | dt=1.94ms | increment=0.1488°
+[ROTATE] measured=16.19° | remaining=13.96° | raw gyro=78.61°/s | corrected=78.30°/s | dt=1.94ms | increment=0.1522°
+[ROTATE] measured=19.33° | remaining=10.82° | raw gyro=78.38°/s | corrected=78.07°/s | dt=1.94ms | increment=0.1511°
+[ROTATE] measured=22.42° | remaining=7.72° | raw gyro=73.56°/s | corrected=73.24°/s | dt=1.94ms | increment=0.1418°
+[ROTATE] measured=25.47° | remaining=4.68° | raw gyro=78.52°/s | corrected=78.21°/s | dt=1.94ms | increment=0.1518°
+[ROTATE] measured=28.56° | remaining=1.59° | raw gyro=77.21°/s | corrected=76.89°/s | dt=1.95ms | increment=0.1503°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 29.04°
+[ROTATE] Global angle updated from -33.31° to -4.26°
+[SEARCH] Angle changed from -33.31° to -4.26°
+[SEARCH] Rotation counter: 37
+[SEARCH] rots % 12 = 1
+[SEARCH] Not driving forward yet
+
+======================================================================
+[SEARCH] Loop number: 38
+[SEARCH] Search rotation count: 37
+[STATE] Position: (-11.136374953561731, 27.444845646086158)
+[STATE] Global angle: -4.26°
+[CAMERA] Taking picture...
+[CAMERA] Picture shape: (640, 480, 3)
+[CAMERA] Picture heading: -4.26°
+[DETECTION] Detecting orange tape...
+[DETECTION] Detected 2 tapes
+[DETECTION] Raw detections: [{'box': (126, 167, 5, 6), 'center': (128.5, 170.0), 'area': 14.5, 'angle': np.float64(-36.62465236129923)}, {'box': (56, 297, 4, 6), 'center': (58.0, 300.0), 'area': 8.5, 'angle': np.float64(-83.72892255049887)}]
+[DETECTION] Angle difference: 47.10°
+
+========== FOUND TWO VALID TAPES ==========
+[STATE] Scan position: (-11.136374953561731, 27.444845646086158)
+[STATE] Picture heading: -4.26°
+[DETECTION] Sorted detections: [{'box': (56, 297, 4, 6), 'center': (58.0, 300.0), 'area': 8.5, 'angle': np.float64(-83.72892255049887)}, {'box': (126, 167, 5, 6), 'center': (128.5, 170.0), 'area': 14.5, 'angle': np.float64(-36.62465236129923)}]
+
+------------------------------------------------------------
+[TAPE 1] Starting measurement
+[TAPE 1] Camera-relative angle: -83.73°
+[TAPE 1] Global target angle: -87.99°
+[TAPE 1] Current robot angle: -4.26°
+[TAPE 1] Rotation needed: -83.73°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: -83.73°
+[ROTATE] Starting global angle: -4.26°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: -1
+[ROTATE] Target magnitude: 83.73°
+[ROTATE] Wheel speeds: left=-150, right=150
+[ROTATE] measured=1.49° | remaining=82.38° | raw gyro=-73.63°/s | corrected=-73.95°/s | dt=1.95ms | increment=0.1443°
+[ROTATE] measured=4.66° | remaining=79.23° | raw gyro=-82.64°/s | corrected=-82.95°/s | dt=1.97ms | increment=0.1635°
+[ROTATE] measured=9.42° | remaining=74.54° | raw gyro=-113.86°/s | corrected=-114.18°/s | dt=1.99ms | increment=0.2272°
+[ROTATE] measured=14.33° | remaining=69.66° | raw gyro=-134.00°/s | corrected=-134.31°/s | dt=1.95ms | increment=0.2623°
+[ROTATE] measured=19.67° | remaining=64.32° | raw gyro=-132.56°/s | corrected=-132.88°/s | dt=1.96ms | increment=0.2606°
+[ROTATE] measured=25.19° | remaining=58.81° | raw gyro=-138.52°/s | corrected=-138.83°/s | dt=1.96ms | increment=0.2714°
+[ROTATE] measured=30.77° | remaining=53.23° | raw gyro=-139.73°/s | corrected=-140.04°/s | dt=1.95ms | increment=0.2728°
+[ROTATE] measured=36.59° | remaining=47.42° | raw gyro=-144.26°/s | corrected=-144.57°/s | dt=1.94ms | increment=0.2806°
+[ROTATE] measured=42.37° | remaining=41.65° | raw gyro=-148.87°/s | corrected=-149.18°/s | dt=1.96ms | increment=0.2921°
+[ROTATE] measured=48.34° | remaining=35.68° | raw gyro=-148.85°/s | corrected=-149.17°/s | dt=1.95ms | increment=0.2916°
+[ROTATE] Wheel speeds: left=-100, right=100
+[ROTATE] measured=55.82° | remaining=29.75° | raw gyro=-147.91°/s | corrected=-148.22°/s | dt=12.45ms | increment=1.8452°
+[ROTATE] measured=61.53° | remaining=22.44° | raw gyro=-121.85°/s | corrected=-122.16°/s | dt=1.94ms | increment=0.2372°
+[ROTATE] measured=66.02° | remaining=17.91° | raw gyro=-101.54°/s | corrected=-101.85°/s | dt=1.94ms | increment=0.1980°
+[ROTATE] measured=70.19° | remaining=13.72° | raw gyro=-90.64°/s | corrected=-90.95°/s | dt=1.97ms | increment=0.1795°
+[ROTATE] measured=73.84° | remaining=10.07° | raw gyro=-89.83°/s | corrected=-90.14°/s | dt=1.95ms | increment=0.1761°
+[ROTATE] measured=77.30° | remaining=6.61° | raw gyro=-86.90°/s | corrected=-87.21°/s | dt=1.98ms | increment=0.1728°
+[ROTATE] measured=80.78° | remaining=3.11° | raw gyro=-81.56°/s | corrected=-81.87°/s | dt=1.97ms | increment=0.1614°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 82.83°
+[ROTATE] Global angle updated from -4.26° to -87.10°
+[TAPE 1] Angle changed from -4.26° to -87.10°
+[TAPE 1] Starting ultrasonic scan
+
+[ULTRASONIC] Requesting measurement
+[ULTRASONIC] Port: 1, slot: 1
+[ULTRASONIC] Raw distance: 37.7068977355957
+[ULTRASONIC] Correction: 3.77
+[ULTRASONIC] Corrected distance: 41.48
+[TAPE 1] Distance: 41.48
+[TAPE 1] Stored global angle: -87.10°
+[DATA] Angles: [-87.09864718362778]
+[DATA] Distances: [41.47758750915527]
+
+------------------------------------------------------------
+[TAPE 2] Starting measurement
+[TAPE 2] Camera-relative angle: -36.62°
+[TAPE 2] Global target angle: -40.89°
+[TAPE 2] Current robot angle: -87.10°
+[TAPE 2] Rotation needed: 46.21°
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: 46.21°
+[ROTATE] Starting global angle: -87.10°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: 1
+[ROTATE] Target magnitude: 46.21°
+[ROTATE] Wheel speeds: left=150, right=-150
+[ROTATE] measured=0.91° | remaining=45.42° | raw gyro=61.16°/s | corrected=60.85°/s | dt=1.95ms | increment=0.1189°
+[ROTATE] measured=4.06° | remaining=42.32° | raw gyro=87.37°/s | corrected=87.06°/s | dt=2.01ms | increment=0.1754°
+[ROTATE] measured=8.20° | remaining=38.23° | raw gyro=112.35°/s | corrected=112.04°/s | dt=1.99ms | increment=0.2228°
+[ROTATE] measured=12.82° | remaining=33.64° | raw gyro=130.31°/s | corrected=129.99°/s | dt=1.95ms | increment=0.2538°
+[ROTATE] Wheel speeds: left=100, right=-100
+[ROTATE] measured=19.44° | remaining=27.02° | raw gyro=130.85°/s | corrected=130.54°/s | dt=1.94ms | increment=0.2535°
+[ROTATE] measured=23.95° | remaining=22.46° | raw gyro=106.58°/s | corrected=106.27°/s | dt=1.94ms | increment=0.2062°
+[ROTATE] measured=28.13° | remaining=18.27° | raw gyro=99.74°/s | corrected=99.43°/s | dt=1.94ms | increment=0.1932°
+[ROTATE] measured=32.00° | remaining=14.38° | raw gyro=88.56°/s | corrected=88.25°/s | dt=1.97ms | increment=0.1737°
+[ROTATE] measured=35.46° | remaining=10.92° | raw gyro=82.79°/s | corrected=82.48°/s | dt=2.02ms | increment=0.1668°
+[ROTATE] measured=38.89° | remaining=7.48° | raw gyro=83.65°/s | corrected=83.34°/s | dt=1.95ms | increment=0.1629°
+[ROTATE] measured=42.36° | remaining=4.01° | raw gyro=81.60°/s | corrected=81.29°/s | dt=1.95ms | increment=0.1589°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 45.31°
+[ROTATE] Global angle updated from -87.10° to -41.79°
+[TAPE 2] Angle changed from -87.10° to -41.79°
+[TAPE 2] Starting ultrasonic scan
+
+[ULTRASONIC] Requesting measurement
+[ULTRASONIC] Port: 1, slot: 1
+[ULTRASONIC] Raw distance: 32.68965530395508
+[ULTRASONIC] Correction: 3.27
+[ULTRASONIC] Corrected distance: 35.96
+[TAPE 2] Distance: 35.96
+[TAPE 2] Stored global angle: -41.79°
+[DATA] Angles: [-87.09864718362778, -41.79079470519193]
+[DATA] Distances: [41.47758750915527, 35.95862083435058]
+
+[SCAN] Both tapes measured
+[SCAN] Distances: [41.47758750915527, 35.95862083435058]
+[SCAN] Angles: [-87.09864718362778, -41.79079470519193]
+[SCAN] Robot position: (-11.136374953561731, 27.444845646086158)
+
+========== CALCULATING CENTER ==========
+[CENTER] Distance 1: 41.48
+[CENTER] Distance 2: 35.96
+[CENTER] Angle 1: -87.10°
+[CENTER] Angle 2: -41.79°
+[CENTER] Scan position: (-11.136374953561731, 27.444845646086158)
+
+[GEOMETRY] calculate_center_and_backset_position()
+[GEOMETRY] Robot position: (-11.136374953561731, 27.444845646086158)
+[GEOMETRY] Distance 1: 41.48
+[GEOMETRY] Distance 2: 35.96
+[GEOMETRY] Angle 1: -87.10°
+[GEOMETRY] Angle 2: -41.79°
+[GEOMETRY] Point A: (-52.56, 29.54)
+[GEOMETRY] Point B: (-35.10, 54.25)
+[GEOMETRY] Center S: (-43.83, 41.90)
+[GEOMETRY] AB dx: 17.46
+[GEOMETRY] AB dy: 24.71
+[GEOMETRY] AB has a finite slope
+[GEOMETRY] Slope AB: 1.4151819326109056
+[GEOMETRY] Perpendicular slope: -0.7066229273822584
+[GEOMETRY] Perpendicular line: y - 41.8996 = -0.7066(x - -43.8302)
+[GEOMETRY] Backset 1: (-31.58, 33.24)
+[GEOMETRY] Backset 2: (-56.08, 50.56)
+[CENTER] Complete result: {'center': (-43.83022558718221, 41.89964081675183), 'point_a': (-52.56079492945146, 29.544296822165713), 'point_b': (-35.099656244912964, 54.25498481133795), 'line_slope': 1.4151819326109056, 'perpendicular_slope': -0.7066229273822584, 'perpendicular_formula': 'y - 41.8996 = -0.7066(x - -43.8302)', 'backset_positions': ((-31.579983342315558, 33.243338780542345), (-56.08046783204887, 50.55594285296131))}
+[CENTER] Target center: (-43.83, 41.90)
+
+========== MOVING TO CENTER ==========
+[MOVE] Current position: (-11.136374953561731, 27.444845646086158)
+[MOVE] Current angle: -41.79°
+
+[MOVE_TO] move_to() called
+[MOVE_TO] Current position: (-11.136374953561731, 27.444845646086158)
+[MOVE_TO] Target position: (-43.83, 41.90)
+[MOVE_TO] Current angle: -41.79°
+[MOVE_TO] dx: -32.69
+[MOVE_TO] dy: 14.45
+[MOVE_TO] Target angle: -66.15°
+[MOVE_TO] Required turn: -24.36°
+[MOVE_TO] Required distance: 35.75
+[MOVE_TO] Starting rotation
+
+[ROTATE] rotate() called
+[ROTATE] Requested rotation: -24.36°
+[ROTATE] Starting global angle: -41.79°
+[ROTATE] Acceptable error: 1.00°
+[ROTATE] Direction multiplier: -1
+[ROTATE] Target magnitude: 24.36°
+[ROTATE] Wheel speeds: left=-100, right=100
+[ROTATE] measured=0.13° | remaining=24.23° | raw gyro=5.28°/s | corrected=4.97°/s | dt=1.94ms | increment=0.0096°
+[ROTATE] measured=0.22° | remaining=24.13° | raw gyro=0.27°/s | corrected=-0.04°/s | dt=1.98ms | increment=0.0001°
+[ROTATE] measured=0.30° | remaining=24.06° | raw gyro=-1.24°/s | corrected=-1.55°/s | dt=1.98ms | increment=0.0031°
+[ROTATE] measured=0.36° | remaining=24.00° | raw gyro=-1.40°/s | corrected=-1.72°/s | dt=1.94ms | increment=0.0033°
+[ROTATE] measured=0.40° | remaining=23.96° | raw gyro=-0.03°/s | corrected=-0.34°/s | dt=1.95ms | increment=0.0007°
+[ROTATE] measured=0.43° | remaining=23.93° | raw gyro=0.96°/s | corrected=0.65°/s | dt=1.95ms | increment=0.0013°
+[ROTATE] measured=0.46° | remaining=23.90° | raw gyro=1.51°/s | corrected=1.20°/s | dt=1.96ms | increment=0.0023°
+[ROTATE] measured=0.49° | remaining=23.87° | raw gyro=0.46°/s | corrected=0.15°/s | dt=1.94ms | increment=0.0003°
+[ROTATE] measured=0.51° | remaining=23.85° | raw gyro=0.02°/s | corrected=-0.30°/s | dt=1.95ms | increment=0.0006°
+[ROTATE] measured=0.53° | remaining=23.83° | raw gyro=-0.50°/s | corrected=-0.82°/s | dt=2.00ms | increment=0.0016°
+[ROTATE] measured=0.54° | remaining=23.81° | raw gyro=0.27°/s | corrected=-0.04°/s | dt=1.95ms | increment=0.0001°
+[ROTATE] measured=0.56° | remaining=23.80° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=1.95ms | increment=0.0000°
+[ROTATE] measured=0.57° | remaining=23.79° | raw gyro=0.56°/s | corrected=0.25°/s | dt=1.95ms | increment=0.0005°
+[ROTATE] measured=0.58° | remaining=23.78° | raw gyro=0.40°/s | corrected=0.08°/s | dt=1.95ms | increment=0.0002°
+[ROTATE] measured=0.59° | remaining=23.77° | raw gyro=0.15°/s | corrected=-0.16°/s | dt=2.00ms | increment=0.0003°
+[ROTATE] measured=0.59° | remaining=23.77° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.05ms | increment=0.0002°
+[ROTATE] measured=0.60° | remaining=23.76° | raw gyro=0.15°/s | corrected=-0.16°/s | dt=1.94ms | increment=0.0003°
+[ROTATE] measured=0.61° | remaining=23.75° | raw gyro=0.38°/s | corrected=0.07°/s | dt=1.96ms | increment=0.0001°
+[ROTATE] measured=0.62° | remaining=23.74° | raw gyro=0.55°/s | corrected=0.24°/s | dt=1.95ms | increment=0.0005°
+[ROTATE] measured=0.62° | remaining=23.74° | raw gyro=0.61°/s | corrected=0.30°/s | dt=1.95ms | increment=0.0006°
+[ROTATE] measured=0.63° | remaining=23.73° | raw gyro=0.35°/s | corrected=0.04°/s | dt=1.99ms | increment=0.0001°
+[ROTATE] measured=0.63° | remaining=23.73° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=1.98ms | increment=0.0000°
+[ROTATE] measured=0.64° | remaining=23.72° | raw gyro=0.34°/s | corrected=0.02°/s | dt=1.96ms | increment=0.0000°
+[ROTATE] measured=0.64° | remaining=23.72° | raw gyro=0.43°/s | corrected=0.11°/s | dt=1.96ms | increment=0.0002°
+[ROTATE] measured=0.65° | remaining=23.71° | raw gyro=0.37°/s | corrected=0.05°/s | dt=1.96ms | increment=0.0001°
+[ROTATE] measured=0.65° | remaining=23.71° | raw gyro=0.41°/s | corrected=0.10°/s | dt=1.95ms | increment=0.0002°
+[ROTATE] measured=0.66° | remaining=23.70° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=1.98ms | increment=0.0000°
+[ROTATE] measured=0.66° | remaining=23.70° | raw gyro=0.38°/s | corrected=0.07°/s | dt=1.99ms | increment=0.0001°
+[ROTATE] measured=0.66° | remaining=23.69° | raw gyro=0.52°/s | corrected=0.21°/s | dt=2.01ms | increment=0.0004°
+[ROTATE] measured=0.67° | remaining=23.69° | raw gyro=0.27°/s | corrected=-0.04°/s | dt=1.96ms | increment=0.0001°
+[ROTATE] measured=0.67° | remaining=23.68° | raw gyro=0.43°/s | corrected=0.11°/s | dt=2.50ms | increment=0.0003°
+[ROTATE] measured=0.68° | remaining=23.68° | raw gyro=0.06°/s | corrected=-0.25°/s | dt=2.50ms | increment=0.0006°
+[ROTATE] measured=0.69° | remaining=23.67° | raw gyro=0.38°/s | corrected=0.07°/s | dt=2.49ms | increment=0.0002°
+[ROTATE] measured=0.69° | remaining=23.67° | raw gyro=-0.05°/s | corrected=-0.36°/s | dt=2.45ms | increment=0.0009°
+[ROTATE] measured=0.70° | remaining=23.66° | raw gyro=0.41°/s | corrected=0.10°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=0.71° | remaining=23.65° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.45ms | increment=0.0001°
+[ROTATE] measured=0.71° | remaining=23.64° | raw gyro=0.49°/s | corrected=0.18°/s | dt=2.44ms | increment=0.0004°
+[ROTATE] measured=0.72° | remaining=23.64° | raw gyro=0.40°/s | corrected=0.08°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=0.73° | remaining=23.63° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=0.73° | remaining=23.62° | raw gyro=0.44°/s | corrected=0.13°/s | dt=2.49ms | increment=0.0003°
+[ROTATE] measured=0.74° | remaining=23.62° | raw gyro=0.44°/s | corrected=0.13°/s | dt=2.47ms | increment=0.0003°
+[ROTATE] measured=0.74° | remaining=23.61° | raw gyro=0.32°/s | corrected=0.01°/s | dt=2.45ms | increment=0.0000°
+[ROTATE] measured=0.75° | remaining=23.61° | raw gyro=0.46°/s | corrected=0.15°/s | dt=2.45ms | increment=0.0004°
+[ROTATE] measured=0.76° | remaining=23.60° | raw gyro=0.24°/s | corrected=-0.07°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=0.76° | remaining=23.60° | raw gyro=0.56°/s | corrected=0.25°/s | dt=2.45ms | increment=0.0006°
+[ROTATE] measured=0.77° | remaining=23.59° | raw gyro=0.58°/s | corrected=0.27°/s | dt=2.46ms | increment=0.0007°
+[ROTATE] measured=0.78° | remaining=23.58° | raw gyro=0.20°/s | corrected=-0.11°/s | dt=2.44ms | increment=0.0003°
+[ROTATE] measured=0.78° | remaining=23.58° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.46ms | increment=0.0000°
+[ROTATE] measured=0.79° | remaining=23.57° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.45ms | increment=0.0001°
+[ROTATE] measured=0.79° | remaining=23.56° | raw gyro=0.35°/s | corrected=0.04°/s | dt=2.48ms | increment=0.0001°
+[ROTATE] measured=0.80° | remaining=23.56° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=0.81° | remaining=23.55° | raw gyro=0.46°/s | corrected=0.15°/s | dt=2.44ms | increment=0.0004°
+[ROTATE] measured=0.82° | remaining=23.54° | raw gyro=0.37°/s | corrected=0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=0.82° | remaining=23.54° | raw gyro=0.37°/s | corrected=0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=0.83° | remaining=23.53° | raw gyro=-0.03°/s | corrected=-0.34°/s | dt=2.45ms | increment=0.0008°
+[ROTATE] measured=0.83° | remaining=23.52° | raw gyro=0.41°/s | corrected=0.10°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=0.84° | remaining=23.52° | raw gyro=0.47°/s | corrected=0.16°/s | dt=2.45ms | increment=0.0004°
+[ROTATE] measured=0.84° | remaining=23.51° | raw gyro=0.61°/s | corrected=0.30°/s | dt=2.47ms | increment=0.0007°
+[ROTATE] measured=0.85° | remaining=23.51° | raw gyro=0.29°/s | corrected=-0.02°/s | dt=2.47ms | increment=0.0001°
+[ROTATE] measured=0.86° | remaining=23.50° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.48ms | increment=0.0001°
+[ROTATE] measured=0.86° | remaining=23.49° | raw gyro=0.34°/s | corrected=0.02°/s | dt=2.43ms | increment=0.0001°
+[ROTATE] measured=0.87° | remaining=23.49° | raw gyro=0.03°/s | corrected=-0.28°/s | dt=2.44ms | increment=0.0007°
+[ROTATE] measured=0.87° | remaining=23.48° | raw gyro=0.29°/s | corrected=-0.02°/s | dt=2.45ms | increment=0.0001°
+[ROTATE] measured=0.88° | remaining=23.48° | raw gyro=0.17°/s | corrected=-0.14°/s | dt=2.44ms | increment=0.0004°
+[ROTATE] measured=0.89° | remaining=23.47° | raw gyro=0.15°/s | corrected=-0.16°/s | dt=2.44ms | increment=0.0004°
+[ROTATE] measured=0.89° | remaining=23.47° | raw gyro=0.41°/s | corrected=0.10°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=0.90° | remaining=23.46° | raw gyro=0.18°/s | corrected=-0.13°/s | dt=2.47ms | increment=0.0003°
+[ROTATE] measured=0.90° | remaining=23.45° | raw gyro=0.23°/s | corrected=-0.08°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=0.91° | remaining=23.45° | raw gyro=0.21°/s | corrected=-0.10°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=0.92° | remaining=23.44° | raw gyro=0.18°/s | corrected=-0.13°/s | dt=2.45ms | increment=0.0003°
+[ROTATE] measured=0.92° | remaining=23.43° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=0.93° | remaining=23.43° | raw gyro=0.24°/s | corrected=-0.07°/s | dt=2.46ms | increment=0.0002°
+[ROTATE] measured=0.94° | remaining=23.42° | raw gyro=0.52°/s | corrected=0.21°/s | dt=2.45ms | increment=0.0005°
+[ROTATE] measured=0.94° | remaining=23.41° | raw gyro=0.11°/s | corrected=-0.21°/s | dt=2.44ms | increment=0.0005°
+[ROTATE] measured=0.95° | remaining=23.41° | raw gyro=0.38°/s | corrected=0.07°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=0.95° | remaining=23.40° | raw gyro=0.29°/s | corrected=-0.02°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=0.96° | remaining=23.40° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=0.98° | remaining=23.38° | raw gyro=-0.34°/s | corrected=-0.65°/s | dt=2.45ms | increment=0.0016°
+[ROTATE] measured=1.01° | remaining=23.35° | raw gyro=-0.38°/s | corrected=-0.69°/s | dt=2.50ms | increment=0.0017°
+[ROTATE] measured=1.02° | remaining=23.33° | raw gyro=0.31°/s | corrected=-0.01°/s | dt=2.50ms | increment=0.0000°
+[ROTATE] measured=1.04° | remaining=23.32° | raw gyro=0.66°/s | corrected=0.34°/s | dt=2.46ms | increment=0.0008°
+[ROTATE] measured=1.05° | remaining=23.31° | raw gyro=0.47°/s | corrected=0.16°/s | dt=2.44ms | increment=0.0004°
+[ROTATE] measured=1.06° | remaining=23.30° | raw gyro=0.70°/s | corrected=0.39°/s | dt=2.45ms | increment=0.0010°
+[ROTATE] measured=1.07° | remaining=23.29° | raw gyro=0.18°/s | corrected=-0.13°/s | dt=2.45ms | increment=0.0003°
+[ROTATE] measured=1.07° | remaining=23.28° | raw gyro=0.37°/s | corrected=0.05°/s | dt=2.45ms | increment=0.0001°
+[ROTATE] measured=1.08° | remaining=23.28° | raw gyro=0.18°/s | corrected=-0.13°/s | dt=2.44ms | increment=0.0003°
+[ROTATE] measured=1.09° | remaining=23.27° | raw gyro=0.26°/s | corrected=-0.05°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=1.09° | remaining=23.27° | raw gyro=0.23°/s | corrected=-0.08°/s | dt=2.47ms | increment=0.0002°
+[ROTATE] measured=1.10° | remaining=23.26° | raw gyro=0.21°/s | corrected=-0.10°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=1.10° | remaining=23.25° | raw gyro=0.38°/s | corrected=0.07°/s | dt=2.44ms | increment=0.0002°
+[ROTATE] measured=1.11° | remaining=23.25° | raw gyro=0.11°/s | corrected=-0.21°/s | dt=2.46ms | increment=0.0005°
+[ROTATE] measured=1.12° | remaining=23.24° | raw gyro=0.29°/s | corrected=-0.02°/s | dt=2.47ms | increment=0.0001°
+[ROTATE] measured=1.13° | remaining=23.23° | raw gyro=0.78°/s | corrected=0.47°/s | dt=2.47ms | increment=0.0012°
+[ROTATE] measured=1.13° | remaining=23.22° | raw gyro=0.24°/s | corrected=-0.07°/s | dt=2.45ms | increment=0.0002°
+[ROTATE] measured=1.14° | remaining=23.22° | raw gyro=0.27°/s | corrected=-0.04°/s | dt=2.44ms | increment=0.0001°
+[ROTATE] measured=1.21° | remaining=23.15° | raw gyro=3.92°/s | corrected=3.61°/s | dt=2.45ms | increment=0.0088°
+[ROTATE] measured=1.31° | remaining=23.05° | raw gyro=3.50°/s | corrected=3.18°/s | dt=2.45ms | increment=0.0078°
+[ROTATE] measured=1.39° | remaining=22.97° | raw gyro=1.05°/s | corrected=0.74°/s | dt=2.44ms | increment=0.0018°
+[ROTATE] measured=1.45° | remaining=22.91° | raw gyro=-1.30°/s | corrected=-1.61°/s | dt=2.45ms | increment=0.0039°
+[ROTATE] measured=1.86° | remaining=22.54° | raw gyro=-16.70°/s | corrected=-17.01°/s | dt=2.45ms | increment=0.0417°
+[ROTATE] measured=2.46° | remaining=21.93° | raw gyro=-12.95°/s | corrected=-13.26°/s | dt=2.44ms | increment=0.0324°
+[ROTATE] measured=3.50° | remaining=20.95° | raw gyro=-33.97°/s | corrected=-34.28°/s | dt=2.46ms | increment=0.0844°
+[ROTATE] measured=4.93° | remaining=19.50° | raw gyro=-27.53°/s | corrected=-27.84°/s | dt=2.45ms | increment=0.0683°
+[ROTATE] measured=6.62° | remaining=17.82° | raw gyro=-30.26°/s | corrected=-30.57°/s | dt=2.43ms | increment=0.0744°
+[ROTATE] measured=7.81° | remaining=16.59° | raw gyro=-13.33°/s | corrected=-13.64°/s | dt=2.44ms | increment=0.0332°
+[ROTATE] measured=9.07° | remaining=15.39° | raw gyro=-38.27°/s | corrected=-38.59°/s | dt=2.44ms | increment=0.0942°
+[ROTATE] measured=11.12° | remaining=13.32° | raw gyro=-33.62°/s | corrected=-33.93°/s | dt=2.44ms | increment=0.0828°
+[ROTATE] measured=12.94° | remaining=11.51° | raw gyro=-36.38°/s | corrected=-36.69°/s | dt=2.45ms | increment=0.0898°
+[ROTATE] measured=14.44° | remaining=9.98° | raw gyro=-22.56°/s | corrected=-22.88°/s | dt=2.44ms | increment=0.0559°
+[ROTATE] measured=15.39° | remaining=9.02° | raw gyro=-18.61°/s | corrected=-18.92°/s | dt=2.44ms | increment=0.0462°
+[ROTATE] measured=16.14° | remaining=8.25° | raw gyro=-15.19°/s | corrected=-15.50°/s | dt=2.44ms | increment=0.0378°
+[ROTATE] measured=16.61° | remaining=7.76° | raw gyro=-2.60°/s | corrected=-2.91°/s | dt=2.47ms | increment=0.0072°
+[ROTATE] measured=17.03° | remaining=7.35° | raw gyro=-7.62°/s | corrected=-7.93°/s | dt=2.44ms | increment=0.0194°
+[ROTATE] measured=17.59° | remaining=6.78° | raw gyro=-5.76°/s | corrected=-6.07°/s | dt=2.46ms | increment=0.0149°
+[ROTATE] measured=17.89° | remaining=6.47° | raw gyro=-1.60°/s | corrected=-1.92°/s | dt=2.94ms | increment=0.0056°
+[ROTATE] measured=17.93° | remaining=6.43° | raw gyro=2.44°/s | corrected=2.13°/s | dt=2.46ms | increment=0.0052°
+[ROTATE] measured=18.04° | remaining=6.32° | raw gyro=-0.09°/s | corrected=-0.40°/s | dt=2.46ms | increment=0.0010°
+[ROTATE] measured=18.15° | remaining=6.22° | raw gyro=-3.80°/s | corrected=-4.11°/s | dt=2.45ms | increment=0.0101°
+[ROTATE] measured=19.29° | remaining=5.17° | raw gyro=-43.11°/s | corrected=-43.43°/s | dt=2.49ms | increment=0.1082°
+[ROTATE] measured=22.24° | remaining=2.27° | raw gyro=-62.82°/s | corrected=-63.14°/s | dt=2.44ms | increment=0.1540°
+[ROTATE] Stopping motors
+[ROTATE] Measured rotation: 23.44°
+[ROTATE] Global angle updated from -41.79° to -65.23°
+[MOVE_TO] Rotation finished
+[MOVE_TO] Angle after rotation: -65.23°
+[MOVE_TO] Starting forward drive
+
+[DRIVE] drive_distance() called
+[DRIVE] Requested distance: 35.75
+[DRIVE] Starting position: (-11.136374953561731, 27.444845646086158)
+[DRIVE] Current heading: -65.23°
+[DRIVE] Drive time: 2.553s
+[DRIVE] Starting motors: left=100, right=100
+[DRIVE] Motors stopped
+[DRIVE] Delta X: -32.46
+[DRIVE] Delta Y: 14.98
+[DRIVE] Position updated from (-11.14, 27.44) to (-43.59, 42.42)
+[MOVE_TO] Forward drive finished
+[MOVE_TO] Estimated position: (-43.59397628081554, 42.42259877399015)
+[MOVE_TO] Position set to target: (-43.83022558718221, 41.89964081675183)
+
+========== PARKING COMPLETE ==========
+[STATE] Final position: (-43.83022558718221, 41.89964081675183)
+[STATE] Final angle: -65.23°
+[LOG] Closing log file: /home/paul/Projects/Driver/src/scripts/logs/parking_log_2026-07-26_16-32-44.txt

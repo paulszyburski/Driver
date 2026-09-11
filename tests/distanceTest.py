@@ -1,4 +1,9 @@
-from lib.mBot import *
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
+from core.hardware.MBotlib.mBot import mBot
 from time import sleep
 
 bot = mBot()
@@ -11,5 +16,5 @@ if __name__ == "__main__":
     # bot.startWithHID()                  # don't use this unless HID really works
 
     while True:
-        bot.requestUltrasonicSensor(1, 4, onDistance)
+        bot.requestUltrasonicSensor(1, 1, onDistance)
         sleep(0.2)
