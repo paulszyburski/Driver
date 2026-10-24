@@ -1,8 +1,6 @@
 import random
 
 import pybullet as p
-import pybullet_data
-import time
 import math
 
 
@@ -15,8 +13,9 @@ def find_joints(car):
         if "steering" in name:
             steering_joints.append(i)
         if "wheel" in name and "steering" not in name:
-            drive_joints.append(i)  
+            drive_joints.append(i)
     return steering_joints, drive_joints
+
 
 def track_held_keys(events, keys_held):
     for k, v in events.items():
@@ -25,112 +24,88 @@ def track_held_keys(events, keys_held):
         if v & p.KEY_WAS_RELEASED:
             keys_held.discard(k)
 
+
 def get_pos(object, client_id):
     position = p.getBasePositionAndOrientation(object, physicsClientId=client_id)[0]
     return position
 
+
 def get_orientation(object, client_id):
-    roll, pitch, yaw = p.getEulerFromQuaternion(p.getBasePositionAndOrientation(object, physicsClientId=client_id)[1])
+    roll, pitch, yaw = p.getEulerFromQuaternion(
+        p.getBasePositionAndOrientation(object, physicsClientId=client_id)[1]
+    )
     return roll, pitch, yaw
+
 
 def get_velocity(object, client_id):
     velocity = p.getBaseVelocity(object, physicsClientId=client_id)[0]
     return velocity
 
+
 def get_steer_angle(car, steering_joints):
     steer_angle = p.getJointState(car, steering_joints[0])[0]
     return steer_angle
 
-def compute_power(value: str):
-    from decimal import Decimal
-
-    d = Decimal(value)
-    return format(d, "f")
 
 def check_collision(object, obstacles, client_id):
-
     for obstacle in obstacles.values():
         contact_points = p.getContactPoints(object, obstacle, physicsClientId=client_id)
         if len(contact_points) > 0:
             return True
     return False
 
+
 def random_spawn(x_range=(-5, 5), y_range=(-5, 5)):
-    x = random.randint(x_range[0]*100, x_range[1]*100)/100
-    y = random.randint(y_range[0]*100, y_range[1]*100)/100
+    x = random.randint(x_range[0] * 100, x_range[1] * 100) / 100
+    y = random.randint(y_range[0] * 100, y_range[1] * 100) / 100
     return x, y, 0
+
 
 def log(state, step):
     if step % 550 != 0:
         return
-    print(f"X: {state['x']:.2f}, Y: {state['y']:.2f}")
-    print(f"Collision: {state['collision']}")
-    print(f"Orientation yaw: {compute_power(str(state['orientation']))}")
-    print(f"Steer angle: {compute_power(str(state['steer_angle']))}")
-    print(f"Velocity: {compute_power(str(state['velocityx']))}, {compute_power(str(state['velocityy']))}")
-    print(f"Front middle: {compute_power(str(state['front_middlex']))}, {compute_power(str(state['front_middley']))}")
-    print(f"Front right: {compute_power(str(state['front_rightx']))}, {compute_power(str(state['front_righty']))}")
-    print(f"Front left: {compute_power(str(state['front_leftx']))}, {compute_power(str(state['front_lefty']))}")
-    print(f"Back middle: {compute_power(str(state['back_middlex']))}, {compute_power(str(state['back_middley']))}")
-    print(f"Back right: {compute_power(str(state['back_rightx']))}, {compute_power(str(state['back_righty']))}")
-    print(f"Back left: {compute_power(str(state['back_leftx']))}, {compute_power(str(state['back_lefty']))}\n\n")
-    print(f"Distance to obs1: {compute_power(str(state['obs1_dist']))}")
-    print(f"Distance to obs2: {compute_power(str(state['obs2_dist']))}")
+    print(
+        f"Position: ({state['x']:.3f}, {state['y']:.3f}) | "
+        f"Yaw: {state['orientation']:.3f} | "
+        f"Target: {state['dist_to_target']:.3f} | "
+        f"Collision: {state['collision']}"
+    )
 
 
 def dist_to_target(ego_state, target_pos):
-    dist1 = math.hypot(ego_state["front_middlex"] - target_pos[0], ego_state["front_middley"] - target_pos[1])
-    dist2 = math.hypot(ego_state["front_rightx"] - target_pos[0], ego_state["front_righty"] - target_pos[1])
-    dist3 = math.hypot(ego_state["front_leftx"] - target_pos[0], ego_state["front_lefty"] - target_pos[1])
-    dist4 = math.hypot(ego_state["back_middlex"] - target_pos[0], ego_state["back_middley"] - target_pos[1])
-    dist5 = math.hypot(ego_state["back_rightx"] - target_pos[0], ego_state["back_righty"] - target_pos[1])
-    dist6 = math.hypot(ego_state["back_leftx"] - target_pos[0], ego_state["back_lefty"] - target_pos[1])
-    return min(dist1, dist2, dist3, dist4, dist5, dist6)
+    return min(
+        math.hypot(
+            ego_state[name + "x"] - target_pos[0], ego_state[name + "y"] - target_pos[1]
+        )
+        for name in CORNER_NAMES
+    )
+
 
 def dist_to_obstacle(ego_state, obstacle_state):
-    smallest_dist = float('inf')
-    for ego_point in ["front_middlex", "front_rightx", "front_leftx", "back_middlex", "back_rightx", "back_leftx"]:
-        for obs_point in ["front_middlex", "front_rightx", "front_leftx", "back_middlex", "back_rightx", "back_leftx"]:
-            dist = math.hypot(ego_state[ego_point] - obstacle_state[obs_point], ego_state[ego_point] - obstacle_state[obs_point])
-            if dist < smallest_dist:
-                smallest_dist = dist
-    return smallest_dist
+    return min(
+        math.hypot(
+            ego_state[ego + "x"] - obstacle_state[obs + "x"],
+            ego_state[ego + "x"] - obstacle_state[obs + "x"],
+        )
+        for ego in CORNER_NAMES
+        for obs in CORNER_NAMES
+    )
 
-def is_facing_target(x0, y0, orientation, x1, y1, eps=0.6):
-    dx = x1 - x0
-    dy = y1 - y0
-
-    if abs(dx * math.sin(orientation) - dy * math.cos(orientation)) > eps:
-        return False
-    
-    t = dx * math.cos(orientation) + dy * math.sin(orientation)
-    return True if t >= 0 else False
 
 def steering_to_target(x0, y0, orientation, x1, y1, max_steer=0.6):
     dx = x1 - x0
     dy = y1 - y0
 
     target_angle = math.atan2(dy, dx)
-    
+
     delta = target_angle - orientation
     delta = math.atan2(math.sin(delta), math.cos(delta))
-    
-    k = 1.0
-    steering = max(-max_steer, min(max_steer, k * delta))
-    
-    return steering
 
-def adjust_yaw(orientation, target_yaw, max_delta=0.1):
-    delta = target_yaw - orientation
-    delta = math.atan2(math.sin(delta), math.cos(delta))
-    
-    if abs(delta) < max_delta:
-        return target_yaw
-    else:
-        return orientation + max(-max_delta, min(max_delta, delta))
-    
+    return max(-max_steer, min(max_steer, delta))
+
+
 def adjust_yaw_in_place(yaw_err, phase):
-    direction = 1 if yaw_err > 0 else -1 #right if positive left if negative
+    direction = 1 if yaw_err > 0 else -1
     if abs(yaw_err) > 0.1:
         if phase == 1.0:
             action = [-7, 0.6 if direction == 1 else -0.6, 80]
@@ -143,43 +118,49 @@ def adjust_yaw_in_place(yaw_err, phase):
         phase = 2
         return [0, 0, 0], phase
 
+
 def approach_target(state, target_pos):
-    # Check if we are at the target
-    #print(math.hypot(state["x"] - target_pos[0], state["y"] - target_pos[1]))
     if math.hypot(state["x"] - target_pos[0], state["y"] - target_pos[1]) < 0.1:
-        action = [0, 0, 0]
-        return action
-    steer = steering_to_target(state["x"], state["y"], state["orientation"], target_pos[0], target_pos[1])
-    action = [20, steer, 1]
-    return action
+        return [0, 0, 0]
+    steer = steering_to_target(
+        state["x"], state["y"], state["orientation"], target_pos[0], target_pos[1]
+    )
+    return [20, steer, 1]
+
 
 def compute_corners_position(position, yaw, length=0.43, width=0.29):
-    """"
-    a1: front middle
-    a2: front right
-    a3: front left
-    a4: back middle
-    a5: back right
-    a6: back left
-    """
-    import math
-    r1 = length / 2
-    a1 = (position[0] + r1 * math.cos(yaw), position[1] + r1 * math.sin(yaw))
-    
-    r2 = math.sqrt((length / 2) ** 2 + (width / 2) ** 2)
-    a2 = (position[0] + math.cos(yaw - math.asin(width / (2 * r2))) * r2, position[1] + math.sin(yaw - math.asin(width / (2 * r2))) * r2)
-    
-    r3 = math.sqrt((length / 2) ** 2 + (width / 2) ** 2)
-    a3 = (position[0] + math.cos(yaw + math.asin(width / (2 * r3))) * r3, position[1] + math.sin(yaw + math.asin(width / (2 * r3))) * r3)
-    
-    r4 = length / 2
-    a4 = (position[0] - r4 * math.cos(yaw), position[1] - r4 * math.sin(yaw))
-    
-    r5 = math.sqrt((length / 2) ** 2 + (width / 2) ** 2)
-    a5 = (position[0] + math.cos(yaw + math.pi - math.asin(width / (2 * r5))) * r5, position[1] + math.sin(yaw + math.pi - math.asin(width / (2 * r5))) * r5)
-    
-    r6 = math.sqrt((length / 2) ** 2 + (width / 2) ** 2)
-    a6 = (position[0] + math.cos(yaw + math.pi + math.asin(width / (2 * r6))) * r6, position[1] + math.sin(yaw + math.pi + math.asin(width / (2 * r6))) * r6)
-    
-    return a1, a2, a3, a4, a5, a6
+    half_length, half_width = length / 2, width / 2
+    offsets = (
+        (half_length, 0),
+        (half_length, -half_width),
+        (half_length, half_width),
+        (-half_length, 0),
+        (-half_length, half_width),
+        (-half_length, -half_width),
+    )
+    cos_yaw, sin_yaw = math.cos(yaw), math.sin(yaw)
+    return tuple(
+        (
+            position[0] + x * cos_yaw - y * sin_yaw,
+            position[1] + x * sin_yaw + y * cos_yaw,
+        )
+        for x, y in offsets
+    )
 
+
+CORNER_NAMES = (
+    "front_middle",
+    "front_right",
+    "front_left",
+    "back_middle",
+    "back_right",
+    "back_left",
+)
+
+
+def corner_state(position, yaw):
+    return {
+        name + axis: value
+        for name, point in zip(CORNER_NAMES, compute_corners_position(position, yaw))
+        for axis, value in zip("xy", point)
+    }

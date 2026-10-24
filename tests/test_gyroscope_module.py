@@ -14,7 +14,7 @@ ACCEL_CONFIG = 0x1C
 ACCEL_XOUT_H = 0x3B
 
 ACCEL_SCALE = 16384.0  # ±2 g
-GYRO_SCALE = 131.0     # ±250 degrees/second
+GYRO_SCALE = 131.0  # ±250 degrees/second
 
 # Higher values trust the gyro more.
 # Lower values correct tilt more strongly using the accelerometer.
@@ -142,9 +142,7 @@ def accelerometer_angles(
     accel_y: float,
     accel_z: float,
 ) -> tuple[float, float]:
-    roll = math.degrees(
-        math.atan2(accel_y, accel_z)
-    )
+    roll = math.degrees(math.atan2(accel_y, accel_z))
 
     pitch = math.degrees(
         math.atan2(
@@ -223,9 +221,7 @@ def main() -> None:
             yaw = normalize_angle(yaw)
 
             print(
-                f"\rRoll: {roll:8.2f}°  "
-                f"Pitch: {pitch:8.2f}°  "
-                f"Yaw: {yaw:8.2f}°  ",
+                f"\rRoll: {roll:8.2f}°  Pitch: {pitch:8.2f}°  Yaw: {yaw:8.2f}°  ",
                 end="",
                 flush=True,
             )

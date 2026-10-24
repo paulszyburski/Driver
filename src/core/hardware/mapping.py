@@ -13,10 +13,7 @@ class Mapping:
     def add_free_space(self, x, y):
         position = self._position(x, y)
 
-        if (
-            position not in self.boundaries
-            and position not in self.obstacles
-        ):
+        if position not in self.boundaries and position not in self.obstacles:
             self.free_space.add(position)
 
     def add_boundary(self, x, y):

@@ -1,1 +1,0 @@
-episode,step,x,y,yaw,vx,vy,omega,dist_to_target,angle_to_target,heading_error,yaw_error,obs2_dx,obs2_dy,obs3_dx,obs3_dy,action_steer,action_speed,success

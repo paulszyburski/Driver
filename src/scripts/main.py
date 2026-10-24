@@ -1,17 +1,17 @@
 import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from core.ml.env import Env
-from core.ml.utils import compute_power
-from core.ml.controller import Controller
+from core.ml.controller import EndOn
 from core.ml.utils import log
 import time
 
 
 def main():
     env = Env()
-    controller = Controller()
+    controller = EndOn()
 
     step = 0
     phase = 0
@@ -28,6 +28,7 @@ def main():
 
             log(state, step)
             step += 1
+
 
 if __name__ == "__main__":
     main()

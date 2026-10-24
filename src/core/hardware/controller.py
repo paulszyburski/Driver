@@ -1,11 +1,7 @@
 import math
 from time import perf_counter, sleep
 
-import cv2
-import numpy as np
-
-from .camera import Camera
-from .utils import normalize_angle, read_gyro, read_accelerometer
+from .utils import normalize_angle, read_gyro
 from .MBotlib.mBot import mBot
 
 
@@ -18,7 +14,6 @@ class BotController:
 
         print("Keep the robot still while calibrating the gyroscope...")
         self.gyro_z_bias = self.calibrate_gyro_z()
-        
 
     def calibrate_gyro_z(self, samples=300):
         total = 0.0
@@ -29,7 +24,6 @@ class BotController:
             sleep(0.003)
 
         return total / samples
-
 
     def rotate(self, degrees, acceptable_error=1):
         if abs(degrees) <= acceptable_error:
@@ -52,10 +46,7 @@ class BotController:
                     speed = 120
 
                 if speed != current_speed:
-                    self.bot.doMove(
-                        direction * speed,
-                        -direction * speed
-                    )
+                    self.bot.doMove(direction * speed, -direction * speed)
                     current_speed = speed
 
                 _, _, gyro_z = read_gyro()
@@ -73,9 +64,7 @@ class BotController:
         finally:
             self.bot.doMove(0, 0)
 
-        self.curr_angle = normalize_angle(
-            self.curr_angle + direction * measured_angle
-        )
+        self.curr_angle = normalize_angle(self.curr_angle + direction * measured_angle)
 
     def drive_distance(self, distance):
         speed = 100
@@ -95,10 +84,7 @@ class BotController:
 
         current_x, current_y = self.position
 
-        self.position = (
-            current_x + delta_x,
-            current_y + delta_y
-        )
+        self.position = (current_x + delta_x, current_y + delta_y)
 
     def move_to(self, x, y):
         current_x, current_y = self.position
@@ -111,24 +97,17 @@ class BotController:
         if distance <= 0.1:
             return
 
-        target_angle = math.degrees(
-            math.atan2(dx, dy)
-        )
+        target_angle = math.degrees(math.atan2(dx, dy))
+        turn_angle = normalize_angle(target_angle - self.curr_angle)
 
-        turn_angle = normalize_angle(
-            target_angle - self.curr_angle
-        )
-
-        print(
-            f"Moving {distance:.2f} cm at "
-            f"{target_angle:.2f}°"
-        )
+        print(f"Moving {distance:.2f} cm at {target_angle:.2f}°")
 
         self.rotate(turn_angle)
         sleep(0.5)
         self.drive_distance(distance)
 
         self.position = (x, y)
+
 
 if __name__ == "__main__":
     bot = mBot()

@@ -1,12 +1,9 @@
 import sys
 from pathlib import Path
 
-import cv2
 import matplotlib.pyplot as plt
 
-sys.path.append(
-    str(Path(__file__).resolve().parents[1])
-)
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from core.hardware.controller import BotController
 from core.hardware.mapping import Mapping
@@ -21,6 +18,7 @@ PIXEL_STEP = 8
 
 
 plt.ion()
+
 
 def visualize_mapping(boundaries, free_space, current_position):
     plt.clf()
@@ -50,7 +48,7 @@ def visualize_mapping(boundaries, free_space, current_position):
     plt.draw()
     plt.pause(0.01)
 
-    
+
 def map_out(bot, controller, camera, mapping):
     frame = camera.take_picture(warmup_time=0.3)
     positions, mask = camera.detect_color(
@@ -62,13 +60,9 @@ def map_out(bot, controller, camera, mapping):
     robot_x, robot_y = controller.position
 
     for relative_x, relative_y in positions.values():
-        mapping.add_boundary(
-            robot_x + relative_x,
-            robot_y + relative_y
-        )
+        mapping.add_boundary(robot_x + relative_x, robot_y + relative_y)
 
     frame_height, frame_width = mask.shape
-
 
     for pixel_y in range(0, frame_height, PIXEL_STEP):
         for pixel_x in range(0, frame_width, PIXEL_STEP):
@@ -76,11 +70,9 @@ def map_out(bot, controller, camera, mapping):
             if mask[pixel_y, pixel_x] != 0:
                 continue
 
-            relative_x, relative_y = (
-                camera.pixel_to_position(
-                    pixel_x,
-                    pixel_y,
-                )
+            relative_x, relative_y = camera.pixel_to_position(
+                pixel_x,
+                pixel_y,
             )
 
             mapping.add_free_space(
@@ -108,11 +100,10 @@ def main():
         )
 
         controller.drive_distance(20)
-        
+
     camera.close()
     plt.ioff()
     plt.show()
-
 
 
 if __name__ == "__main__":

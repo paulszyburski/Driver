@@ -1,27 +1,21 @@
-
+import argparse
 import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pandas as pd
 
-from core.ML.env import Env
-from core.ML.utils import compute_power
-from core.ML.controller import MLController
-from core.ML.utils import log
+from core.ml.env import Env
+from core.ml.controller import MLController
+from core.ml.utils import log
 import time
-import joblib
 
-ALL_COLS = [
-    "episode", "step",
-    "x", "y", "orientation", "velocityx", "velocityy", "steer_angle",
-    "dist_to_target", "yaw_err", "obs1_dist", "obs2_dist",
-    "steer", "speed"
-]
+ALL_COLS = ["episode", "step", *MLController.FEATURE_COLS, "steer", "speed"]
 
-CSV_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "training_data_V1_2026-05-05_21-48-18.csv"
-
-MODEL_FILE = Path(__file__).resolve().parent.parent.parent / "models" / "trained_robot_model.pkl"
+MODEL_FILE = (
+    Path(__file__).resolve().parent.parent.parent / "models" / "trained_robot_model.pkl"
+)
 MAX_TRAIN_SAMPLES = 4_500_000
 EPOCHS = 200
 CHECKPOINT_EVERY_EPOCHS = 10
@@ -29,10 +23,12 @@ BATCH_SIZE = 512
 LEARNING_RATE = 8e-4
 HIDDEN_LAYERS = (128, 64)
 
-def setup():
-    controller = MLController()
 
-    df = pd.read_csv(CSV_FILE, header=None, names=ALL_COLS)
+def setup(csv_file):
+    controller = MLController()
+    MODEL_FILE.parent.mkdir(exist_ok=True)
+
+    df = pd.read_csv(csv_file, header=None, names=ALL_COLS)
     sample_n = min(MAX_TRAIN_SAMPLES, len(df))
     df = df.sample(n=sample_n, random_state=42).reset_index(drop=True)
 
@@ -59,7 +55,6 @@ def main():
     MLcontroller.load_model(MODEL_FILE)
 
     step = 0
-    phase = 0
 
     while True:
         state = env.get_state(env.car)
@@ -73,6 +68,14 @@ def main():
         log(state, step)
         step += 1
 
+
 if __name__ == "__main__":
-    #setup()
-    main()
+    parser = argparse.ArgumentParser(description="Train or run the parking model.")
+    parser.add_argument(
+        "--train", type=Path, metavar="CSV", help="train from a recorded CSV"
+    )
+    args = parser.parse_args()
+    if args.train:
+        setup(args.train)
+    else:
+        main()

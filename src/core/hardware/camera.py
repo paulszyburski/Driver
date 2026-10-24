@@ -17,21 +17,18 @@ PIXEL_POSITION_SAMPLES = {
     (1286, 886): (10, 20),
     (1490, 923): (20, 20),
     (1609, 981): (30, 20),
-
     (445, 1085): (-30, 10),
     (562, 1085): (-20, 10),
     (744, 1049): (-10, 10),
     (1335, 1070): (10, 10),
     (1517, 1133): (20, 10),
     (1630, 1188): (30, 10),
-
     (412, 1280): (-30, 0),
     (533, 1307): (-20, 0),
     (736, 1328): (-10, 0),
     (1317, 1357): (10, 0),
     (1509, 1391): (20, 0),
     (1635, 1367): (30, 0),
-
     (418, 1467): (-30, -10),
     (539, 1528): (-20, -10),
     (720, 1596): (-10, -10),
@@ -39,7 +36,6 @@ PIXEL_POSITION_SAMPLES = {
     (1246, 1635): (10, -10),
     (1449, 1601): (20, -10),
     (1564, 1567): (30, -10),
-
     (441, 1630): (-30, -20),
     (573, 1691): (-20, -20),
     (752, 1746): (-10, -20),
@@ -100,28 +96,24 @@ class Camera:
         )[0]
 
     def _features(self, x, y):
-        x = (
-            np.asarray(x, dtype=float)
-            - self.full_width / 2
-        ) / (self.full_width / 2)
+        x = (np.asarray(x, dtype=float) - self.full_width / 2) / (self.full_width / 2)
 
-        y = (
-            np.asarray(y, dtype=float)
-            - self.full_height / 2
-        ) / (self.full_height / 2)
+        y = (np.asarray(y, dtype=float) - self.full_height / 2) / (self.full_height / 2)
 
-        return np.column_stack([
-            np.ones_like(x),
-            x,
-            y,
-            x ** 2,
-            x * y,
-            y ** 2,
-            x ** 3,
-            x ** 2 * y,
-            x * y ** 2,
-            y ** 3,
-        ])
+        return np.column_stack(
+            [
+                np.ones_like(x),
+                x,
+                y,
+                x**2,
+                x * y,
+                y**2,
+                x**3,
+                x**2 * y,
+                x * y**2,
+                y**3,
+            ]
+        )
 
     def configure_camera(self):
         config = self.camera.create_still_configuration(
@@ -137,9 +129,7 @@ class Camera:
 
     def take_picture(self, warmup_time=0):
         if not self.configured:
-            raise RuntimeError(
-                "Run configure_camera() first."
-            )
+            raise RuntimeError("Run configure_camera() first.")
 
         self.camera.start()
 
@@ -155,8 +145,8 @@ class Camera:
         )
 
         return frame[
-            self.crop_y1:self.crop_y2,
-            self.crop_x1:self.crop_x2,
+            self.crop_y1 : self.crop_y2,
+            self.crop_x1 : self.crop_x2,
         ]
 
     def pixel_to_position(self, pixel_x, pixel_y):
@@ -182,9 +172,7 @@ class Camera:
 
         sampled_mask = mask[::pixel_step, ::pixel_step]
 
-        sampled_y, sampled_x = np.where(
-            sampled_mask == 0
-        )
+        sampled_y, sampled_x = np.where(sampled_mask == 0)
 
         pixel_x = sampled_x * pixel_step
         pixel_y = sampled_y * pixel_step
@@ -199,10 +187,7 @@ class Camera:
 
         # Many pixels correspond to the same centimetre position.
         # A set removes those duplicates immediately.
-        return {
-            (round(float(x)), round(float(y)))
-            for x, y in zip(ground_x, ground_y)
-        }
+        return {(round(float(x)), round(float(y))) for x, y in zip(ground_x, ground_y)}
 
     def detect_color(self, frame, lower, upper):
         hsv = cv2.cvtColor(

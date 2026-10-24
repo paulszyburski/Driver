@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import glob
 import signal
 import struct
@@ -27,7 +25,7 @@ class mSerial:
             write_timeout=1
         )
 
-        # mCore / Arduino usually resets when serial opens
+
         sleep(2)
 
         try:
@@ -84,11 +82,6 @@ class mSerial:
 
 
 class mHID:
-    """
-    HID support is kept only for compatibility.
-    For your mBot over USB serial, do not use this.
-    """
-
     def __init__(self):
         self.device = None
         self.buffer = []
@@ -442,7 +435,7 @@ class mBot:
                 value = 0
 
                 try:
-                    # 1 byte, 2 float, 3 short, 4 string, 5 double/float
+
                     if value_type == 1:
                         value = self.buffer[position]
 
@@ -485,7 +478,7 @@ class mBot:
         return bytes(raw).decode("utf-8", errors="replace")
 
     def readDouble(self, position):
-        # Original Makeblock protocol often sends float here
+
         v = self.buffer[position:position + 4]
         return struct.unpack("<f", bytes(v))[0]
 

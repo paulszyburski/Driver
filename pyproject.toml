@@ -1,14 +1,16 @@
 [project]
 name = "driver"
 version = "0.1.0"
-description = "Add your description here"
+description = "mBot control and parking experiments in PyBullet"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "pybullet>=3.2.7",
     "pandas",
-    "scikit-learn",
+    "scikit-learn==1.8.0",
     "joblib",
     "numpy",
     "pygame",
+    "pyserial",
+    "pynput",
 ]
